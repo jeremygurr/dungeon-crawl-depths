@@ -1,0 +1,2354 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BackController	jscrawl.html	/^class BackController {$/;"	C
+FrontController	jscrawl.html	/^class FrontController {$/;"	C
+InController	jscrawl.html	/^class InController {$/;"	C
+Line	jscrawl.html	/^class Line {$/;"	C
+OutController	jscrawl.html	/^class OutController {$/;"	C
+Pair	jscrawl.html	/^class Pair {$/;"	C
+Rect	jscrawl.html	/^class Rect {$/;"	C
+SeededRandomizer	jscrawl.html	/^class SeededRandomizer {$/;"	C
+Segment	jscrawl.html	/^class Segment {$/;"	C
+TopController	jscrawl.html	/^class TopController {$/;"	C
+action	jscrawl.html	/^    action()$/;"	F
+actionMessage	jscrawl.html	/^    let actionMessage = 'Unknown'$/;"	V
+actions	jscrawl.html	/^const actions = {$/;"	O
+actor	jscrawl.html	/^    actor: [],$/;"	P
+add	jscrawl.html	/^  add(pair) {$/;"	F
+add	jscrawl.html	/^  add(pair) {$/;"	M
+addActor	jscrawl.html	/^  addActor(actor) {$/;"	F
+addActor	jscrawl.html	/^  addActor(actor) {$/;"	M
+addCellGlow	jscrawl.html	/^  addCellGlow(pos, amount) {$/;"	F
+addCellGlow	jscrawl.html	/^  addCellGlow(pos, amount) {$/;"	M
+addEnergy	jscrawl.html	/^  addEnergy(actor, energyType, amount) {$/;"	F
+addEnergy	jscrawl.html	/^  addEnergy(actor, energyType, amount) {$/;"	M
+addGrowthSelectionToGrowth	jscrawl.html	/^  addGrowthSelectionToGrowth() {$/;"	F
+addGrowthSelectionToGrowth	jscrawl.html	/^  addGrowthSelectionToGrowth() {$/;"	M
+addGrowthSelectionToGrowth2	jscrawl.html	/^  addGrowthSelectionToGrowth2(growthSelection, growth) {$/;"	F
+addGrowthSelectionToGrowth2	jscrawl.html	/^  addGrowthSelectionToGrowth2(growthSelection, growth) {$/;"	M
+addItemToInventory	jscrawl.html	/^  addItemToInventory(item) {$/;"	F
+addItemToInventory	jscrawl.html	/^  addItemToInventory(item) {$/;"	M
+addLevelCellsChanged	jscrawl.html	/^  addLevelCellsChanged(pos) {$/;"	F
+addLevelCellsChanged	jscrawl.html	/^  addLevelCellsChanged(pos) {$/;"	M
+addMessage	jscrawl.html	/^  addMessage(message, multiColumn = false) {$/;"	F
+addMessage	jscrawl.html	/^  addMessage(message, multiColumn = false) {$/;"	M
+addSmell	jscrawl.html	/^  addSmell(pos, smell) {$/;"	F
+addSmell	jscrawl.html	/^  addSmell(pos, smell) {$/;"	M
+addStatusPoolLineCompact	jscrawl.html	/^  addStatusPoolLineCompact(list, player, poolList) {$/;"	F
+addStatusPoolLineCompact	jscrawl.html	/^  addStatusPoolLineCompact(list, player, poolList) {$/;"	M
+addStatusPoolLineExpanded	jscrawl.html	/^  addStatusPoolLineExpanded(list, player, poolList) {$/;"	F
+addStatusPoolLineExpanded	jscrawl.html	/^  addStatusPoolLineExpanded(list, player, poolList) {$/;"	M
+addSubjectToLevel	jscrawl.html	/^  addSubjectToLevel(subject, pos) {$/;"	F
+addSubjectToLevel	jscrawl.html	/^  addSubjectToLevel(subject, pos) {$/;"	M
+adjacent	jscrawl.html	/^        let adjacent = new Pair(fromX, fromY).adjacent(size)$/;"	V
+adjacent	jscrawl.html	/^  adjacent(size) {$/;"	F
+adjacent	jscrawl.html	/^  adjacent(size) {$/;"	M
+adjacentCells	jscrawl.html	/^  adjacentCells(subjectPos) {$/;"	F
+adjacentCells	jscrawl.html	/^  adjacentCells(subjectPos) {$/;"	M
+adjustHealth	jscrawl.html	/^  adjustHealth(target, change) {$/;"	F
+adjustHealth	jscrawl.html	/^  adjustHealth(target, change) {$/;"	M
+adjustLevelPan	jscrawl.html	/^  adjustLevelPan(levelWindow, pos, levelSize) {$/;"	F
+adjustLevelPan	jscrawl.html	/^  adjustLevelPan(levelWindow, pos, levelSize) {$/;"	M
+advanceEnergyFlow	jscrawl.html	/^  advanceEnergyFlow(actor) {$/;"	F
+advanceEnergyFlow	jscrawl.html	/^  advanceEnergyFlow(actor) {$/;"	M
+advanceEnergyFlowChannel	jscrawl.html	/^  advanceEnergyFlowChannel(actor, channel, currentMaxFlow) {$/;"	F
+advanceEnergyFlowChannel	jscrawl.html	/^  advanceEnergyFlowChannel(actor, channel, currentMaxFlow) {$/;"	M
+advanceEnergyFlowPools	jscrawl.html	/^  advanceEnergyFlowPools(actor, from, to, currentMaxFlow) {$/;"	F
+advanceEnergyFlowPools	jscrawl.html	/^  advanceEnergyFlowPools(actor, from, to, currentMaxFlow) {$/;"	M
+advanceTime	jscrawl.html	/^  advanceTime(playerActive) {$/;"	F
+advanceTime	jscrawl.html	/^  advanceTime(playerActive) {$/;"	M
+afterEachTurn	jscrawl.html	/^  afterEachTurn() {$/;"	F
+afterEachTurn	jscrawl.html	/^  afterEachTurn() {$/;"	M
+afterWillpowerFocusSelectFocusType	jscrawl.html	/^  afterWillpowerFocusSelectFocusType() {$/;"	F
+afterWillpowerFocusSelectFocusType	jscrawl.html	/^  afterWillpowerFocusSelectFocusType() {$/;"	M
+allResults	jscrawl.html	/^  let allResults = [] $/;"	A
+alt	jscrawl.html	/^  alt: false,$/;"	P
+amount	jscrawl.html	/^              amount: 5,$/;"	P
+amount	jscrawl.html	/^          let amount = 0$/;"	V
+amulet	jscrawl.html	/^        amulet: null,$/;"	P
+apple	jscrawl.html	/^          apple: { $/;"	P
+applyEnergyDelta	jscrawl.html	/^  applyEnergyDelta(actor) {$/;"	F
+applyEnergyDelta	jscrawl.html	/^  applyEnergyDelta(actor) {$/;"	M
+aptitudes	jscrawl.html	/^    aptitudes: {$/;"	P
+armor	jscrawl.html	/^        armor: [],$/;"	P
+attack	jscrawl.html	/^            attack: { min: 0, max: 1 }, $/;"	P
+attack	jscrawl.html	/^            attack: { min: 0, max: 4 },$/;"	P
+attackSpeed	jscrawl.html	/^                attackSpeed: 0,$/;"	P
+attackSpeed	jscrawl.html	/^                attackSpeed: 1,$/;"	P
+attributes	jscrawl.html	/^        attributes: { },$/;"	P
+attributes	jscrawl.html	/^    attributes: {$/;"	P
+autoRound	jscrawl.html	/^function autoRound(n) {$/;"	F
+average	jscrawl.html	/^                  average: 1$/;"	P
+average	jscrawl.html	/^                  average: 2$/;"	P
+averageValue	jscrawl.html	/^        let averageValue = values.reduce((a,b) => a + b, 0) \/ values.length$/;"	F
+awakenedList	jscrawl.html	/^      let awakenedList = [ text('Awakened:') ]$/;"	A
+awakenedPools	jscrawl.html	/^      awakenedPools: [],$/;"	P
+awakening	jscrawl.html	/^      awakening: null,$/;"	P
+axe	jscrawl.html	/^          axe: {$/;"	P
+b	jscrawl.html	/^  const b = 1 - levelCaveGenerator.openness$/;"	V
+backModel	jscrawl.html	/^  backModel: {$/;"	P
+bacon	jscrawl.html	/^          bacon: { $/;"	P
+banana	jscrawl.html	/^          banana: { $/;"	P
+base	jscrawl.html	/^                  base: 20, $/;"	P
+base	jscrawl.html	/^                  base: 3, $/;"	P
+base	jscrawl.html	/^                  base: 5, $/;"	P
+base	jscrawl.html	/^                  base: 8, $/;"	P
+base	jscrawl.html	/^      base: {$/;"	P
+base	jscrawl.html	/^  base: {$/;"	P
+beef	jscrawl.html	/^          beef: { $/;"	P
+beforeEachTurn	jscrawl.html	/^  beforeEachTurn() {$/;"	F
+beforeEachTurn	jscrawl.html	/^  beforeEachTurn() {$/;"	M
+bgStyle	jscrawl.html	/^          bgStyle,$/;"	V
+black	jscrawl.html	/^              black: 10,$/;"	P
+black	jscrawl.html	/^  black:   { bgStyle: '#000000', style: '#FFF' },$/;"	P
+black	jscrawl.html	/^  black: { $/;"	P
+blue	jscrawl.html	/^              blue: 15,$/;"	P
+blue	jscrawl.html	/^              blue: 2,$/;"	P
+blue	jscrawl.html	/^              blue: 5, $/;"	P
+blue	jscrawl.html	/^              blue: 5,$/;"	P
+blue	jscrawl.html	/^  blue:       { bgStyle: '#0084FF', style: '#FFF' },$/;"	P
+blue	jscrawl.html	/^  blue: { $/;"	P
+blueberries	jscrawl.html	/^          blueberries: { $/;"	P
+body	jscrawl.html	/^        body: null,$/;"	P
+book	jscrawl.html	/^        book: [],$/;"	P
+boomerang	jscrawl.html	/^              boomerang: { $/;"	P
+boots	jscrawl.html	/^        boots: null,$/;"	P
+boulder	jscrawl.html	/^              boulder: { $/;"	P
+bread	jscrawl.html	/^          bread: { $/;"	P
+break	jscrawl.html	/^          break$/;"	V
+break	jscrawl.html	/^        break$/;"	V
+break	jscrawl.html	/^      break$/;"	V
+break	jscrawl.html	/^    break$/;"	V
+brightness	jscrawl.html	/^    let brightness = 0$/;"	V
+brocolli	jscrawl.html	/^          brocolli: { $/;"	P
+brown	jscrawl.html	/^  brown:   { bgStyle: '#CF9509', style: '#FFF'  },$/;"	P
+brown	jscrawl.html	/^  brown: { $/;"	P
+buildLevel	jscrawl.html	/^  buildLevel() {$/;"	F
+buildLevel	jscrawl.html	/^  buildLevel() {$/;"	M
+calculateDamageFrom	jscrawl.html	/^  calculateDamageFrom(attacker) {$/;"	F
+calculateDamageFrom	jscrawl.html	/^  calculateDamageFrom(attacker) {$/;"	M
+candle	jscrawl.html	/^          candle: {$/;"	P
+canvasProps	jscrawl.html	/^const canvasProps = {$/;"	O
+carrot	jscrawl.html	/^          carrot: { $/;"	P
+cellBlocksLight	jscrawl.html	/^  cellBlocksLight(pos, cell, line) {$/;"	F
+cellBlocksLight	jscrawl.html	/^  cellBlocksLight(pos, cell, line) {$/;"	M
+cellPos	jscrawl.html	/^          cellPos,$/;"	V
+cellSizePixels	jscrawl.html	/^      cellSizePixels: cellSizePixels,$/;"	P
+cellsChanged	jscrawl.html	/^        cellsChanged,$/;"	V
+cellsChanged	jscrawl.html	/^    let cellsChanged = []$/;"	A
+centerX	jscrawl.html	/^        centerX: false,$/;"	P
+centerX	jscrawl.html	/^        centerX: true,$/;"	P
+centerY	jscrawl.html	/^        centerY: false,$/;"	P
+centerY	jscrawl.html	/^        centerY: true,$/;"	P
+chanceWeight	jscrawl.html	/^                chanceWeight: 100, $/;"	P
+chanceWeight	jscrawl.html	/^                chanceWeight: 1000, $/;"	P
+chanceWeight	jscrawl.html	/^            chanceWeight: 0, $/;"	P
+chanceWeight	jscrawl.html	/^            chanceWeight: 1,$/;"	P
+chanceWeight	jscrawl.html	/^            chanceWeight: 1000, $/;"	P
+chanceWeight	jscrawl.html	/^            chanceWeight: 1000,$/;"	P
+chanceWeight	jscrawl.html	/^            chanceWeight: 20,$/;"	P
+chanceWeight	jscrawl.html	/^            chanceWeight: 200,$/;"	P
+chanceWeight	jscrawl.html	/^            chanceWeight: 2000,$/;"	P
+chanceWeight	jscrawl.html	/^            chanceWeight: 300,$/;"	P
+chanceWeight	jscrawl.html	/^            chanceWeight: 500,$/;"	P
+chanceWeight	jscrawl.html	/^        chanceWeight: 0,$/;"	P
+chanceWeight	jscrawl.html	/^        chanceWeight: 1000,$/;"	P
+changeStatusMode	jscrawl.html	/^    changeStatusMode: [ 's' ],$/;"	P
+changeStatusMode	jscrawl.html	/^  changeStatusMode() {$/;"	F
+changeStatusMode	jscrawl.html	/^  changeStatusMode() {$/;"	M
+changeStatusMode	jscrawl.html	/^  changeStatusMode: () => {$/;"	M
+channelCommand	jscrawl.html	/^    channelCommand: [ 'c' ],$/;"	P
+channelCommand	jscrawl.html	/^  channelCommand: () => {$/;"	M
+channelCommandExecuteChange	jscrawl.html	/^  channelCommandExecuteChange() {$/;"	F
+channelCommandExecuteChange	jscrawl.html	/^  channelCommandExecuteChange() {$/;"	M
+channelCommandSelectChannel	jscrawl.html	/^  channelCommandSelectChannel() {$/;"	F
+channelCommandSelectChannel	jscrawl.html	/^  channelCommandSelectChannel() {$/;"	M
+channelCommandSelectFlow	jscrawl.html	/^  channelCommandSelectFlow() {$/;"	F
+channelCommandSelectFlow	jscrawl.html	/^  channelCommandSelectFlow() {$/;"	M
+channelCommandSelectPool	jscrawl.html	/^  channelCommandSelectPool() {$/;"	F
+channelCommandSelectPool	jscrawl.html	/^  channelCommandSelectPool() {$/;"	M
+channelCommandSelectPoolType	jscrawl.html	/^  channelCommandSelectPoolType() {$/;"	F
+channelCommandSelectPoolType	jscrawl.html	/^  channelCommandSelectPoolType() {$/;"	M
+channelCurrent	jscrawl.html	/^      channelCurrent: [],  \/\/ integers of openness of each channel$/;"	P
+channelMax	jscrawl.html	/^      channelMax: [],      \/\/ integers of max value of each channel$/;"	P
+channelMaxFlow	jscrawl.html	/^        channelMaxFlow: { },$/;"	P
+channelString	jscrawl.html	/^  let channelString = [ $/;"	A
+channelsToOutput	jscrawl.html	/^    let channelsToOutput = []$/;"	A
+checkCellVisibility	jscrawl.html	/^  checkCellVisibility(actor, wrappedPos) {$/;"	F
+checkCellVisibility	jscrawl.html	/^  checkCellVisibility(actor, wrappedPos) {$/;"	M
+checkCellVisibilityToEdge	jscrawl.html	/^  checkCellVisibilityToEdge(actor, pos, line) {$/;"	F
+checkCellVisibilityToEdge	jscrawl.html	/^  checkCellVisibilityToEdge(actor, pos, line) {$/;"	M
+checkCellVisibilityToEdgeDiagonal	jscrawl.html	/^  checkCellVisibilityToEdgeDiagonal(actor, edge, fullDelta) {$/;"	F
+checkCellVisibilityToEdgeDiagonal	jscrawl.html	/^  checkCellVisibilityToEdgeDiagonal(actor, edge, fullDelta) {$/;"	M
+checkCellVisibilityToEdgeOrthagonal	jscrawl.html	/^  checkCellVisibilityToEdgeOrthagonal(actor, edge, fullDelta) {$/;"	F
+checkCellVisibilityToEdgeOrthagonal	jscrawl.html	/^  checkCellVisibilityToEdgeOrthagonal(actor, edge, fullDelta) {$/;"	M
+checkPan	jscrawl.html	/^  checkPan(window, pos, size) {$/;"	F
+checkPan	jscrawl.html	/^  checkPan(window, pos, size) {$/;"	M
+cheese	jscrawl.html	/^          cheese: { $/;"	P
+cherry	jscrawl.html	/^          cherry: { $/;"	P
+chicken	jscrawl.html	/^          chicken: { $/;"	P
+chocolate	jscrawl.html	/^          chocolate: { $/;"	P
+classifyLevelSpaces	jscrawl.html	/^      classifyLevelSpaces(level, adjacentPos, classifiedSpaces)$/;"	F
+classifyLevelSpaces	jscrawl.html	/^function classifyLevelSpaces(level, pos, classifiedSpaces = null) {$/;"	F
+clearArray	jscrawl.html	/^function clearArray(array) {$/;"	F
+clearLevelCellsChanged	jscrawl.html	/^  clearLevelCellsChanged() {$/;"	F
+clearLevelCellsChanged	jscrawl.html	/^  clearLevelCellsChanged() {$/;"	M
+clearMessages	jscrawl.html	/^  clearMessages() {$/;"	F
+clearMessages	jscrawl.html	/^  clearMessages() {$/;"	M
+clearNumericSelection	jscrawl.html	/^    clearNumericSelection: [ 'Backspace' ],$/;"	P
+clearNumericSelection	jscrawl.html	/^  clearNumericSelection() {$/;"	F
+clearNumericSelection	jscrawl.html	/^  clearNumericSelection() {$/;"	M
+clearNumericSelection	jscrawl.html	/^  clearNumericSelection: () => {$/;"	M
+clearRect	jscrawl.html	/^  clearRect(rect) {$/;"	F
+clearRect	jscrawl.html	/^  clearRect(rect) {$/;"	M
+clearSelectMeta	jscrawl.html	/^  clearSelectMeta(key) {$/;"	F
+clearSelectMeta	jscrawl.html	/^  clearSelectMeta(key) {$/;"	M
+clearWindow	jscrawl.html	/^  clearWindow(screen, window) {$/;"	F
+clearWindow	jscrawl.html	/^  clearWindow(screen, window) {$/;"	M
+clearWindowCells	jscrawl.html	/^  clearWindowCells(screen, window, cells) {$/;"	F
+clearWindowCells	jscrawl.html	/^  clearWindowCells(screen, window, cells) {$/;"	M
+cloak	jscrawl.html	/^        cloak: null,$/;"	P
+coconut	jscrawl.html	/^          coconut: { $/;"	P
+col	jscrawl.html	/^        let col = 0$/;"	V
+colorize	jscrawl.html	/^const colorize = {$/;"	O
+colorizePoolName	jscrawl.html	/^    colorizePoolName(from),$/;"	F
+colorizePoolName	jscrawl.html	/^    colorizePoolName(to),$/;"	F
+colorizePoolName	jscrawl.html	/^function colorizePoolName(pool) {$/;"	F
+colors	jscrawl.html	/^const colors = {$/;"	O
+command	jscrawl.html	/^  command: false,$/;"	P
+commandExecution	jscrawl.html	/^const commandExecution = {$/;"	O
+compact	jscrawl.html	/^  compact: { name: "Courier", size: 13 },$/;"	P
+complexJoin	jscrawl.html	/^function complexJoin(list, pad={text:' '}) {$/;"	F
+complexLength	jscrawl.html	/^function complexLength(list) {$/;"	F
+connectRooms	jscrawl.html	/^  connectRooms(level, map, wallThreshold, randomizer)$/;"	F
+connectRooms	jscrawl.html	/^function connectRooms(level, map, wallThreshold, randomizer) {$/;"	F
+connectedRooms	jscrawl.html	/^  let connectedRooms = 0$/;"	V
+constructor	jscrawl.html	/^  constructor() {$/;"	F
+constructor	jscrawl.html	/^  constructor() {$/;"	M
+constructor	jscrawl.html	/^  constructor(pos1, pos2) {$/;"	F
+constructor	jscrawl.html	/^  constructor(pos1, pos2) {$/;"	M
+constructor	jscrawl.html	/^  constructor(seed) {$/;"	F
+constructor	jscrawl.html	/^  constructor(seed) {$/;"	M
+constructor	jscrawl.html	/^  constructor(slope, yIntercept, xIntercept) {$/;"	F
+constructor	jscrawl.html	/^  constructor(slope, yIntercept, xIntercept) {$/;"	M
+constructor	jscrawl.html	/^  constructor(x, y) {$/;"	F
+constructor	jscrawl.html	/^  constructor(x, y) {$/;"	M
+constructor	jscrawl.html	/^  constructor(x1, y1, x2, y2) {$/;"	F
+constructor	jscrawl.html	/^  constructor(x1, y1, x2, y2) {$/;"	M
+continue	jscrawl.html	/^            continue$/;"	V
+continue	jscrawl.html	/^        continue$/;"	V
+continue	jscrawl.html	/^      continue$/;"	V
+control	jscrawl.html	/^  control: false,$/;"	P
+copper	jscrawl.html	/^              copper: 20,$/;"	P
+copper	jscrawl.html	/^  copper:  { $/;"	P
+copper	jscrawl.html	/^  copper: { $/;"	P
+copperEgg	jscrawl.html	/^          copperEgg: { $/;"	P
+count	jscrawl.html	/^            count: 1,$/;"	P
+count	jscrawl.html	/^      count: 1, $/;"	P
+count	jscrawl.html	/^      let count = ''$/;"	V
+count	jscrawl.html	/^    let count = 0$/;"	V
+count	jscrawl.html	/^    let count = 1 $/;"	V
+countEmptyCells	jscrawl.html	/^  countEmptyCells() {$/;"	F
+countEmptyCells	jscrawl.html	/^  countEmptyCells() {$/;"	M
+countedItem	jscrawl.html	/^      const countedItem = { base: template }$/;"	O
+counts	jscrawl.html	/^      let [subjects, counts] = fc.getSelectedSubjectsAndCounts()$/;"	V
+counts	jscrawl.html	/^    const [items, counts] = this.getSelectedSubjectsAndCounts()$/;"	V
+creator	jscrawl.html	/^  creator: {$/;"	P
+creatorAdvanceLevel	jscrawl.html	/^    creatorAdvanceLevel: [ 'x' ],$/;"	P
+creatorAdvanceLevel	jscrawl.html	/^  creatorAdvanceLevel: () => {$/;"	M
+creatorAwakenPool	jscrawl.html	/^    creatorAwakenPool: [ 'a' ],$/;"	P
+creatorAwakenPool	jscrawl.html	/^  creatorAwakenPool: () => {$/;"	M
+creatorCreateTarget	jscrawl.html	/^    creatorCreateTarget: [ 'c' ],$/;"	P
+creatorCreateTarget	jscrawl.html	/^  creatorCreateTarget: () => {$/;"	M
+creatorDeleteTarget	jscrawl.html	/^    creatorDeleteTarget: [ 'd' ],$/;"	P
+creatorDeleteTarget	jscrawl.html	/^  creatorDeleteTarget: () => {$/;"	M
+creatorMode	jscrawl.html	/^    creatorMode: false,$/;"	P
+creatorModeAdvanceLevel	jscrawl.html	/^  creatorModeAdvanceLevel() {$/;"	F
+creatorModeAdvanceLevel	jscrawl.html	/^  creatorModeAdvanceLevel() {$/;"	M
+creatorModeAwakenPool	jscrawl.html	/^  creatorModeAwakenPool() {$/;"	F
+creatorModeAwakenPool	jscrawl.html	/^  creatorModeAwakenPool() {$/;"	M
+creatorModeCommand	jscrawl.html	/^    creatorModeCommand: [ '`' ],$/;"	P
+creatorModeCommand	jscrawl.html	/^  creatorModeCommand() {$/;"	F
+creatorModeCommand	jscrawl.html	/^  creatorModeCommand() {$/;"	M
+creatorModeCommand	jscrawl.html	/^  creatorModeCommand: () => {$/;"	M
+creatorModeCreateTarget	jscrawl.html	/^  creatorModeCreateTarget() {$/;"	F
+creatorModeCreateTarget	jscrawl.html	/^  creatorModeCreateTarget() {$/;"	M
+creatorModeDeleteTarget	jscrawl.html	/^  creatorModeDeleteTarget() {$/;"	F
+creatorModeDeleteTarget	jscrawl.html	/^  creatorModeDeleteTarget() {$/;"	M
+creatorModeRegenLevel	jscrawl.html	/^  creatorModeRegenLevel() {$/;"	F
+creatorModeRegenLevel	jscrawl.html	/^  creatorModeRegenLevel() {$/;"	M
+creatorModeSetEnergy	jscrawl.html	/^  creatorModeSetEnergy() {$/;"	F
+creatorModeSetEnergy	jscrawl.html	/^  creatorModeSetEnergy() {$/;"	M
+creatorModeSetEnergyExecute	jscrawl.html	/^  creatorModeSetEnergyExecute() {$/;"	F
+creatorModeSetEnergyExecute	jscrawl.html	/^  creatorModeSetEnergyExecute() {$/;"	M
+creatorModeSetEnergyGetAmount	jscrawl.html	/^  creatorModeSetEnergyGetAmount() {$/;"	F
+creatorModeSetEnergyGetAmount	jscrawl.html	/^  creatorModeSetEnergyGetAmount() {$/;"	M
+creatorModeSetEnergySelectPool	jscrawl.html	/^  creatorModeSetEnergySelectPool() {$/;"	F
+creatorModeSetEnergySelectPool	jscrawl.html	/^  creatorModeSetEnergySelectPool() {$/;"	M
+creatorModeSetSkill	jscrawl.html	/^  creatorModeSetSkill() {$/;"	F
+creatorModeSetSkill	jscrawl.html	/^  creatorModeSetSkill() {$/;"	M
+creatorModeSetSkillSelectSkill	jscrawl.html	/^  creatorModeSetSkillSelectSkill() {$/;"	F
+creatorModeSetSkillSelectSkill	jscrawl.html	/^  creatorModeSetSkillSelectSkill() {$/;"	M
+creatorModeTeleportToTarget	jscrawl.html	/^  creatorModeTeleportToTarget() {$/;"	F
+creatorModeTeleportToTarget	jscrawl.html	/^  creatorModeTeleportToTarget() {$/;"	M
+creatorRegenLevel	jscrawl.html	/^    creatorRegenLevel: [ 'r' ],$/;"	P
+creatorRegenLevel	jscrawl.html	/^  creatorRegenLevel: () => {$/;"	M
+creatorSetEnergy	jscrawl.html	/^    creatorSetEnergy: [ 'e' ],$/;"	P
+creatorSetEnergy	jscrawl.html	/^  creatorSetEnergy: () => {$/;"	M
+creatorSetSkill	jscrawl.html	/^    creatorSetSkill: [ 's' ],$/;"	P
+creatorSetSkill	jscrawl.html	/^  creatorSetSkill: () => {$/;"	M
+creatorTeleportToTarget	jscrawl.html	/^    creatorTeleportToTarget: [ 't' ],$/;"	P
+creatorTeleportToTarget	jscrawl.html	/^  creatorTeleportToTarget: () => {$/;"	M
+creature	jscrawl.html	/^      creature: {$/;"	P
+criticalHealth	jscrawl.html	/^      criticalHealth: 10,$/;"	P
+criticalHealth	jscrawl.html	/^  criticalHealth: { $/;"	P
+current	jscrawl.html	/^      const current = '' + Math.round($/;"	V
+currentFlowMagnitude	jscrawl.html	/^        currentFlowMagnitude,$/;"	V
+currentMaxFlow	jscrawl.html	/^        currentMaxFlow,$/;"	V
+cyan	jscrawl.html	/^              cyan: 2, $/;"	P
+cyan	jscrawl.html	/^              cyan: 5,$/;"	P
+cyan	jscrawl.html	/^  cyan:       { bgStyle: '#00FFFF', style: '#000' },$/;"	P
+cyan	jscrawl.html	/^  cyan: { $/;"	P
+damage	jscrawl.html	/^                damage: [{$/;"	P
+debug	jscrawl.html	/^        debug("Placed " + getNameOf(null, subject))$/;"	F
+debug	jscrawl.html	/^      debug("Removed " + removed + " stray walls.")$/;"	F
+debug	jscrawl.html	/^      debug('decayed to ' + newVolume)$/;"	F
+debug	jscrawl.html	/^    debug("Found " + emptyCellCount + "\/" + (level.length * level[0].length) + " empty cells")$/;"	F
+debug	jscrawl.html	/^    debug("Placed " + getNameOf(null, subject))$/;"	F
+debug	jscrawl.html	/^    debug("Placing " + stuffCount + " things in this level.")$/;"	F
+debug	jscrawl.html	/^    debug('Connected ' + connectedRooms + ' rooms')$/;"	F
+debug	jscrawl.html	/^function debug(message) {$/;"	F
+decaySound	jscrawl.html	/^  decaySound() {$/;"	F
+decaySound	jscrawl.html	/^  decaySound() {$/;"	M
+default	jscrawl.html	/^      default: 1,$/;"	P
+default	jscrawl.html	/^      default: 100,$/;"	P
+default	jscrawl.html	/^  default: {$/;"	P
+defense	jscrawl.html	/^  defense: {},$/;"	P
+describeItem	jscrawl.html	/^function describeItem(item) {$/;"	F
+dexterity	jscrawl.html	/^      dexterity: 10,$/;"	P
+diamond	jscrawl.html	/^              diamond: 20,$/;"	P
+diamond	jscrawl.html	/^  diamond:  { $/;"	P
+diamond	jscrawl.html	/^  diamond: { $/;"	P
+diamondEgg	jscrawl.html	/^          diamondEgg: { $/;"	P
+direction	jscrawl.html	/^    let direction = '?'$/;"	V
+directionTo	jscrawl.html	/^  directionTo(pair) {$/;"	F
+directionTo	jscrawl.html	/^  directionTo(pair) {$/;"	M
+dirtFloor	jscrawl.html	/^    dirtFloor: { $/;"	P
+distance	jscrawl.html	/^  distance(target) {$/;"	F
+distance	jscrawl.html	/^  distance(target) {$/;"	M
+divide	jscrawl.html	/^  divide(pair) {$/;"	F
+divide	jscrawl.html	/^  divide(pair) {$/;"	M
+dodge	jscrawl.html	/^  dodge: { type: skillTypes.defense },$/;"	P
+drawCenterLines	jscrawl.html	/^  drawCenterLines(screen, window, levelSize) {$/;"	F
+drawCenterLines	jscrawl.html	/^  drawCenterLines(screen, window, levelSize) {$/;"	M
+drawEmptyRect	jscrawl.html	/^  drawEmptyRect(rect, style = "#000000") {$/;"	F
+drawEmptyRect	jscrawl.html	/^  drawEmptyRect(rect, style = "#000000") {$/;"	M
+drawFilledRect	jscrawl.html	/^  drawFilledRect(rect, style = "#000000") {$/;"	F
+drawFilledRect	jscrawl.html	/^  drawFilledRect(rect, style = "#000000") {$/;"	M
+drawLevelWindowCell	jscrawl.html	/^  drawLevelWindowCell(windowPos) {$/;"	F
+drawLevelWindowCell	jscrawl.html	/^  drawLevelWindowCell(windowPos) {$/;"	M
+drawLevelWindowCells	jscrawl.html	/^  drawLevelWindowCells(screen, window, cells) {$/;"	F
+drawLevelWindowCells	jscrawl.html	/^  drawLevelWindowCells(screen, window, cells) {$/;"	M
+drawMessagesWindow	jscrawl.html	/^  drawMessagesWindow(screen, window) {$/;"	F
+drawMessagesWindow	jscrawl.html	/^  drawMessagesWindow(screen, window) {$/;"	M
+drawStatusWindow	jscrawl.html	/^  drawStatusWindow(screen, window, statusList) {$/;"	F
+drawStatusWindow	jscrawl.html	/^  drawStatusWindow(screen, window, statusList) {$/;"	M
+drawTarget	jscrawl.html	/^  drawTarget(screen, window, targetPos, levelSize) {$/;"	F
+drawTarget	jscrawl.html	/^  drawTarget(screen, window, targetPos, levelSize) {$/;"	M
+drawText	jscrawl.html	/^  drawText(p) {$/;"	F
+drawText	jscrawl.html	/^  drawText(p) {$/;"	M
+drawWindow	jscrawl.html	/^  drawWindow(screen, window) {$/;"	F
+drawWindow	jscrawl.html	/^  drawWindow(screen, window) {$/;"	M
+drink	jscrawl.html	/^  drink: {$/;"	P
+drinkExperiencePotion	jscrawl.html	/^  drinkExperiencePotion() {$/;"	F
+drinkExperiencePotion	jscrawl.html	/^  drinkExperiencePotion() {$/;"	M
+drinkPotion	jscrawl.html	/^  drinkPotion(item, count) {$/;"	F
+drinkPotion	jscrawl.html	/^  drinkPotion(item, count) {$/;"	M
+drop	jscrawl.html	/^  drop: {$/;"	P
+dropItem	jscrawl.html	/^  dropItem(item, count) {$/;"	F
+dropItem	jscrawl.html	/^  dropItem(item, count) {$/;"	M
+dropItem	jscrawl.html	/^  dropItem(type, index, count) {$/;"	F
+dropItem	jscrawl.html	/^  dropItem(type, index, count) {$/;"	M
+durability	jscrawl.html	/^            durability: 100,$/;"	P
+durability	jscrawl.html	/^        durability: 100,$/;"	P
+durability	jscrawl.html	/^        durability: 1000,$/;"	P
+eat	jscrawl.html	/^  eat: {$/;"	P
+eatItem	jscrawl.html	/^  eatItem(item, count) {$/;"	F
+eatItem	jscrawl.html	/^  eatItem(item, count) {$/;"	M
+editGrowthAllocation	jscrawl.html	/^    editGrowthAllocation: [ 'g' ],$/;"	P
+editGrowthAllocation	jscrawl.html	/^  editGrowthAllocation() {$/;"	F
+editGrowthAllocation	jscrawl.html	/^  editGrowthAllocation() {$/;"	M
+editGrowthAllocation	jscrawl.html	/^  editGrowthAllocation: () => {$/;"	M
+editGrowthAllocationSelect	jscrawl.html	/^  editGrowthAllocationSelect() {$/;"	F
+editGrowthAllocationSelect	jscrawl.html	/^  editGrowthAllocationSelect() {$/;"	M
+editGrowthAllocationSelectAttributes	jscrawl.html	/^  editGrowthAllocationSelectAttributes() {$/;"	F
+editGrowthAllocationSelectAttributes	jscrawl.html	/^  editGrowthAllocationSelectAttributes() {$/;"	M
+editGrowthAllocationSelectCategory	jscrawl.html	/^  editGrowthAllocationSelectCategory($/;"	F
+editGrowthAllocationSelectCategory_addCategory	jscrawl.html	/^  editGrowthAllocationSelectCategory_addCategory($/;"	F
+editGrowthAllocationSelectChannelMaxFlow	jscrawl.html	/^  editGrowthAllocationSelectChannelMaxFlow() {$/;"	F
+editGrowthAllocationSelectChannelMaxFlow	jscrawl.html	/^  editGrowthAllocationSelectChannelMaxFlow() {$/;"	M
+editGrowthAllocationSelectEnergyEfficiency	jscrawl.html	/^  editGrowthAllocationSelectEnergyEfficiency() {$/;"	F
+editGrowthAllocationSelectEnergyEfficiency	jscrawl.html	/^  editGrowthAllocationSelectEnergyEfficiency() {$/;"	M
+editGrowthAllocationSelectPoolCapacity	jscrawl.html	/^  editGrowthAllocationSelectPoolCapacity() {$/;"	F
+editGrowthAllocationSelectPoolCapacity	jscrawl.html	/^  editGrowthAllocationSelectPoolCapacity() {$/;"	M
+editGrowthAllocationSelectSkills	jscrawl.html	/^  editGrowthAllocationSelectSkills() {$/;"	F
+editGrowthAllocationSelectSkills	jscrawl.html	/^  editGrowthAllocationSelectSkills() {$/;"	M
+editGrowthAllocationSelectSomething	jscrawl.html	/^  editGrowthAllocationSelectSomething($/;"	F
+egg	jscrawl.html	/^          egg: { $/;"	P
+eggplant	jscrawl.html	/^          eggplant: { $/;"	P
+emptyCellCount	jscrawl.html	/^    let emptyCellCount = 0$/;"	V
+emptyPair	jscrawl.html	/^      emptyPair,$/;"	V
+energy	jscrawl.html	/^            energy: {$/;"	P
+energy	jscrawl.html	/^        energy: [],$/;"	P
+energy	jscrawl.html	/^      energy: 10,$/;"	P
+energy	jscrawl.html	/^  energy: { key: 'e', },$/;"	P
+energyDelta	jscrawl.html	/^    energyDelta: {$/;"	P
+energyEfficiency	jscrawl.html	/^        energyEfficiency: { },$/;"	P
+energyEfficiency	jscrawl.html	/^    energyEfficiency: {$/;"	P
+enterCreatorMode	jscrawl.html	/^    enterCreatorMode: [ 'C' ],$/;"	P
+enterCreatorMode	jscrawl.html	/^  enterCreatorMode() {$/;"	F
+enterCreatorMode	jscrawl.html	/^  enterCreatorMode() {$/;"	M
+enterCreatorMode	jscrawl.html	/^  enterCreatorMode: () => {$/;"	M
+enterTargetMode	jscrawl.html	/^    enterTargetMode: [ 'x' ],$/;"	P
+enterTargetMode	jscrawl.html	/^    enterTargetMode: [],$/;"	P
+enterTargetMode	jscrawl.html	/^  enterTargetMode() {$/;"	F
+enterTargetMode	jscrawl.html	/^  enterTargetMode() {$/;"	M
+enterTargetMode	jscrawl.html	/^  enterTargetMode: () => {$/;"	M
+equals	jscrawl.html	/^  equals(pair) {$/;"	F
+equals	jscrawl.html	/^  equals(pair) {$/;"	M
+equip	jscrawl.html	/^      equip: {$/;"	P
+equip	jscrawl.html	/^  equip: {$/;"	P
+equipItem	jscrawl.html	/^  equipItem(item) {$/;"	F
+equipItem	jscrawl.html	/^  equipItem(item) {$/;"	M
+err	jscrawl.html	/^          err("Item is missing size property")$/;"	F
+err	jscrawl.html	/^        err("Bad message")$/;"	F
+err	jscrawl.html	/^        err("Couldn't identify energy type: " + energyType)$/;"	F
+err	jscrawl.html	/^        err("Missing chanceWeight for " + getNameOf(null, subject))$/;"	F
+err	jscrawl.html	/^        err("No select action defined.")$/;"	F
+err	jscrawl.html	/^        err("No subjects were selected.")$/;"	F
+err	jscrawl.html	/^        err("Not implemented yet")$/;"	F
+err	jscrawl.html	/^        err("Unknown potion: " + getNameOf(null, item))$/;"	F
+err	jscrawl.html	/^        err('Unknown focus class: ' + focus.objectClass)$/;"	F
+err	jscrawl.html	/^      err("Could not find an empty spot in the level to place the player.")$/;"	F
+err	jscrawl.html	/^      err("Could not find item in inventory")$/;"	F
+err	jscrawl.html	/^      err("Could not find pool")$/;"	F
+err	jscrawl.html	/^      err("Invalid radius: " + radius)$/;"	F
+err	jscrawl.html	/^      err("No channels selected. This shouldn't happen")$/;"	F
+err	jscrawl.html	/^      err("No pool groups selected. This shouldn't happen")$/;"	F
+err	jscrawl.html	/^      err("No pools selected. This shouldn't happen")$/;"	F
+err	jscrawl.html	/^      err("Too many iterations")$/;"	F
+err	jscrawl.html	/^      err("from and to must be different.")$/;"	F
+err	jscrawl.html	/^      err($/;"	F
+err	jscrawl.html	/^      err('Invalid inventory type: ' + type)$/;"	F
+err	jscrawl.html	/^      err('Invalid key ' + key)$/;"	F
+err	jscrawl.html	/^      err('Not food: ' + getNameOf(null, item))$/;"	F
+err	jscrawl.html	/^    err("Couldn't find channel " + channelName)$/;"	F
+err	jscrawl.html	/^function err(message) {$/;"	F
+etherea	jscrawl.html	/^    const etherea = possiblePools.filter(pool => $/;"	F
+etherea	jscrawl.html	/^  etherea: { key: 'e', },$/;"	P
+execute	jscrawl.html	/^    execute: (item) => {$/;"	M
+execute	jscrawl.html	/^    execute: (item, count) => {$/;"	M
+executeAction	jscrawl.html	/^        executeAction()$/;"	F
+executeAction	jscrawl.html	/^      executeAction()$/;"	F
+executeAction	jscrawl.html	/^  executeAction() {$/;"	F
+executeAction	jscrawl.html	/^  executeAction() {$/;"	M
+executeAction	jscrawl.html	/^  executeAction(key) {$/;"	F
+executeAction	jscrawl.html	/^  executeAction(key) {$/;"	M
+executeAction	jscrawl.html	/^  executeAction: (key) => {$/;"	M
+executeAttack	jscrawl.html	/^  executeAttack(source, target) {$/;"	F
+executeAttack	jscrawl.html	/^  executeAttack(source, target) {$/;"	M
+executeMove	jscrawl.html	/^  executeMove(actor, pos) {$/;"	F
+executeMove	jscrawl.html	/^  executeMove(actor, pos) {$/;"	M
+executeSelectAction	jscrawl.html	/^    executeSelectAction: [ 'Enter' ],$/;"	P
+executeSelectAction	jscrawl.html	/^  executeSelectAction() {$/;"	F
+executeSelectAction	jscrawl.html	/^  executeSelectAction() {$/;"	M
+executeSelectAction	jscrawl.html	/^  executeSelectAction: () => {$/;"	M
+exitSimple	jscrawl.html	/^    exitSimple: [ 'Escape' ],$/;"	P
+exitSimple	jscrawl.html	/^  exitSimple() {$/;"	F
+exitSimple	jscrawl.html	/^  exitSimple() {$/;"	M
+exitSimple	jscrawl.html	/^  exitSimple: () => {$/;"	M
+exitTargetMode	jscrawl.html	/^    exitTargetMode: [ 'Escape' ],$/;"	P
+exitTargetMode	jscrawl.html	/^  exitTargetMode: () => {$/;"	M
+exotica	jscrawl.html	/^    const exotica = possiblePools.filter(pool => $/;"	F
+exotica	jscrawl.html	/^  exotica: { key: 'x', },$/;"	P
+expand	jscrawl.html	/^  expand(pixels) {$/;"	F
+expand	jscrawl.html	/^  expand(pixels) {$/;"	M
+expandCrack	jscrawl.html	/^function expandCrack(level, map, classifiedSpaces, wallThreshold, startPos) {$/;"	F
+experience	jscrawl.html	/^          experience: { $/;"	P
+experiencePerLevel	jscrawl.html	/^    experiencePerLevel: 10,$/;"	P
+experiencePerLevel	jscrawl.html	/^    experiencePerLevel: 12,$/;"	P
+experiencePotionInLevel	jscrawl.html	/^    experiencePotionInLevel: null, $/;"	P
+extra	jscrawl.html	/^      let extra = ' (' $/;"	V
+fPress	jscrawl.html	/^  const [fPress, tPress] = getEffectivePressures($/;"	V
+fRoom	jscrawl.html	/^        fRoom,$/;"	V
+false	jscrawl.html	/^      false,$/;"	V
+feel	jscrawl.html	/^        feel: [],$/;"	P
+feel	jscrawl.html	/^      feel: 10,$/;"	P
+feeling	jscrawl.html	/^      feeling: 10,$/;"	P
+feeling	jscrawl.html	/^  feeling: { key: 'f', },$/;"	P
+fetchCellFromVisionMemory	jscrawl.html	/^  fetchCellFromVisionMemory(actor, pos) {$/;"	F
+fetchCellFromVisionMemory	jscrawl.html	/^  fetchCellFromVisionMemory(actor, pos) {$/;"	M
+fill	jscrawl.html	/^      fill(this.frontModel.selectFlags, false)$/;"	F
+fill	jscrawl.html	/^function fill(objectOrArray, value) {$/;"	F
+fillEnergy	jscrawl.html	/^  fillEnergy(actor, poolTypeToFill = null, poolToFill = null) {$/;"	F
+fillEnergy	jscrawl.html	/^  fillEnergy(actor, poolTypeToFill = null, poolToFill = null) {$/;"	M
+fillPool	jscrawl.html	/^  fillPool(actor, pool) {$/;"	F
+fillPool	jscrawl.html	/^  fillPool(actor, pool) {$/;"	M
+findBestCrack	jscrawl.html	/^function findBestCrack(level, map, classifiedSpaces, wallThreshold) {$/;"	F
+findEmptyCellCentrally	jscrawl.html	/^function findEmptyCellCentrally(level, randomizer, bounds = null) {$/;"	F
+findEmptyCellSimple	jscrawl.html	/^function findEmptyCellSimple(level) {$/;"	F
+fish	jscrawl.html	/^          fish: { $/;"	P
+fixed	jscrawl.html	/^  fixed: { name: "Courier", size: 26 },$/;"	P
+floor	jscrawl.html	/^  floor() {$/;"	F
+floor	jscrawl.html	/^  floor() {$/;"	M
+floorType	jscrawl.html	/^          floorType: { base: ot.dirtFloor }, $/;"	P
+floorType	jscrawl.html	/^          floorType: { base: ot.dirtFloor },$/;"	P
+flow	jscrawl.html	/^    const flow = 9 - selectedIndex$/;"	V
+focus	jscrawl.html	/^      focus: null,$/;"	P
+focusEnhancement	jscrawl.html	/^    let focusEnhancement = 1$/;"	V
+fontStyle	jscrawl.html	/^      fontStyle: fontStyle, $/;"	P
+fontStyle	jscrawl.html	/^const fontStyle = {$/;"	O
+food	jscrawl.html	/^        food: [],$/;"	P
+food	jscrawl.html	/^      food: {$/;"	P
+for	jscrawl.html	/^            for(let t = 0; t < channel.to.length; t++) {$/;"	F
+for	jscrawl.html	/^            for(let t = 0; t < channel.to.length; t++) {$/;"	M
+for	jscrawl.html	/^          for(let c = 0; c < pool.channelIndexes.length; c++) {$/;"	F
+for	jscrawl.html	/^          for(let c = 0; c < pool.channelIndexes.length; c++) {$/;"	M
+for	jscrawl.html	/^          for(let f = 0; f < channel.from.length; f++) {$/;"	F
+for	jscrawl.html	/^          for(let f = 0; f < channel.from.length; f++) {$/;"	M
+for	jscrawl.html	/^          for(let t = 0; t < channel.to.length; t++) {$/;"	F
+for	jscrawl.html	/^          for(let t = 0; t < channel.to.length; t++) {$/;"	M
+for	jscrawl.html	/^        for(const item of equip[key]) {$/;"	F
+for	jscrawl.html	/^        for(const item of equip[key]) {$/;"	M
+for	jscrawl.html	/^        for(let adjacentPos of newPos.adjacent(levelSize)) {$/;"	F
+for	jscrawl.html	/^        for(let adjacentPos of newPos.adjacent(levelSize)) {$/;"	M
+for	jscrawl.html	/^        for(let ci = 0; ci < channelList.length; ci++) {$/;"	F
+for	jscrawl.html	/^        for(let ci = 0; ci < channelList.length; ci++) {$/;"	M
+for	jscrawl.html	/^        for(let f = 0; f < channel.from.length; f++) {$/;"	F
+for	jscrawl.html	/^        for(let f = 0; f < channel.from.length; f++) {$/;"	M
+for	jscrawl.html	/^        for(let j = 0; j < hands; j++) {$/;"	F
+for	jscrawl.html	/^        for(let j = 0; j < hands; j++) {$/;"	M
+for	jscrawl.html	/^        for(let p = 0; p < poolTypePools.length; p++) {$/;"	F
+for	jscrawl.html	/^        for(let p = 0; p < poolTypePools.length; p++) {$/;"	M
+for	jscrawl.html	/^        for(let r = 0; r < window.size.y; r++) {$/;"	F
+for	jscrawl.html	/^        for(let r = 0; r < window.size.y; r++) {$/;"	M
+for	jscrawl.html	/^        for(let y = pos.y - glow * 2; y < pos.y + glow * 2; y++) {$/;"	F
+for	jscrawl.html	/^        for(let y = pos.y - glow * 2; y < pos.y + glow * 2; y++) {$/;"	M
+for	jscrawl.html	/^      for(const [windowName, window] of Object.entries(screen.window)) {$/;"	F
+for	jscrawl.html	/^      for(const [windowName, window] of Object.entries(screen.window)) {$/;"	M
+for	jscrawl.html	/^      for(const sound of sounds) {$/;"	F
+for	jscrawl.html	/^      for(const sound of sounds) {$/;"	M
+for	jscrawl.html	/^      for(let [energyType, amount] of Object.entries(deltas)) {$/;"	F
+for	jscrawl.html	/^      for(let [energyType, amount] of Object.entries(deltas)) {$/;"	M
+for	jscrawl.html	/^      for(let [energyType, amount] of Object.entries(item.base.energy)) {$/;"	F
+for	jscrawl.html	/^      for(let [energyType, amount] of Object.entries(item.base.energy)) {$/;"	M
+for	jscrawl.html	/^      for(let [key, value] of Object.entries(template.sub)) {$/;"	F
+for	jscrawl.html	/^      for(let [key, value] of Object.entries(template.sub)) {$/;"	M
+for	jscrawl.html	/^      for(let c = 0; c < pool.channelIndexes.length; c++) {$/;"	F
+for	jscrawl.html	/^      for(let c = 0; c < pool.channelIndexes.length; c++) {$/;"	M
+for	jscrawl.html	/^      for(let c = 0; c < poolChannels.length; c++) {$/;"	F
+for	jscrawl.html	/^      for(let c = 0; c < poolChannels.length; c++) {$/;"	M
+for	jscrawl.html	/^      for(let c = 0; c < window.size.x; c++) {$/;"	F
+for	jscrawl.html	/^      for(let c = 0; c < window.size.x; c++) {$/;"	M
+for	jscrawl.html	/^      for(let cPool of channel.from) {$/;"	F
+for	jscrawl.html	/^      for(let cPool of channel.from) {$/;"	M
+for	jscrawl.html	/^      for(let cPool of channel.to) {$/;"	F
+for	jscrawl.html	/^      for(let cPool of channel.to) {$/;"	M
+for	jscrawl.html	/^      for(let floorItem of cell.onFloor) {$/;"	F
+for	jscrawl.html	/^      for(let floorItem of cell.onFloor) {$/;"	M
+for	jscrawl.html	/^      for(let fromY = 0; fromY < fromHeight; fromY++) {$/;"	F
+for	jscrawl.html	/^      for(let fromY = 0; fromY < fromHeight; fromY++) {$/;"	M
+for	jscrawl.html	/^      for(let fromY = 0; fromY < size.y; fromY++) {$/;"	F
+for	jscrawl.html	/^      for(let fromY = 0; fromY < size.y; fromY++) {$/;"	M
+for	jscrawl.html	/^      for(let i = from + 1; i < to; i++) {$/;"	F
+for	jscrawl.html	/^      for(let i = from + 1; i < to; i++) {$/;"	M
+for	jscrawl.html	/^      for(let i = from - 1; i > to; i--) {$/;"	F
+for	jscrawl.html	/^      for(let i = from - 1; i > to; i--) {$/;"	M
+for	jscrawl.html	/^      for(let invItem of group) {$/;"	F
+for	jscrawl.html	/^      for(let invItem of group) {$/;"	M
+for	jscrawl.html	/^      for(let item of cell.onFloor) {$/;"	F
+for	jscrawl.html	/^      for(let item of cell.onFloor) {$/;"	M
+for	jscrawl.html	/^      for(let pt = 0; pt < poolTypes.length; pt++) {$/;"	F
+for	jscrawl.html	/^      for(let pt = 0; pt < poolTypes.length; pt++) {$/;"	M
+for	jscrawl.html	/^      for(let r = this.y - 1; r <= this.y + 1; r++) {$/;"	F
+for	jscrawl.html	/^      for(let r = this.y - 1; r <= this.y + 1; r++) {$/;"	M
+for	jscrawl.html	/^      for(let t = 0; t < channel.to.length; t++) {$/;"	F
+for	jscrawl.html	/^      for(let t = 0; t < channel.to.length; t++) {$/;"	M
+for	jscrawl.html	/^      for(let x = from.x + dx; x < to.x; x += dx) {$/;"	F
+for	jscrawl.html	/^      for(let x = from.x + dx; x < to.x; x += dx) {$/;"	M
+for	jscrawl.html	/^      for(let x = from.x - dx; x > to.x; x -= dx) {$/;"	F
+for	jscrawl.html	/^      for(let x = from.x - dx; x > to.x; x -= dx) {$/;"	M
+for	jscrawl.html	/^      for(let x = pos.x - glow * 2; x < pos.x + glow * 2; x++) {$/;"	F
+for	jscrawl.html	/^      for(let x = pos.x - glow * 2; x < pos.x + glow * 2; x++) {$/;"	M
+for	jscrawl.html	/^      for(let y = 0; y < column.length; y++) {$/;"	F
+for	jscrawl.html	/^      for(let y = 0; y < column.length; y++) {$/;"	M
+for	jscrawl.html	/^      for(let y = 0; y < level[0].length; y++) {$/;"	F
+for	jscrawl.html	/^      for(let y = 0; y < level[0].length; y++) {$/;"	M
+for	jscrawl.html	/^      for(let y = 0; y < smells[x].length; y++) {$/;"	F
+for	jscrawl.html	/^      for(let y = 0; y < smells[x].length; y++) {$/;"	M
+for	jscrawl.html	/^    for(const [key, subject] of Object.entries(group)) {$/;"	F
+for	jscrawl.html	/^    for(const [key, subject] of Object.entries(group)) {$/;"	M
+for	jscrawl.html	/^    for(const [key, value] of Object.entries(equip)) {$/;"	F
+for	jscrawl.html	/^    for(const [key, value] of Object.entries(equip)) {$/;"	M
+for	jscrawl.html	/^    for(const [screenName, screen] of Object.entries(screens)) {$/;"	F
+for	jscrawl.html	/^    for(const [screenName, screen] of Object.entries(screens)) {$/;"	M
+for	jscrawl.html	/^    for(const [testName, testWindow] of Object.entries(screen.window)) {$/;"	F
+for	jscrawl.html	/^    for(const [testName, testWindow] of Object.entries(screen.window)) {$/;"	M
+for	jscrawl.html	/^    for(const attribute in player.species.attributes) {$/;"	F
+for	jscrawl.html	/^    for(const attribute in player.species.attributes) {$/;"	M
+for	jscrawl.html	/^    for(const cellPos of cells) {$/;"	F
+for	jscrawl.html	/^    for(const cellPos of cells) {$/;"	M
+for	jscrawl.html	/^    for(const channel of poolChannels) {$/;"	F
+for	jscrawl.html	/^    for(const channel of poolChannels) {$/;"	M
+for	jscrawl.html	/^    for(const key in bm.randomizers) {$/;"	F
+for	jscrawl.html	/^    for(const key in bm.randomizers) {$/;"	M
+for	jscrawl.html	/^    for(const key in growth) {$/;"	F
+for	jscrawl.html	/^    for(const key in growth) {$/;"	M
+for	jscrawl.html	/^    for(const key in growthSelection) {$/;"	F
+for	jscrawl.html	/^    for(const key in growthSelection) {$/;"	M
+for	jscrawl.html	/^    for(const pool of Object.values(pools)) {$/;"	F
+for	jscrawl.html	/^    for(const pool of Object.values(pools)) {$/;"	M
+for	jscrawl.html	/^    for(const pool of pools) {$/;"	F
+for	jscrawl.html	/^    for(const pool of pools) {$/;"	M
+for	jscrawl.html	/^    for(const poolName in pools) {$/;"	F
+for	jscrawl.html	/^    for(const poolName in pools) {$/;"	M
+for	jscrawl.html	/^    for(const poolName of poolList) {$/;"	F
+for	jscrawl.html	/^    for(const poolName of poolList) {$/;"	M
+for	jscrawl.html	/^    for(const skill in skills) {$/;"	F
+for	jscrawl.html	/^    for(const skill in skills) {$/;"	M
+for	jscrawl.html	/^    for(const sound of sounds) {$/;"	F
+for	jscrawl.html	/^    for(const sound of sounds) {$/;"	M
+for	jscrawl.html	/^    for(const subject of Object.values(group)) {$/;"	F
+for	jscrawl.html	/^    for(const subject of Object.values(group)) {$/;"	M
+for	jscrawl.html	/^    for(const window of Object.values(screen.window)) {$/;"	F
+for	jscrawl.html	/^    for(const window of Object.values(screen.window)) {$/;"	M
+for	jscrawl.html	/^    for(const windowPos of cells) {$/;"	F
+for	jscrawl.html	/^    for(const windowPos of cells) {$/;"	M
+for	jscrawl.html	/^    for(i = 0; i < poolChannels.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(i = 0; i < poolChannels.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(i in poolTypes) {$/;"	F
+for	jscrawl.html	/^    for(i in poolTypes) {$/;"	M
+for	jscrawl.html	/^    for(i in senses) {$/;"	F
+for	jscrawl.html	/^    for(i in senses) {$/;"	M
+for	jscrawl.html	/^    for(i in skillTypes) {$/;"	F
+for	jscrawl.html	/^    for(i in skillTypes) {$/;"	M
+for	jscrawl.html	/^    for(i in skills) {$/;"	F
+for	jscrawl.html	/^    for(i in skills) {$/;"	M
+for	jscrawl.html	/^    for(index = 0; index < group.length; index++) {$/;"	F
+for	jscrawl.html	/^    for(index = 0; index < group.length; index++) {$/;"	M
+for	jscrawl.html	/^    for(let [poolName, pool] of Object.entries(pools)) {$/;"	F
+for	jscrawl.html	/^    for(let [poolName, pool] of Object.entries(pools)) {$/;"	M
+for	jscrawl.html	/^    for(let [type, value] of Object.entries(equip)) {$/;"	F
+for	jscrawl.html	/^    for(let [type, value] of Object.entries(equip)) {$/;"	M
+for	jscrawl.html	/^    for(let action of actions) {$/;"	F
+for	jscrawl.html	/^    for(let action of actions) {$/;"	M
+for	jscrawl.html	/^    for(let attribute in growthSelection[growthKey]) {$/;"	F
+for	jscrawl.html	/^    for(let attribute in growthSelection[growthKey]) {$/;"	M
+for	jscrawl.html	/^    for(let c = this.x - 1; c <= this.x + 1; c++) {$/;"	F
+for	jscrawl.html	/^    for(let c = this.x - 1; c <= this.x + 1; c++) {$/;"	M
+for	jscrawl.html	/^    for(let channelIndex of fc.getSelectMeta('channelIndexes')) {$/;"	F
+for	jscrawl.html	/^    for(let channelIndex of fc.getSelectMeta('channelIndexes')) {$/;"	M
+for	jscrawl.html	/^    for(let command of Object.keys(keyMap[km])) {$/;"	F
+for	jscrawl.html	/^    for(let command of Object.keys(keyMap[km])) {$/;"	M
+for	jscrawl.html	/^    for(let f = 0; f < channel.from.length; f++) {$/;"	F
+for	jscrawl.html	/^    for(let f = 0; f < channel.from.length; f++) {$/;"	M
+for	jscrawl.html	/^    for(let fromX = 0; fromX < size.x; fromX++) {$/;"	F
+for	jscrawl.html	/^    for(let fromX = 0; fromX < size.x; fromX++) {$/;"	M
+for	jscrawl.html	/^    for(let fromY = 0; fromY < fromHeight - 1; fromY += 2) {$/;"	F
+for	jscrawl.html	/^    for(let fromY = 0; fromY < fromHeight - 1; fromY += 2) {$/;"	M
+for	jscrawl.html	/^    for(let fromY = 0; fromY < fromHeight; fromY++) {$/;"	F
+for	jscrawl.html	/^    for(let fromY = 0; fromY < fromHeight; fromY++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < adjacent.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < adjacent.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < count; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < count; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < floorItems.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < floorItems.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < group.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < group.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < hand.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < hand.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < items.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < items.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < list.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < list.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < p.textToDrawList.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < p.textToDrawList.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < poolChannels.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < poolChannels.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < selectFlagsList.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < selectFlagsList.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 0; i < selectedFloorItems.length; i++) {$/;"	F
+for	jscrawl.html	/^    for(let i = 0; i < selectedFloorItems.length; i++) {$/;"	M
+for	jscrawl.html	/^    for(let i = 9; i > 0; i--) {$/;"	F
+for	jscrawl.html	/^    for(let i = 9; i > 0; i--) {$/;"	M
+for	jscrawl.html	/^    for(let i = 9; i >= 0; i--) {$/;"	F
+for	jscrawl.html	/^    for(let i = 9; i >= 0; i--) {$/;"	M
+for	jscrawl.html	/^    for(let i = list.length - 1; i >= 0; i--) {$/;"	F
+for	jscrawl.html	/^    for(let i = list.length - 1; i >= 0; i--) {$/;"	M
+for	jscrawl.html	/^    for(let i = pos; i > 0; i--) {$/;"	F
+for	jscrawl.html	/^    for(let i = pos; i > 0; i--) {$/;"	M
+for	jscrawl.html	/^    for(let i in selectFlagsList) {$/;"	F
+for	jscrawl.html	/^    for(let i in selectFlagsList) {$/;"	M
+for	jscrawl.html	/^    for(let i of this.getSelectedIndexes()) {$/;"	F
+for	jscrawl.html	/^    for(let i of this.getSelectedIndexes()) {$/;"	M
+for	jscrawl.html	/^    for(let item of cell.onFloor) {$/;"	F
+for	jscrawl.html	/^    for(let item of cell.onFloor) {$/;"	M
+for	jscrawl.html	/^    for(let itemKey in itemBase) {$/;"	F
+for	jscrawl.html	/^    for(let itemKey in itemBase) {$/;"	M
+for	jscrawl.html	/^    for(let key in fm.selectFlags) {$/;"	F
+for	jscrawl.html	/^    for(let key in fm.selectFlags) {$/;"	M
+for	jscrawl.html	/^    for(let key in inventoryTypes) {$/;"	F
+for	jscrawl.html	/^    for(let key in inventoryTypes) {$/;"	M
+for	jscrawl.html	/^    for(let key in selected) {$/;"	F
+for	jscrawl.html	/^    for(let key in selected) {$/;"	M
+for	jscrawl.html	/^    for(let key in species) {$/;"	F
+for	jscrawl.html	/^    for(let key in species) {$/;"	M
+for	jscrawl.html	/^    for(let n = 0; n < stuffCount; n++) {$/;"	F
+for	jscrawl.html	/^    for(let n = 0; n < stuffCount; n++) {$/;"	M
+for	jscrawl.html	/^    for(let p = 0; p < pools.length; p++) {$/;"	F
+for	jscrawl.html	/^    for(let p = 0; p < pools.length; p++) {$/;"	M
+for	jscrawl.html	/^    for(let pool of Object.values(subjectPools)) {$/;"	F
+for	jscrawl.html	/^    for(let pool of Object.values(subjectPools)) {$/;"	M
+for	jscrawl.html	/^    for(let pool of actor.awakenedPools) {$/;"	F
+for	jscrawl.html	/^    for(let pool of actor.awakenedPools) {$/;"	M
+for	jscrawl.html	/^    for(let poolType of Object.values(poolTypes)) {$/;"	F
+for	jscrawl.html	/^    for(let poolType of Object.values(poolTypes)) {$/;"	M
+for	jscrawl.html	/^    for(let r = 0; r < column.length; r++) {$/;"	F
+for	jscrawl.html	/^    for(let r = 0; r < column.length; r++) {$/;"	M
+for	jscrawl.html	/^    for(let r = 0; r < size.y + 2; r++) {$/;"	F
+for	jscrawl.html	/^    for(let r = 0; r < size.y + 2; r++) {$/;"	M
+for	jscrawl.html	/^    for(let r = 0; r < size.y; r++) {$/;"	F
+for	jscrawl.html	/^    for(let r = 0; r < size.y; r++) {$/;"	M
+for	jscrawl.html	/^    for(let row = 0; row < messages.length; row++) {$/;"	F
+for	jscrawl.html	/^    for(let row = 0; row < messages.length; row++) {$/;"	M
+for	jscrawl.html	/^    for(let row = 0; row < statusList.length; row++) {$/;"	F
+for	jscrawl.html	/^    for(let row = 0; row < statusList.length; row++) {$/;"	M
+for	jscrawl.html	/^    for(let sense of Object.values(senses)) {$/;"	F
+for	jscrawl.html	/^    for(let sense of Object.values(senses)) {$/;"	M
+for	jscrawl.html	/^    for(let skill of Object.values(skills)) {$/;"	F
+for	jscrawl.html	/^    for(let skill of Object.values(skills)) {$/;"	M
+for	jscrawl.html	/^    for(let smell of cell) {$/;"	F
+for	jscrawl.html	/^    for(let smell of cell) {$/;"	M
+for	jscrawl.html	/^    for(let x = 0; x < level.length; x++) {$/;"	F
+for	jscrawl.html	/^    for(let x = 0; x < level.length; x++) {$/;"	M
+for	jscrawl.html	/^    for(let x = 0; x < smells.length; x++) {$/;"	F
+for	jscrawl.html	/^    for(let x = 0; x < smells.length; x++) {$/;"	M
+for	jscrawl.html	/^    for(let x = this.x - radius; x < this.x + radius + 1; x++) {$/;"	F
+for	jscrawl.html	/^    for(let x = this.x - radius; x < this.x + radius + 1; x++) {$/;"	M
+for	jscrawl.html	/^    for(let y = 0; y < level[x].length; y++) {$/;"	F
+for	jscrawl.html	/^    for(let y = 0; y < level[x].length; y++) {$/;"	M
+for	jscrawl.html	/^    for(let y = 0; y < toHeight; y++) {$/;"	F
+for	jscrawl.html	/^    for(let y = 0; y < toHeight; y++) {$/;"	M
+for	jscrawl.html	/^    for(let y = this.y - radius; y < this.y + radius + 1; y++) {$/;"	F
+for	jscrawl.html	/^    for(let y = this.y - radius; y < this.y + radius + 1; y++) {$/;"	M
+for	jscrawl.html	/^  for(i in objectOrArray) {$/;"	F
+for	jscrawl.html	/^  for(i in objectOrArray) {$/;"	M
+for	jscrawl.html	/^  for(let adjacentPos of adjacentList) {$/;"	F
+for	jscrawl.html	/^  for(let adjacentPos of adjacentList) {$/;"	M
+for	jscrawl.html	/^  for(let adjacentPos of startPos.adjacent(levelSize)) {$/;"	F
+for	jscrawl.html	/^  for(let adjacentPos of startPos.adjacent(levelSize)) {$/;"	M
+for	jscrawl.html	/^  for(let c = 0; c < level.length; c++) {$/;"	F
+for	jscrawl.html	/^  for(let c = 0; c < level.length; c++) {$/;"	M
+for	jscrawl.html	/^  for(let c = 0; c < size.x + 2; c++) {$/;"	F
+for	jscrawl.html	/^  for(let c = 0; c < size.x + 2; c++) {$/;"	M
+for	jscrawl.html	/^  for(let c = 0; c < size.x; c++) {$/;"	F
+for	jscrawl.html	/^  for(let c = 0; c < size.x; c++) {$/;"	M
+for	jscrawl.html	/^  for(let fromX = 0; fromX < fromWidth - 1; fromX += 2) {$/;"	F
+for	jscrawl.html	/^  for(let fromX = 0; fromX < fromWidth - 1; fromX += 2) {$/;"	M
+for	jscrawl.html	/^  for(let fromX = 0; fromX < fromWidth; fromX++) {$/;"	F
+for	jscrawl.html	/^  for(let fromX = 0; fromX < fromWidth; fromX++) {$/;"	M
+for	jscrawl.html	/^  for(let i = 0; i < lastIndex; i++) {$/;"	F
+for	jscrawl.html	/^  for(let i = 0; i < lastIndex; i++) {$/;"	M
+for	jscrawl.html	/^  for(let i in poolChannels) {$/;"	F
+for	jscrawl.html	/^  for(let i in poolChannels) {$/;"	M
+for	jscrawl.html	/^  for(let item of list) {$/;"	F
+for	jscrawl.html	/^  for(let item of list) {$/;"	M
+for	jscrawl.html	/^  for(let key in growthSelection) {$/;"	F
+for	jscrawl.html	/^  for(let key in growthSelection) {$/;"	M
+for	jscrawl.html	/^  for(let key of Object.keys(pools)) {$/;"	F
+for	jscrawl.html	/^  for(let key of Object.keys(pools)) {$/;"	M
+for	jscrawl.html	/^  for(let x = 0; x < level.length; x++) {$/;"	F
+for	jscrawl.html	/^  for(let x = 0; x < level.length; x++) {$/;"	M
+for	jscrawl.html	/^  for(let x = 0; x < multiplier; x++) {$/;"	F
+for	jscrawl.html	/^  for(let x = 0; x < multiplier; x++) {$/;"	M
+for	jscrawl.html	/^  for(let x = 0; x < toWidth; x++) {$/;"	F
+for	jscrawl.html	/^  for(let x = 0; x < toWidth; x++) {$/;"	M
+fork	jscrawl.html	/^  fork() {$/;"	F
+fork	jscrawl.html	/^  fork() {$/;"	M
+from	jscrawl.html	/^    from: [$/;"	P
+from	jscrawl.html	/^    from: [pools.blue],$/;"	P
+from	jscrawl.html	/^    from: [pools.copper],$/;"	P
+from	jscrawl.html	/^    from: [pools.criticalHealth],$/;"	P
+from	jscrawl.html	/^    from: [pools.cyan],$/;"	P
+from	jscrawl.html	/^    from: [pools.diamond],$/;"	P
+from	jscrawl.html	/^    from: [pools.gold],$/;"	P
+from	jscrawl.html	/^    from: [pools.gray],$/;"	P
+from	jscrawl.html	/^    from: [pools.green],$/;"	P
+from	jscrawl.html	/^    from: [pools.indigo],$/;"	P
+from	jscrawl.html	/^    from: [pools.majorHealth],$/;"	P
+from	jscrawl.html	/^    from: [pools.mana],$/;"	P
+from	jscrawl.html	/^    from: [pools.minorHealth],$/;"	P
+from	jscrawl.html	/^    from: [pools.moon],$/;"	P
+from	jscrawl.html	/^    from: [pools.orange],$/;"	P
+from	jscrawl.html	/^    from: [pools.red],$/;"	P
+from	jscrawl.html	/^    from: [pools.silver],$/;"	P
+from	jscrawl.html	/^    from: [pools.stamina],$/;"	P
+from	jscrawl.html	/^    from: [pools.star],$/;"	P
+from	jscrawl.html	/^    from: [pools.sun],$/;"	P
+from	jscrawl.html	/^    from: [pools.violet],$/;"	P
+from	jscrawl.html	/^    from: [pools.willpower],$/;"	P
+from	jscrawl.html	/^    from: [pools.yellow],$/;"	P
+fromSegment	jscrawl.html	/^  fromSegment(segment) {$/;"	F
+fromSegment	jscrawl.html	/^  fromSegment(segment) {$/;"	M
+frontModel	jscrawl.html	/^  frontModel: {$/;"	P
+gameClock	jscrawl.html	/^    gameClock: 0,$/;"	P
+generateDiamondSquareMap	jscrawl.html	/^function generateDiamondSquareMap(fromMap, randomizer) {$/;"	F
+generateGradient	jscrawl.html	/^function generateGradient(width, height, list) {$/;"	F
+generateItem	jscrawl.html	/^  generateItem(count, path, currentItem = template.generated) {$/;"	F
+generateItem	jscrawl.html	/^  generateItem(count, path, currentItem = template.generated) {$/;"	M
+generateLevelEmptyRoom	jscrawl.html	/^function generateLevelEmptyRoom(level, size, randomizer) {$/;"	F
+generateLevelSimpleCaves	jscrawl.html	/^function generateLevelSimpleCaves(level, size, randomizer, levelCaveGenerator) {$/;"	F
+generated	jscrawl.html	/^  generated: {$/;"	P
+getActionModeMessage	jscrawl.html	/^  getActionModeMessage() {$/;"	F
+getActionModeMessage	jscrawl.html	/^  getActionModeMessage() {$/;"	M
+getActionsFor	jscrawl.html	/^function getActionsFor(type, allowMultiple) {$/;"	F
+getActors	jscrawl.html	/^  getActors() {$/;"	F
+getActors	jscrawl.html	/^  getActors() {$/;"	M
+getAttribute	jscrawl.html	/^  getAttribute(actor, attribute, boost = 0) {$/;"	F
+getAttribute	jscrawl.html	/^  getAttribute(actor, attribute, boost = 0) {$/;"	M
+getAttribute	jscrawl.html	/^  getAttribute(actor, key, boost) {$/;"	F
+getAttribute	jscrawl.html	/^  getAttribute(actor, key, boost) {$/;"	M
+getAttributeFunction	jscrawl.html	/^    getAttributeFunction,$/;"	V
+getAttributes	jscrawl.html	/^  getAttributes(actor) {$/;"	F
+getAttributes	jscrawl.html	/^  getAttributes(actor) {$/;"	M
+getBias	jscrawl.html	/^function getBias(actor, fromPool, toPool) {$/;"	F
+getCell	jscrawl.html	/^  getCell(pos) {$/;"	F
+getCell	jscrawl.html	/^  getCell(pos) {$/;"	M
+getCellGlow	jscrawl.html	/^  getCellGlow(pos) {$/;"	F
+getCellGlow	jscrawl.html	/^  getCellGlow(pos) {$/;"	M
+getCellPixelRect	jscrawl.html	/^  getCellPixelRect(screen, window, windowPos) {$/;"	F
+getCellPixelRect	jscrawl.html	/^  getCellPixelRect(screen, window, windowPos) {$/;"	M
+getChangeString	jscrawl.html	/^  getChangeString(prefix, change) {$/;"	F
+getChangeString	jscrawl.html	/^  getChangeString(prefix, change) {$/;"	M
+getChannelFlowFromMagnitude	jscrawl.html	/^          getChannelFlowFromMagnitude(i, 100)$/;"	F
+getChannelFlowFromMagnitude	jscrawl.html	/^          getChannelFlowFromMagnitude(i, 1000)$/;"	F
+getChannelFlowFromMagnitude	jscrawl.html	/^          getChannelFlowFromMagnitude(i, 10000)$/;"	F
+getChannelFlowFromMagnitude	jscrawl.html	/^          getChannelFlowFromMagnitude(i, 100000)$/;"	F
+getChannelFlowFromMagnitude	jscrawl.html	/^function getChannelFlowFromMagnitude(mag, max) {$/;"	F
+getChannelMaxFlow	jscrawl.html	/^function getChannelMaxFlow(actor, channelName, boost = 0) {$/;"	F
+getChannelString	jscrawl.html	/^function getChannelString(player, from, to) {$/;"	F
+getCreatorMode	jscrawl.html	/^  getCreatorMode() {$/;"	F
+getCreatorMode	jscrawl.html	/^  getCreatorMode() {$/;"	M
+getCurrentFloorBrightness	jscrawl.html	/^  getCurrentFloorBrightness() {$/;"	F
+getCurrentFloorBrightness	jscrawl.html	/^  getCurrentFloorBrightness() {$/;"	M
+getCurrentScreen	jscrawl.html	/^  getCurrentScreen() {$/;"	F
+getCurrentScreen	jscrawl.html	/^  getCurrentScreen() {$/;"	M
+getEffectivePressures	jscrawl.html	/^function getEffectivePressures(actor, fromPool, toPool) {$/;"	F
+getEnergyEfficiency	jscrawl.html	/^function getEnergyEfficiency(actor, poolName, boost = 0) {$/;"	F
+getEquipBrightness	jscrawl.html	/^  getEquipBrightness(actor) {$/;"	F
+getEquipBrightness	jscrawl.html	/^  getEquipBrightness(actor) {$/;"	M
+getEquipment	jscrawl.html	/^  getEquipment() {$/;"	F
+getEquipment	jscrawl.html	/^  getEquipment() {$/;"	M
+getExperiencePotionInLevel	jscrawl.html	/^  getExperiencePotionInLevel() {$/;"	F
+getExperiencePotionInLevel	jscrawl.html	/^  getExperiencePotionInLevel() {$/;"	M
+getFloorItemsAt	jscrawl.html	/^  getFloorItemsAt(pos) {$/;"	F
+getFloorItemsAt	jscrawl.html	/^  getFloorItemsAt(pos) {$/;"	M
+getFloorItemsAtPlayerPos	jscrawl.html	/^  getFloorItemsAtPlayerPos() {$/;"	F
+getFloorItemsAtPlayerPos	jscrawl.html	/^  getFloorItemsAtPlayerPos() {$/;"	M
+getFontStyle	jscrawl.html	/^  getFontStyle(screen, window) {$/;"	F
+getFontStyle	jscrawl.html	/^  getFontStyle(screen, window) {$/;"	M
+getGameClock	jscrawl.html	/^  getGameClock() {$/;"	F
+getGameClock	jscrawl.html	/^  getGameClock() {$/;"	M
+getGrowthPerLevel	jscrawl.html	/^  getGrowthPerLevel() {$/;"	F
+getGrowthPerLevel	jscrawl.html	/^  getGrowthPerLevel() {$/;"	M
+getGrowthSelectCount	jscrawl.html	/^          getGrowthSelectCount(growthSelection)$/;"	F
+getGrowthSelectCount	jscrawl.html	/^      getGrowthSelectCount(growthSelection)$/;"	F
+getGrowthSelectCount	jscrawl.html	/^      getGrowthSelectCount(growthSelection[name])$/;"	F
+getGrowthSelectCount	jscrawl.html	/^function getGrowthSelectCount(growthSelection) {$/;"	F
+getGrowthSelection	jscrawl.html	/^  getGrowthSelection() {$/;"	F
+getGrowthSelection	jscrawl.html	/^  getGrowthSelection() {$/;"	M
+getHearingDepth	jscrawl.html	/^  getHearingDepth(actor) {$/;"	F
+getHearingDepth	jscrawl.html	/^  getHearingDepth(actor) {$/;"	M
+getHearingSensitivity	jscrawl.html	/^  getHearingSensitivity(actor) {$/;"	F
+getHearingSensitivity	jscrawl.html	/^  getHearingSensitivity(actor) {$/;"	M
+getInventoryGroup	jscrawl.html	/^  getInventoryGroup(type) {$/;"	F
+getInventoryGroup	jscrawl.html	/^  getInventoryGroup(type) {$/;"	M
+getItemBrightness	jscrawl.html	/^  getItemBrightness(item) {$/;"	F
+getItemBrightness	jscrawl.html	/^  getItemBrightness(item) {$/;"	M
+getKeyMode	jscrawl.html	/^  getKeyMode() {$/;"	F
+getKeyMode	jscrawl.html	/^  getKeyMode() {$/;"	M
+getLevel	jscrawl.html	/^  getLevel() {$/;"	F
+getLevel	jscrawl.html	/^  getLevel() {$/;"	M
+getLevelBackgroundNoise	jscrawl.html	/^  getLevelBackgroundNoise() {$/;"	F
+getLevelBackgroundNoise	jscrawl.html	/^  getLevelBackgroundNoise() {$/;"	M
+getLevelCellsChanged	jscrawl.html	/^  getLevelCellsChanged() {$/;"	F
+getLevelCellsChanged	jscrawl.html	/^  getLevelCellsChanged() {$/;"	M
+getLevelChanged	jscrawl.html	/^  getLevelChanged() {$/;"	F
+getLevelChanged	jscrawl.html	/^  getLevelChanged() {$/;"	M
+getLevelSize	jscrawl.html	/^  getLevelSize() {$/;"	F
+getLevelSize	jscrawl.html	/^  getLevelSize() {$/;"	M
+getMaxMeditationDepth	jscrawl.html	/^  getMaxMeditationDepth(actor) {$/;"	F
+getMaxMeditationDepth	jscrawl.html	/^  getMaxMeditationDepth(actor) {$/;"	M
+getMeditationRate	jscrawl.html	/^  getMeditationRate(actor) {$/;"	F
+getMeditationRate	jscrawl.html	/^  getMeditationRate(actor) {$/;"	M
+getMessagesChanged	jscrawl.html	/^  getMessagesChanged() {$/;"	F
+getMessagesChanged	jscrawl.html	/^  getMessagesChanged() {$/;"	M
+getNameOf	jscrawl.html	/^function getNameOf(article, item, verb) {$/;"	F
+getOrCreateSmellFromCell	jscrawl.html	/^  getOrCreateSmellFromCell(name, cell) {$/;"	F
+getOrCreateSmellFromCell	jscrawl.html	/^  getOrCreateSmellFromCell(name, cell) {$/;"	M
+getPlayer	jscrawl.html	/^  getPlayer() {$/;"	F
+getPlayer	jscrawl.html	/^  getPlayer() {$/;"	M
+getPlayerPos	jscrawl.html	/^  getPlayerPos() {$/;"	F
+getPlayerPos	jscrawl.html	/^  getPlayerPos() {$/;"	M
+getPlayerSpecies	jscrawl.html	/^  getPlayerSpecies() {$/;"	F
+getPlayerSpecies	jscrawl.html	/^  getPlayerSpecies() {$/;"	M
+getPoolChannelByName	jscrawl.html	/^function getPoolChannelByName(channelName) {$/;"	F
+getPoolCurrent	jscrawl.html	/^        getPoolCurrent(player, index)$/;"	F
+getPoolCurrent	jscrawl.html	/^function getPoolCurrent(actor, poolIndex) {$/;"	F
+getPoolCurrentChange	jscrawl.html	/^  getPoolCurrentChange(actor, poolIndex) {$/;"	F
+getPoolCurrentChange	jscrawl.html	/^  getPoolCurrentChange(actor, poolIndex) {$/;"	M
+getPoolDigits	jscrawl.html	/^  getPoolDigits(actor) {$/;"	F
+getPoolDigits	jscrawl.html	/^  getPoolDigits(actor) {$/;"	M
+getPoolMax	jscrawl.html	/^      getPoolMax(actor, poolIndexToName(poolIndex))$/;"	F
+getPoolMax	jscrawl.html	/^function getPoolMax($/;"	F
+getPoolMaxChange	jscrawl.html	/^  getPoolMaxChange(actor, poolIndex) {$/;"	F
+getPoolMaxChange	jscrawl.html	/^  getPoolMaxChange(actor, poolIndex) {$/;"	M
+getPoolPercent	jscrawl.html	/^  getPoolPercent(actor, poolIndex) {$/;"	F
+getPoolPercent	jscrawl.html	/^  getPoolPercent(actor, poolIndex) {$/;"	M
+getRandomizer	jscrawl.html	/^  getRandomizer(name) {$/;"	F
+getRandomizer	jscrawl.html	/^  getRandomizer(name) {$/;"	M
+getSelectAction	jscrawl.html	/^  getSelectAction(action) {$/;"	F
+getSelectAction	jscrawl.html	/^  getSelectAction(action) {$/;"	M
+getSelectAllowMultiple	jscrawl.html	/^  getSelectAllowMultiple(allow) {$/;"	F
+getSelectAllowMultiple	jscrawl.html	/^  getSelectAllowMultiple(allow) {$/;"	M
+getSelectCount	jscrawl.html	/^  getSelectCount() {$/;"	F
+getSelectCount	jscrawl.html	/^  getSelectCount() {$/;"	M
+getSelectCountByIndex	jscrawl.html	/^  getSelectCountByIndex(index) {$/;"	F
+getSelectCountByIndex	jscrawl.html	/^  getSelectCountByIndex(index) {$/;"	M
+getSelectExecute	jscrawl.html	/^  getSelectExecute() {$/;"	F
+getSelectExecute	jscrawl.html	/^  getSelectExecute() {$/;"	M
+getSelectMeta	jscrawl.html	/^  getSelectMeta(key) {$/;"	F
+getSelectMeta	jscrawl.html	/^  getSelectMeta(key) {$/;"	M
+getSelectedIndex	jscrawl.html	/^  getSelectedIndex() {$/;"	F
+getSelectedIndex	jscrawl.html	/^  getSelectedIndex() {$/;"	M
+getSelectedIndexes	jscrawl.html	/^  getSelectedIndexes() {$/;"	F
+getSelectedIndexes	jscrawl.html	/^  getSelectedIndexes() {$/;"	M
+getSelectedKeys	jscrawl.html	/^  getSelectedKeys() {$/;"	F
+getSelectedKeys	jscrawl.html	/^  getSelectedKeys() {$/;"	M
+getSelectedSubject	jscrawl.html	/^  getSelectedSubject() {$/;"	F
+getSelectedSubject	jscrawl.html	/^  getSelectedSubject() {$/;"	M
+getSelectedSubjects	jscrawl.html	/^  getSelectedSubjects() {$/;"	F
+getSelectedSubjects	jscrawl.html	/^  getSelectedSubjects() {$/;"	M
+getSelectedSubjectsAndCounts	jscrawl.html	/^  getSelectedSubjectsAndCounts() {$/;"	F
+getSelectedSubjectsAndCounts	jscrawl.html	/^  getSelectedSubjectsAndCounts() {$/;"	M
+getSkill	jscrawl.html	/^  getSkill(actor, key, boost) {$/;"	F
+getSkill	jscrawl.html	/^  getSkill(actor, key, boost) {$/;"	M
+getSkill	jscrawl.html	/^  getSkill(actor, skillName, boost = 0) {$/;"	F
+getSkill	jscrawl.html	/^  getSkill(actor, skillName, boost = 0) {$/;"	M
+getSmellFromCell	jscrawl.html	/^  getSmellFromCell(name, cell) {$/;"	F
+getSmellFromCell	jscrawl.html	/^  getSmellFromCell(name, cell) {$/;"	M
+getSounds	jscrawl.html	/^  getSounds() {$/;"	F
+getSounds	jscrawl.html	/^  getSounds() {$/;"	M
+getStatusChanged	jscrawl.html	/^  getStatusChanged() {$/;"	F
+getStatusChanged	jscrawl.html	/^  getStatusChanged() {$/;"	M
+getStatusList	jscrawl.html	/^  getStatusList() {$/;"	F
+getStatusList	jscrawl.html	/^  getStatusList() {$/;"	M
+getStatusListAwakened	jscrawl.html	/^  getStatusListAwakened(list, player) {$/;"	F
+getStatusListAwakened	jscrawl.html	/^  getStatusListAwakened(list, player) {$/;"	M
+getStatusListChannels	jscrawl.html	/^  getStatusListChannels(list, player) {$/;"	F
+getStatusListChannels	jscrawl.html	/^  getStatusListChannels(list, player) {$/;"	M
+getStatusListExperienceCompass	jscrawl.html	/^  getStatusListExperienceCompass(list, player, potion) {$/;"	F
+getStatusListExperienceCompass	jscrawl.html	/^  getStatusListExperienceCompass(list, player, potion) {$/;"	M
+getStatusListFocus	jscrawl.html	/^  getStatusListFocus(list, player) {$/;"	F
+getStatusListFocus	jscrawl.html	/^  getStatusListFocus(list, player) {$/;"	M
+getStatusListPoolsCompact	jscrawl.html	/^  getStatusListPoolsCompact(list, player) {$/;"	F
+getStatusListPoolsCompact	jscrawl.html	/^  getStatusListPoolsCompact(list, player) {$/;"	M
+getStatusListPoolsExpanded	jscrawl.html	/^  getStatusListPoolsExpanded(list, player) {$/;"	F
+getStatusListPoolsExpanded	jscrawl.html	/^  getStatusListPoolsExpanded(list, player) {$/;"	M
+getStatusListSounds	jscrawl.html	/^  getStatusListSounds(list, player) {$/;"	F
+getStatusListSounds	jscrawl.html	/^  getStatusListSounds(list, player) {$/;"	M
+getStatusMode	jscrawl.html	/^  getStatusMode() {$/;"	F
+getStatusMode	jscrawl.html	/^  getStatusMode() {$/;"	M
+getTarget	jscrawl.html	/^  getTarget() {$/;"	F
+getTarget	jscrawl.html	/^  getTarget() {$/;"	M
+getVisionRadius	jscrawl.html	/^  getVisionRadius(actor) {$/;"	F
+getVisionRadius	jscrawl.html	/^  getVisionRadius(actor) {$/;"	M
+getWindowPixelRect	jscrawl.html	/^  getWindowPixelRect(screen, window) {$/;"	F
+getWindowPixelRect	jscrawl.html	/^  getWindowPixelRect(screen, window) {$/;"	M
+gloves	jscrawl.html	/^        gloves: null,$/;"	P
+glow	jscrawl.html	/^            glow: 2,$/;"	P
+glow	jscrawl.html	/^            glow: 3,$/;"	P
+glowGrid	jscrawl.html	/^    glowGrid: [],$/;"	P
+gold	jscrawl.html	/^              gold: 20,$/;"	P
+gold	jscrawl.html	/^          gold: { $/;"	P
+gold	jscrawl.html	/^      gold: 0,$/;"	P
+gold	jscrawl.html	/^      gold: {$/;"	P
+gold	jscrawl.html	/^  gold:  { $/;"	P
+gold	jscrawl.html	/^  gold: { $/;"	P
+goldEgg	jscrawl.html	/^          goldEgg: { $/;"	P
+gradient	jscrawl.html	/^let gradient = {}$/;"	O
+grapes	jscrawl.html	/^          grapes: { $/;"	P
+gray	jscrawl.html	/^  gray:    { bgStyle: '#808080', style: '#FFF' },$/;"	P
+gray	jscrawl.html	/^  gray: { $/;"	P
+green	jscrawl.html	/^              green: 10,$/;"	P
+green	jscrawl.html	/^              green: 15,$/;"	P
+green	jscrawl.html	/^              green: 3,$/;"	P
+green	jscrawl.html	/^              green: 5,$/;"	P
+green	jscrawl.html	/^  green:      { bgStyle: '#7FFF00', style: '#000' },$/;"	P
+green	jscrawl.html	/^  green: { $/;"	P
+growth	jscrawl.html	/^      growth: {$/;"	P
+growthKey	jscrawl.html	/^    growthKey,$/;"	V
+growthPerLevel	jscrawl.html	/^    growthPerLevel$/;"	V
+growthSelectCount	jscrawl.html	/^        const [growthSelectCount] = $/;"	V
+growthSelectCount	jscrawl.html	/^    const [growthSelectCount, _] = $/;"	V
+growthSelection	jscrawl.html	/^      growthSelection: { },$/;"	P
+growthSelection	jscrawl.html	/^    growthSelection,$/;"	V
+ham	jscrawl.html	/^          ham: { $/;"	P
+hand	jscrawl.html	/^        hand: [],$/;"	P
+handAxe	jscrawl.html	/^              handAxe: {$/;"	P
+handleCreateTarget	jscrawl.html	/^  handleCreateTarget(target, template) {$/;"	F
+handleCreateTarget	jscrawl.html	/^  handleCreateTarget(target, template) {$/;"	M
+handleKeyDown	jscrawl.html	/^  handleKeyDown(event) {$/;"	F
+handleKeyDown	jscrawl.html	/^  handleKeyDown(event) {$/;"	M
+handleKeyUp	jscrawl.html	/^  handleKeyUp(event) {$/;"	F
+handleKeyUp	jscrawl.html	/^  handleKeyUp(event) {$/;"	M
+hands	jscrawl.html	/^                hands: 2,$/;"	P
+hands	jscrawl.html	/^        hands: 1,$/;"	P
+hands	jscrawl.html	/^    hands: 2,$/;"	P
+handsUsed	jscrawl.html	/^  handsUsed() {$/;"	F
+handsUsed	jscrawl.html	/^  handsUsed() {$/;"	M
+health	jscrawl.html	/^            health: 10,$/;"	P
+health	jscrawl.html	/^            health: 2,  $/;"	P
+heard	jscrawl.html	/^      const heard = []$/;"	A
+hearing	jscrawl.html	/^        hearing: [],$/;"	P
+hearing	jscrawl.html	/^      hearing: 10,$/;"	P
+hearing	jscrawl.html	/^  hearing: { key: 'h', },$/;"	P
+heavyStyle	jscrawl.html	/^    const heavyStyle = "#0000C0"$/;"	V
+height	jscrawl.html	/^  height: 572,$/;"	P
+helpMode	jscrawl.html	/^    helpMode: [ '?' ],$/;"	P
+hitChance	jscrawl.html	/^                hitChance: 0,$/;"	P
+human	jscrawl.html	/^  human: {$/;"	P
+i	jscrawl.html	/^    let i = 0$/;"	V
+if	jscrawl.html	/^            if(!innerList) {$/;"	F
+if	jscrawl.html	/^            if(!innerList) {$/;"	M
+if	jscrawl.html	/^            if(!subjects.includes(channelIndex)) {$/;"	F
+if	jscrawl.html	/^            if(!subjects.includes(channelIndex)) {$/;"	M
+if	jscrawl.html	/^            if(fromMap[b.x][b.y] > wallThreshold) {$/;"	F
+if	jscrawl.html	/^            if(fromMap[b.x][b.y] > wallThreshold) {$/;"	M
+if	jscrawl.html	/^          if(amount) {$/;"	F
+if	jscrawl.html	/^          if(amount) {$/;"	M
+if	jscrawl.html	/^          if(blocked) break$/;"	F
+if	jscrawl.html	/^          if(col == maxColumns) {$/;"	F
+if	jscrawl.html	/^          if(col == maxColumns) {$/;"	M
+if	jscrawl.html	/^          if(complexLength(fits) == 0 $/;"	F
+if	jscrawl.html	/^          if(count == null) {$/;"	F
+if	jscrawl.html	/^          if(count == null) {$/;"	M
+if	jscrawl.html	/^          if(distance < glow) {$/;"	F
+if	jscrawl.html	/^          if(distance < glow) {$/;"	M
+if	jscrawl.html	/^          if(fits.length == 0 || remaining.length == 0) break$/;"	F
+if	jscrawl.html	/^          if(subject.size > size.medium) {$/;"	F
+if	jscrawl.html	/^          if(subject.size > size.medium) {$/;"	M
+if	jscrawl.html	/^          if(value[j]) {$/;"	F
+if	jscrawl.html	/^          if(value[j]) {$/;"	M
+if	jscrawl.html	/^          if(wallStrength <= wallThreshold) {$/;"	F
+if	jscrawl.html	/^          if(wallStrength <= wallThreshold) {$/;"	M
+if	jscrawl.html	/^          if(weakestWall == null || wallStrength < weakestWall) {$/;"	F
+if	jscrawl.html	/^          if(weakestWall == null || wallStrength < weakestWall) {$/;"	M
+if	jscrawl.html	/^        if(!itemBase[itemKey].name) {$/;"	F
+if	jscrawl.html	/^        if(!itemBase[itemKey].name) {$/;"	M
+if	jscrawl.html	/^        if(!levelPos.equals(player.pos)) {$/;"	F
+if	jscrawl.html	/^        if(!levelPos.equals(player.pos)) {$/;"	M
+if	jscrawl.html	/^        if(!pos.equals(edge)) {$/;"	F
+if	jscrawl.html	/^        if(!pos.equals(edge)) {$/;"	M
+if	jscrawl.html	/^        if(!subjects.includes(channelIndex)) {$/;"	F
+if	jscrawl.html	/^        if(!subjects.includes(channelIndex)) {$/;"	M
+if	jscrawl.html	/^        if(!this.unequipUntilHandsFree(item.hands)) {$/;"	F
+if	jscrawl.html	/^        if(!this.unequipUntilHandsFree(item.hands)) {$/;"	M
+if	jscrawl.html	/^        if($/;"	F
+if	jscrawl.html	/^        if(amount > 0) {$/;"	F
+if	jscrawl.html	/^        if(amount > 0) {$/;"	M
+if	jscrawl.html	/^        if(blocked) break$/;"	F
+if	jscrawl.html	/^        if(c == this.x && r == this.y) continue$/;"	F
+if	jscrawl.html	/^        if(cPool == aPool) {$/;"	F
+if	jscrawl.html	/^        if(cPool == aPool) {$/;"	M
+if	jscrawl.html	/^        if(cell.occupiedBy == null) {$/;"	F
+if	jscrawl.html	/^        if(cell.occupiedBy == null) {$/;"	M
+if	jscrawl.html	/^        if(cell.occupiedBy) {$/;"	F
+if	jscrawl.html	/^        if(cell.occupiedBy) {$/;"	M
+if	jscrawl.html	/^        if(distance > visionRadius * 2) {$/;"	F
+if	jscrawl.html	/^        if(distance > visionRadius * 2) {$/;"	M
+if	jscrawl.html	/^        if(fc.motionModeAttack()) {$/;"	F
+if	jscrawl.html	/^        if(fc.motionModeAttack()) {$/;"	M
+if	jscrawl.html	/^        if(found > -1) {$/;"	F
+if	jscrawl.html	/^        if(found > -1) {$/;"	M
+if	jscrawl.html	/^        if(fromY < fromHeight - 1) {$/;"	F
+if	jscrawl.html	/^        if(fromY < fromHeight - 1) {$/;"	M
+if	jscrawl.html	/^        if(horizontal) {$/;"	F
+if	jscrawl.html	/^        if(horizontal) {$/;"	M
+if	jscrawl.html	/^        if(itemsEqual(floorItem, subject)) {$/;"	F
+if	jscrawl.html	/^        if(itemsEqual(floorItem, subject)) {$/;"	M
+if	jscrawl.html	/^        if(itemsEqual(invItem, item)) {$/;"	F
+if	jscrawl.html	/^        if(itemsEqual(invItem, item)) {$/;"	M
+if	jscrawl.html	/^        if(line.length > 2) {$/;"	F
+if	jscrawl.html	/^        if(line.length > 2) {$/;"	M
+if	jscrawl.html	/^        if(multi) return 'Choose items:'$/;"	F
+if	jscrawl.html	/^        if(multi) return 'Choose pool types:'$/;"	F
+if	jscrawl.html	/^        if(multi) return 'Choose pools:'$/;"	F
+if	jscrawl.html	/^        if(multi) return 'Choose skills:'$/;"	F
+if	jscrawl.html	/^        if(multi) return 'Choose some equipped items:'$/;"	F
+if	jscrawl.html	/^        if(multi) {$/;"	F
+if	jscrawl.html	/^        if(multi) {$/;"	M
+if	jscrawl.html	/^        if(noItemsFound) {$/;"	F
+if	jscrawl.html	/^        if(noItemsFound) {$/;"	M
+if	jscrawl.html	/^        if(player.equip[slot].length - player.species.hands < 1) {$/;"	F
+if	jscrawl.html	/^        if(player.equip[slot].length - player.species.hands < 1) {$/;"	M
+if	jscrawl.html	/^        if(remembered && remembered.size == subject.size) {$/;"	F
+if	jscrawl.html	/^        if(remembered && remembered.size == subject.size) {$/;"	M
+if	jscrawl.html	/^        if(remembered) {$/;"	F
+if	jscrawl.html	/^        if(remembered) {$/;"	M
+if	jscrawl.html	/^        if(result) {$/;"	F
+if	jscrawl.html	/^        if(result) {$/;"	M
+if	jscrawl.html	/^        if(selected) {$/;"	F
+if	jscrawl.html	/^        if(selected) {$/;"	M
+if	jscrawl.html	/^        if(selectedCount == null) selectedCount = 0$/;"	F
+if	jscrawl.html	/^        if(subject.size == null) {$/;"	F
+if	jscrawl.html	/^        if(subject.size == null) {$/;"	M
+if	jscrawl.html	/^        if(value > wallThreshold && surroundingWalls < requireSurroundingWalls) {$/;"	F
+if	jscrawl.html	/^        if(value > wallThreshold && surroundingWalls < requireSurroundingWalls) {$/;"	M
+if	jscrawl.html	/^        if(value) growth[key]++$/;"	F
+if	jscrawl.html	/^        if(value) {$/;"	F
+if	jscrawl.html	/^        if(value) {$/;"	M
+if	jscrawl.html	/^        if(volume > threshold && volume > backgroundNoise) {$/;"	F
+if	jscrawl.html	/^        if(volume > threshold && volume > backgroundNoise) {$/;"	M
+if	jscrawl.html	/^        if(x+1 < toWidth && toMap[x+1][y] != null) {$/;"	F
+if	jscrawl.html	/^        if(x+1 < toWidth && toMap[x+1][y] != null) {$/;"	M
+if	jscrawl.html	/^        if(x-1 > 0 && toMap[x-1][y] != null) {$/;"	F
+if	jscrawl.html	/^        if(x-1 > 0 && toMap[x-1][y] != null) {$/;"	M
+if	jscrawl.html	/^        if(y+1 < toHeight && toMap[x][y+1] != null) {$/;"	F
+if	jscrawl.html	/^        if(y+1 < toHeight && toMap[x][y+1] != null) {$/;"	M
+if	jscrawl.html	/^        if(y-1 > 0 && toMap[x][y-1] != null) {$/;"	F
+if	jscrawl.html	/^        if(y-1 > 0 && toMap[x][y-1] != null) {$/;"	M
+if	jscrawl.html	/^      if(!bc.isEquipped(item)) {$/;"	F
+if	jscrawl.html	/^      if(!bc.isEquipped(item)) {$/;"	M
+if	jscrawl.html	/^      if(!bc.isFieldPosValid(playerNewPos)) {$/;"	F
+if	jscrawl.html	/^      if(!bc.isFieldPosValid(playerNewPos)) {$/;"	M
+if	jscrawl.html	/^      if(!bc.isFieldPosValid(targetNewPos)) {$/;"	F
+if	jscrawl.html	/^      if(!bc.isFieldPosValid(targetNewPos)) {$/;"	M
+if	jscrawl.html	/^      if(!blocked) {$/;"	F
+if	jscrawl.html	/^      if(!blocked) {$/;"	M
+if	jscrawl.html	/^      if(!fc.motionModeMove()) {$/;"	F
+if	jscrawl.html	/^      if(!fc.motionModeMove()) {$/;"	M
+if	jscrawl.html	/^      if(!found) {$/;"	F
+if	jscrawl.html	/^      if(!found) {$/;"	M
+if	jscrawl.html	/^      if(!key) {$/;"	F
+if	jscrawl.html	/^      if(!key) {$/;"	M
+if	jscrawl.html	/^      if(!maxChannelSize) {$/;"	F
+if	jscrawl.html	/^      if(!maxChannelSize) {$/;"	M
+if	jscrawl.html	/^      if(!maxPoolSize) {$/;"	F
+if	jscrawl.html	/^      if(!maxPoolSize) {$/;"	M
+if	jscrawl.html	/^      if(!poolsInPoolType) {$/;"	F
+if	jscrawl.html	/^      if(!poolsInPoolType) {$/;"	M
+if	jscrawl.html	/^      if(!success) break$/;"	F
+if	jscrawl.html	/^      if(!unequipItem(hand[hand.length-1])) {$/;"	F
+if	jscrawl.html	/^      if(!unequipItem(hand[hand.length-1])) {$/;"	M
+if	jscrawl.html	/^      if($/;"	F
+if	jscrawl.html	/^      if(bc.isEquipped(item)) {$/;"	F
+if	jscrawl.html	/^      if(bc.isEquipped(item)) {$/;"	M
+if	jscrawl.html	/^      if(bc.isFieldPosOccupied(playerNewPos)) {$/;"	F
+if	jscrawl.html	/^      if(bc.isFieldPosOccupied(playerNewPos)) {$/;"	M
+if	jscrawl.html	/^      if(bgStyle) {$/;"	F
+if	jscrawl.html	/^      if(bgStyle) {$/;"	M
+if	jscrawl.html	/^      if(bm.experiencePotionInLevel.base === subject.base$/;"	F
+if	jscrawl.html	/^      if(c == 0 || r == 0 || c == size.x + 1 || r == size.y + 1) {$/;"	F
+if	jscrawl.html	/^      if(c == 0 || r == 0 || c == size.x + 1 || r == size.y + 1) {$/;"	M
+if	jscrawl.html	/^      if(c == 0 || r == 0 || c == size.x - 1 || r == size.y - 1) {$/;"	F
+if	jscrawl.html	/^      if(c == 0 || r == 0 || c == size.x - 1 || r == size.y - 1) {$/;"	M
+if	jscrawl.html	/^      if(c) {$/;"	F
+if	jscrawl.html	/^      if(c) {$/;"	M
+if	jscrawl.html	/^      if(cell.occupiedBy == null && cell.onFloor.length == 0) {$/;"	F
+if	jscrawl.html	/^      if(cell.occupiedBy == null && cell.onFloor.length == 0) {$/;"	M
+if	jscrawl.html	/^      if(cell.occupiedBy == null) {$/;"	F
+if	jscrawl.html	/^      if(cell.occupiedBy == null) {$/;"	M
+if	jscrawl.html	/^      if(cell.occupiedBy == player) {$/;"	F
+if	jscrawl.html	/^      if(cell.occupiedBy == player) {$/;"	M
+if	jscrawl.html	/^      if(cell.occupiedBy) {$/;"	F
+if	jscrawl.html	/^      if(cell.occupiedBy) {$/;"	M
+if	jscrawl.html	/^      if(change >= 0) {$/;"	F
+if	jscrawl.html	/^      if(change >= 0) {$/;"	M
+if	jscrawl.html	/^      if(channel.from.length > 1) {$/;"	F
+if	jscrawl.html	/^      if(channel.from.length > 1) {$/;"	M
+if	jscrawl.html	/^      if(channel.to.length > 1) {$/;"	F
+if	jscrawl.html	/^      if(channel.to.length > 1) {$/;"	M
+if	jscrawl.html	/^      if(channel.to[0].type == poolTypes.interna) {$/;"	F
+if	jscrawl.html	/^      if(channel.to[0].type == poolTypes.interna) {$/;"	M
+if	jscrawl.html	/^      if(classifiedSpaces[x][y] == false && !level[x][y].occupiedBy) {$/;"	F
+if	jscrawl.html	/^      if(classifiedSpaces[x][y] == false && !level[x][y].occupiedBy) {$/;"	M
+if	jscrawl.html	/^      if(complexLength(list.slice(0, i)) <= pos) {$/;"	F
+if	jscrawl.html	/^      if(complexLength(list.slice(0, i)) <= pos) {$/;"	M
+if	jscrawl.html	/^      if(count == null) count = itemOnFloor.count$/;"	F
+if	jscrawl.html	/^      if(count > itemOnFloor.count) count = itemOnFloor.count$/;"	F
+if	jscrawl.html	/^      if(count) {$/;"	F
+if	jscrawl.html	/^      if(count) {$/;"	M
+if	jscrawl.html	/^      if(damage > 0) {$/;"	F
+if	jscrawl.html	/^      if(damage > 0) {$/;"	M
+if	jscrawl.html	/^      if(distance > levelSize.x \/ 4) {$/;"	F
+if	jscrawl.html	/^      if(distance > levelSize.x \/ 4) {$/;"	M
+if	jscrawl.html	/^      if(dx > 0) {$/;"	F
+if	jscrawl.html	/^      if(dx > 0) {$/;"	M
+if	jscrawl.html	/^      if(dy > 0) {$/;"	F
+if	jscrawl.html	/^      if(dy > 0) {$/;"	M
+if	jscrawl.html	/^      if(effectiveRow > maxMessageRow) {$/;"	F
+if	jscrawl.html	/^      if(effectiveRow > maxMessageRow) {$/;"	M
+if	jscrawl.html	/^      if(effectiveRow > maxRow) {$/;"	F
+if	jscrawl.html	/^      if(effectiveRow > maxRow) {$/;"	M
+if	jscrawl.html	/^      if(fc.isIndexSelected(i)) {$/;"	F
+if	jscrawl.html	/^      if(fc.isIndexSelected(i)) {$/;"	M
+if	jscrawl.html	/^      if(flow) {$/;"	F
+if	jscrawl.html	/^      if(flow) {$/;"	M
+if	jscrawl.html	/^      if(fm.selectCount) {$/;"	F
+if	jscrawl.html	/^      if(fm.selectCount) {$/;"	M
+if	jscrawl.html	/^      if(fm.selectKeys.length > 0) {$/;"	F
+if	jscrawl.html	/^      if(fm.selectKeys.length > 0) {$/;"	M
+if	jscrawl.html	/^      if(fm.selectMultiple) {$/;"	F
+if	jscrawl.html	/^      if(fm.selectMultiple) {$/;"	M
+if	jscrawl.html	/^      if(focus.objectClass == 'pool') {$/;"	F
+if	jscrawl.html	/^      if(focus.objectClass == 'pool') {$/;"	M
+if	jscrawl.html	/^      if(found) {$/;"	F
+if	jscrawl.html	/^      if(found) {$/;"	M
+if	jscrawl.html	/^      if(fullDelta.x == 0 || fullDelta.y == 0) {$/;"	F
+if	jscrawl.html	/^      if(fullDelta.x == 0 || fullDelta.y == 0) {$/;"	M
+if	jscrawl.html	/^      if(group.length > 0) {$/;"	F
+if	jscrawl.html	/^      if(group.length > 0) {$/;"	M
+if	jscrawl.html	/^      if(group[i] == item) {$/;"	F
+if	jscrawl.html	/^      if(group[i] == item) {$/;"	M
+if	jscrawl.html	/^      if(group[index] == item) {$/;"	F
+if	jscrawl.html	/^      if(group[index] == item) {$/;"	M
+if	jscrawl.html	/^      if(hand.length < 1) {$/;"	F
+if	jscrawl.html	/^      if(hand.length < 1) {$/;"	M
+if	jscrawl.html	/^      if(heard.length) {$/;"	F
+if	jscrawl.html	/^      if(heard.length) {$/;"	M
+if	jscrawl.html	/^      if(i == index) {$/;"	F
+if	jscrawl.html	/^      if(i == index) {$/;"	M
+if	jscrawl.html	/^      if(i > 6) {$/;"	F
+if	jscrawl.html	/^      if(i > 6) {$/;"	M
+if	jscrawl.html	/^      if(item) {$/;"	F
+if	jscrawl.html	/^      if(item) {$/;"	M
+if	jscrawl.html	/^      if(item.base.name == 'experience') {$/;"	F
+if	jscrawl.html	/^      if(item.base.name == 'experience') {$/;"	M
+if	jscrawl.html	/^      if(itemBase[itemKey].sub) {$/;"	F
+if	jscrawl.html	/^      if(itemBase[itemKey].sub) {$/;"	M
+if	jscrawl.html	/^      if(itemOnFloor.count == count) {$/;"	F
+if	jscrawl.html	/^      if(itemOnFloor.count == count) {$/;"	M
+if	jscrawl.html	/^      if(items.length == 0) {$/;"	F
+if	jscrawl.html	/^      if(items.length == 0) {$/;"	M
+if	jscrawl.html	/^      if(iterationsLeft > 0) {$/;"	F
+if	jscrawl.html	/^      if(iterationsLeft > 0) {$/;"	M
+if	jscrawl.html	/^      if(key == 'default') continue$/;"	F
+if	jscrawl.html	/^      if(key == 'hand' || key == 'ring') {$/;"	F
+if	jscrawl.html	/^      if(key == 'hand' || key == 'ring') {$/;"	M
+if	jscrawl.html	/^      if(keyMap[km][command].some(x => event.key == x)) {$/;"	F
+if	jscrawl.html	/^      if(keyMap[km][command].some(x => event.key == x)) {$/;"	M
+if	jscrawl.html	/^      if(map[c][r] > wallThreshold) {$/;"	F
+if	jscrawl.html	/^      if(map[c][r] > wallThreshold) {$/;"	M
+if	jscrawl.html	/^      if(maxCount > 1) {$/;"	F
+if	jscrawl.html	/^      if(maxCount > 1) {$/;"	M
+if	jscrawl.html	/^      if(message == null) {$/;"	F
+if	jscrawl.html	/^      if(message == null) {$/;"	M
+if	jscrawl.html	/^      if(multipleColumnBlocks) {$/;"	F
+if	jscrawl.html	/^      if(multipleColumnBlocks) {$/;"	M
+if	jscrawl.html	/^      if(newVolume >= 1) {$/;"	F
+if	jscrawl.html	/^      if(newVolume >= 1) {$/;"	M
+if	jscrawl.html	/^      if(newX > size.x \/ 2) {$/;"	F
+if	jscrawl.html	/^      if(newX > size.x \/ 2) {$/;"	M
+if	jscrawl.html	/^      if(newY > size.y \/ 2) {$/;"	F
+if	jscrawl.html	/^      if(newY > size.y \/ 2) {$/;"	M
+if	jscrawl.html	/^      if(offset < 0) offset = code - 65 + 26$/;"	F
+if	jscrawl.html	/^      if(p.offset) {$/;"	F
+if	jscrawl.html	/^      if(p.offset) {$/;"	M
+if	jscrawl.html	/^      if(p.textToDrawList.length > 1) {$/;"	F
+if	jscrawl.html	/^      if(p.textToDrawList.length > 1) {$/;"	M
+if	jscrawl.html	/^      if(player.medDepth == 0) {$/;"	F
+if	jscrawl.html	/^      if(player.medDepth == 0) {$/;"	M
+if	jscrawl.html	/^      if(player.medDepth) {$/;"	F
+if	jscrawl.html	/^      if(player.medDepth) {$/;"	M
+if	jscrawl.html	/^      if(pool.type == poolTypes.interna) {$/;"	F
+if	jscrawl.html	/^      if(pool.type == poolTypes.interna) {$/;"	M
+if	jscrawl.html	/^      if(poolIndex == -1) {$/;"	F
+if	jscrawl.html	/^      if(poolIndex == -1) {$/;"	M
+if	jscrawl.html	/^      if(poolTypeToFill && pool.type == poolTypeToFill) {$/;"	F
+if	jscrawl.html	/^      if(poolTypeToFill && pool.type == poolTypeToFill) {$/;"	M
+if	jscrawl.html	/^      if(random(1000) < sound.chance * 1000) {$/;"	F
+if	jscrawl.html	/^      if(random(1000) < sound.chance * 1000) {$/;"	M
+if	jscrawl.html	/^      if(remaining != 0) {$/;"	F
+if	jscrawl.html	/^      if(remaining != 0) {$/;"	M
+if	jscrawl.html	/^      if(remainingWeight < 0) {$/;"	F
+if	jscrawl.html	/^      if(remainingWeight < 0) {$/;"	M
+if	jscrawl.html	/^      if(row > header - 1) {$/;"	F
+if	jscrawl.html	/^      if(row > header - 1) {$/;"	M
+if	jscrawl.html	/^      if(selectAction) {$/;"	F
+if	jscrawl.html	/^      if(selectAction) {$/;"	M
+if	jscrawl.html	/^      if(selectFlagsList[i]) {$/;"	F
+if	jscrawl.html	/^      if(selectFlagsList[i]) {$/;"	M
+if	jscrawl.html	/^      if(selectedSubject) {$/;"	F
+if	jscrawl.html	/^      if(selectedSubject) {$/;"	M
+if	jscrawl.html	/^      if(selected[key]) {$/;"	F
+if	jscrawl.html	/^      if(selected[key]) {$/;"	M
+if	jscrawl.html	/^      if(smell.name === name) {$/;"	F
+if	jscrawl.html	/^      if(smell.name === name) {$/;"	M
+if	jscrawl.html	/^      if(string[i] == ' ') {$/;"	F
+if	jscrawl.html	/^      if(string[i] == ' ') {$/;"	M
+if	jscrawl.html	/^      if(style != this.previousFillStyle) {$/;"	F
+if	jscrawl.html	/^      if(style != this.previousFillStyle) {$/;"	M
+if	jscrawl.html	/^      if(subject) {$/;"	F
+if	jscrawl.html	/^      if(subject) {$/;"	M
+if	jscrawl.html	/^      if(target == player) {$/;"	F
+if	jscrawl.html	/^      if(target == player) {$/;"	M
+if	jscrawl.html	/^      if(targetPos) {$/;"	F
+if	jscrawl.html	/^      if(targetPos) {$/;"	M
+if	jscrawl.html	/^      if(testWindow == window) {$/;"	F
+if	jscrawl.html	/^      if(testWindow == window) {$/;"	M
+if	jscrawl.html	/^      if(this.cellBlocksLight($/;"	F
+if	jscrawl.html	/^      if(this.previousFontStyle != p.fontStyle) {$/;"	F
+if	jscrawl.html	/^      if(this.previousFontStyle != p.fontStyle) {$/;"	M
+if	jscrawl.html	/^      if(this.slope != line.slope) {$/;"	F
+if	jscrawl.html	/^      if(this.slope != line.slope) {$/;"	M
+if	jscrawl.html	/^      if(this.windowPosIsValid(window, cellPos)) {$/;"	F
+if	jscrawl.html	/^      if(this.windowPosIsValid(window, cellPos)) {$/;"	M
+if	jscrawl.html	/^      if(toMap[x][y] == null) {$/;"	F
+if	jscrawl.html	/^      if(toMap[x][y] == null) {$/;"	M
+if	jscrawl.html	/^      if(type == 'hand' || type == 'ring') {$/;"	F
+if	jscrawl.html	/^      if(type == 'hand' || type == 'ring') {$/;"	M
+if	jscrawl.html	/^      if(typeof name == 'string') {$/;"	F
+if	jscrawl.html	/^      if(typeof name == 'string') {$/;"	M
+if	jscrawl.html	/^      if(typeof value == 'boolean') {$/;"	F
+if	jscrawl.html	/^      if(typeof value == 'boolean') {$/;"	M
+if	jscrawl.html	/^      if(value) selected++$/;"	F
+if	jscrawl.html	/^      if(visibility < 1) {$/;"	F
+if	jscrawl.html	/^      if(visibility < 1) {$/;"	M
+if	jscrawl.html	/^      if(visibility >= 2) {$/;"	F
+if	jscrawl.html	/^      if(visibility >= 2) {$/;"	M
+if	jscrawl.html	/^      if(weight == null) {$/;"	F
+if	jscrawl.html	/^      if(weight == null) {$/;"	M
+if	jscrawl.html	/^    if(!bc.getCreatorMode() && selected < total) {$/;"	F
+if	jscrawl.html	/^    if(!bc.getCreatorMode() && selected < total) {$/;"	M
+if	jscrawl.html	/^    if(!bc.getCreatorMode()) {$/;"	F
+if	jscrawl.html	/^    if(!bc.getCreatorMode()) {$/;"	M
+if	jscrawl.html	/^    if(!classified && !occupied) {$/;"	F
+if	jscrawl.html	/^    if(!classified && !occupied) {$/;"	M
+if	jscrawl.html	/^    if(!count) {$/;"	F
+if	jscrawl.html	/^    if(!count) {$/;"	M
+if	jscrawl.html	/^    if(!found) {$/;"	F
+if	jscrawl.html	/^    if(!found) {$/;"	M
+if	jscrawl.html	/^    if(!iterations) {$/;"	F
+if	jscrawl.html	/^    if(!iterations) {$/;"	M
+if	jscrawl.html	/^    if(!multiColumn) {$/;"	F
+if	jscrawl.html	/^    if(!multiColumn) {$/;"	M
+if	jscrawl.html	/^    if(!newItem) {$/;"	F
+if	jscrawl.html	/^    if(!newItem) {$/;"	M
+if	jscrawl.html	/^    if(!pair) return this$/;"	F
+if	jscrawl.html	/^    if(!pos) {$/;"	F
+if	jscrawl.html	/^    if(!pos) {$/;"	M
+if	jscrawl.html	/^    if(!radius) {$/;"	F
+if	jscrawl.html	/^    if(!radius) {$/;"	M
+if	jscrawl.html	/^    if(!slot) {$/;"	F
+if	jscrawl.html	/^    if(!slot) {$/;"	M
+if	jscrawl.html	/^    if(!smell) {$/;"	F
+if	jscrawl.html	/^    if(!smell) {$/;"	M
+if	jscrawl.html	/^    if(!target) {$/;"	F
+if	jscrawl.html	/^    if(!target) {$/;"	M
+if	jscrawl.html	/^    if(!template.sub) {$/;"	F
+if	jscrawl.html	/^    if(!template.sub) {$/;"	M
+if	jscrawl.html	/^    if(!this.frontController.getTarget().pos) {$/;"	F
+if	jscrawl.html	/^    if(!this.frontController.getTarget().pos) {$/;"	M
+if	jscrawl.html	/^    if(!wpos.equals(actor.pos)) {$/;"	F
+if	jscrawl.html	/^    if(!wpos.equals(actor.pos)) {$/;"	M
+if	jscrawl.html	/^    if($/;"	F
+if	jscrawl.html	/^    if(Math.abs(fullDelta.x) < Math.abs(fullDelta.y)) {$/;"	F
+if	jscrawl.html	/^    if(Math.abs(fullDelta.x) < Math.abs(fullDelta.y)) {$/;"	M
+if	jscrawl.html	/^    if(Math.abs(target.x - this.x) > size.x \/ 2) {$/;"	F
+if	jscrawl.html	/^    if(Math.abs(target.x - this.x) > size.x \/ 2) {$/;"	M
+if	jscrawl.html	/^    if(Math.abs(target.y - this.y) > size.y \/ 2) {$/;"	F
+if	jscrawl.html	/^    if(Math.abs(target.y - this.y) > size.y \/ 2) {$/;"	M
+if	jscrawl.html	/^    if(actionMode == 'attackOrMove') {$/;"	F
+if	jscrawl.html	/^    if(actionMode == 'attackOrMove') {$/;"	M
+if	jscrawl.html	/^    if(actor.focus === senses.hearing) {$/;"	F
+if	jscrawl.html	/^    if(actor.focus === senses.hearing) {$/;"	M
+if	jscrawl.html	/^    if(actor.focus === senses.vision) {$/;"	F
+if	jscrawl.html	/^    if(actor.focus === senses.vision) {$/;"	M
+if	jscrawl.html	/^    if(actor.focus) {$/;"	F
+if	jscrawl.html	/^    if(actor.focus) {$/;"	M
+if	jscrawl.html	/^    if(actor.growth) {$/;"	F
+if	jscrawl.html	/^    if(actor.growth) {$/;"	M
+if	jscrawl.html	/^    if(actor.poolCurrent[poolIndex] < maxValue) {$/;"	F
+if	jscrawl.html	/^    if(actor.poolCurrent[poolIndex] < maxValue) {$/;"	M
+if	jscrawl.html	/^    if(actor.pos.equals(wrappedPos)) {$/;"	F
+if	jscrawl.html	/^    if(actor.pos.equals(wrappedPos)) {$/;"	M
+if	jscrawl.html	/^    if(article === null) {$/;"	F
+if	jscrawl.html	/^    if(article === null) {$/;"	M
+if	jscrawl.html	/^    if(attacker.attack != null) {$/;"	F
+if	jscrawl.html	/^    if(attacker.attack != null) {$/;"	M
+if	jscrawl.html	/^    if(baselinePos.x < window.size.x) {$/;"	F
+if	jscrawl.html	/^    if(baselinePos.x < window.size.x) {$/;"	M
+if	jscrawl.html	/^    if(baselinePos.y < window.size.y) {$/;"	F
+if	jscrawl.html	/^    if(baselinePos.y < window.size.y) {$/;"	M
+if	jscrawl.html	/^    if(bc.getCell(toPos).occupiedBy != null) {$/;"	F
+if	jscrawl.html	/^    if(bc.getCell(toPos).occupiedBy != null) {$/;"	M
+if	jscrawl.html	/^    if(bc.getCreatorMode()) {$/;"	F
+if	jscrawl.html	/^    if(bc.getCreatorMode()) {$/;"	M
+if	jscrawl.html	/^    if(breakPoint > -1) {$/;"	F
+if	jscrawl.html	/^    if(breakPoint > -1) {$/;"	M
+if	jscrawl.html	/^    if(cell.floorType) {$/;"	F
+if	jscrawl.html	/^    if(cell.floorType) {$/;"	M
+if	jscrawl.html	/^    if(cell.occupiedBy && cell.occupiedBy.base.size > size.medium) {$/;"	F
+if	jscrawl.html	/^    if(cell.occupiedBy && cell.occupiedBy.base.size > size.medium) {$/;"	M
+if	jscrawl.html	/^    if(cell.occupiedBy) {$/;"	F
+if	jscrawl.html	/^    if(cell.occupiedBy) {$/;"	M
+if	jscrawl.html	/^    if(change != 0 && target == player) {$/;"	F
+if	jscrawl.html	/^    if(change != 0 && target == player) {$/;"	M
+if	jscrawl.html	/^    if(change < 0.001 && change > -0.001) {$/;"	F
+if	jscrawl.html	/^    if(change < 0.001 && change > -0.001) {$/;"	M
+if	jscrawl.html	/^    if(changed || forceRefresh) {$/;"	F
+if	jscrawl.html	/^    if(changed || forceRefresh) {$/;"	M
+if	jscrawl.html	/^    if(channel.name == channelName) {$/;"	F
+if	jscrawl.html	/^    if(channel.name == channelName) {$/;"	M
+if	jscrawl.html	/^    if(choice) {$/;"	F
+if	jscrawl.html	/^    if(choice) {$/;"	M
+if	jscrawl.html	/^    if(classifiedSpaces[adjacentPos.x][adjacentPos.y]) {$/;"	F
+if	jscrawl.html	/^    if(classifiedSpaces[adjacentPos.x][adjacentPos.y]) {$/;"	M
+if	jscrawl.html	/^    if(count < 1) count = 1$/;"	F
+if	jscrawl.html	/^    if(count == inventoryCount) {$/;"	F
+if	jscrawl.html	/^    if(count == inventoryCount) {$/;"	M
+if	jscrawl.html	/^    if(count > 0) {$/;"	F
+if	jscrawl.html	/^    if(count > 0) {$/;"	M
+if	jscrawl.html	/^    if(count > inventoryCount) count = inventoryCount$/;"	F
+if	jscrawl.html	/^    if(currentArray[index] == undefined) {$/;"	F
+if	jscrawl.html	/^    if(currentArray[index] == undefined) {$/;"	M
+if	jscrawl.html	/^    if(damage > 0) {$/;"	F
+if	jscrawl.html	/^    if(damage > 0) {$/;"	M
+if	jscrawl.html	/^    if(deltas) {$/;"	F
+if	jscrawl.html	/^    if(deltas) {$/;"	M
+if	jscrawl.html	/^    if(dx == 0)  {$/;"	F
+if	jscrawl.html	/^    if(dx == 0)  {$/;"	M
+if	jscrawl.html	/^    if(dx === 0) {$/;"	F
+if	jscrawl.html	/^    if(dx === 0) {$/;"	M
+if	jscrawl.html	/^    if(dx > size.x \/ 2) dx -= size.x$/;"	F
+if	jscrawl.html	/^    if(dy > size.y \/ 2) dy -= size.y$/;"	F
+if	jscrawl.html	/^    if(energyType == 'health') {$/;"	F
+if	jscrawl.html	/^    if(energyType == 'health') {$/;"	M
+if	jscrawl.html	/^    if(fc.getSelectAllowMultiple()) {$/;"	F
+if	jscrawl.html	/^    if(fc.getSelectAllowMultiple()) {$/;"	M
+if	jscrawl.html	/^    if(fc.getSelectedIndex() >= 0) {$/;"	F
+if	jscrawl.html	/^    if(fc.getSelectedIndex() >= 0) {$/;"	M
+if	jscrawl.html	/^    if(fc.getStatusMode() == 'compact') {$/;"	F
+if	jscrawl.html	/^    if(fc.getStatusMode() == 'compact') {$/;"	M
+if	jscrawl.html	/^    if(fc.windowPosIsValid(window, windowPos, level)) {$/;"	F
+if	jscrawl.html	/^    if(fc.windowPosIsValid(window, windowPos, level)) {$/;"	M
+if	jscrawl.html	/^    if(floorItems.length == 0) {$/;"	F
+if	jscrawl.html	/^    if(floorItems.length == 0) {$/;"	M
+if	jscrawl.html	/^    if(floorItems.length == 1) {$/;"	F
+if	jscrawl.html	/^    if(floorItems.length == 1) {$/;"	M
+if	jscrawl.html	/^    if(fm.messages.length) {$/;"	F
+if	jscrawl.html	/^    if(fm.messages.length) {$/;"	M
+if	jscrawl.html	/^    if(fm.selectCount) message += ' ' + fm.selectCount$/;"	F
+if	jscrawl.html	/^    if(fm.selectFlags == null) {$/;"	F
+if	jscrawl.html	/^    if(fm.selectFlags == null) {$/;"	M
+if	jscrawl.html	/^    if(fm.statusMode == 'compact') {$/;"	F
+if	jscrawl.html	/^    if(fm.statusMode == 'compact') {$/;"	M
+if	jscrawl.html	/^    if(focus) {$/;"	F
+if	jscrawl.html	/^    if(focus) {$/;"	M
+if	jscrawl.html	/^    if(from < to) {$/;"	F
+if	jscrawl.html	/^    if(from < to) {$/;"	M
+if	jscrawl.html	/^    if(from.equals(to)) {$/;"	F
+if	jscrawl.html	/^    if(from.equals(to)) {$/;"	M
+if	jscrawl.html	/^    if(from.x < to.x) {$/;"	F
+if	jscrawl.html	/^    if(from.x < to.x) {$/;"	M
+if	jscrawl.html	/^    if(fromPos != null) {$/;"	F
+if	jscrawl.html	/^    if(fromPos != null) {$/;"	M
+if	jscrawl.html	/^    if(fromX < fromWidth - 1) {$/;"	F
+if	jscrawl.html	/^    if(fromX < fromWidth - 1) {$/;"	M
+if	jscrawl.html	/^    if(fullDelta.x != 0) {$/;"	F
+if	jscrawl.html	/^    if(fullDelta.x != 0) {$/;"	M
+if	jscrawl.html	/^    if(glow) {$/;"	F
+if	jscrawl.html	/^    if(glow) {$/;"	M
+if	jscrawl.html	/^    if(index != null) {$/;"	F
+if	jscrawl.html	/^    if(index != null) {$/;"	M
+if	jscrawl.html	/^    if(index < 0) return$/;"	F
+if	jscrawl.html	/^    if(index == poolIndex) return key$/;"	F
+if	jscrawl.html	/^    if(index >= 26) offset = index + 65 - 26$/;"	F
+if	jscrawl.html	/^    if(item && item.base.glow) {$/;"	F
+if	jscrawl.html	/^    if(item && item.base.glow) {$/;"	M
+if	jscrawl.html	/^    if(item.base.energy) {$/;"	F
+if	jscrawl.html	/^    if(item.base.energy) {$/;"	M
+if	jscrawl.html	/^    if(item.base.type != 'food') { $/;"	F
+if	jscrawl.html	/^    if(item.base.type != 'food') { $/;"	M
+if	jscrawl.html	/^    if(item.base.type == 'gold') {$/;"	F
+if	jscrawl.html	/^    if(item.base.type == 'gold') {$/;"	M
+if	jscrawl.html	/^    if(item.text) {$/;"	F
+if	jscrawl.html	/^    if(item.text) {$/;"	M
+if	jscrawl.html	/^    if(key == poolName) return index$/;"	F
+if	jscrawl.html	/^    if(key === 'p') {$/;"	F
+if	jscrawl.html	/^    if(key === 'p') {$/;"	M
+if	jscrawl.html	/^    if(keyModeName != 'target') {$/;"	F
+if	jscrawl.html	/^    if(keyModeName != 'target') {$/;"	M
+if	jscrawl.html	/^    if(maxIterations-- == 0) {$/;"	F
+if	jscrawl.html	/^    if(maxIterations-- == 0) {$/;"	M
+if	jscrawl.html	/^    if(message) {$/;"	F
+if	jscrawl.html	/^    if(message) {$/;"	M
+if	jscrawl.html	/^    if(midlinePos.x < window.size.x) {$/;"	F
+if	jscrawl.html	/^    if(midlinePos.x < window.size.x) {$/;"	M
+if	jscrawl.html	/^    if(midlinePos.y < window.size.y) {$/;"	F
+if	jscrawl.html	/^    if(midlinePos.y < window.size.y) {$/;"	M
+if	jscrawl.html	/^    if(newValue < 0) newValue = 0$/;"	F
+if	jscrawl.html	/^    if(noItemsFound) {$/;"	F
+if	jscrawl.html	/^    if(noItemsFound) {$/;"	M
+if	jscrawl.html	/^    if(of) {$/;"	F
+if	jscrawl.html	/^    if(of) {$/;"	M
+if	jscrawl.html	/^    if(p.window.offset) {$/;"	F
+if	jscrawl.html	/^    if(p.window.offset) {$/;"	M
+if	jscrawl.html	/^    if(path.length) {$/;"	F
+if	jscrawl.html	/^    if(path.length) {$/;"	M
+if	jscrawl.html	/^    if(player.awakenedPools.length) {$/;"	F
+if	jscrawl.html	/^    if(player.awakenedPools.length) {$/;"	M
+if	jscrawl.html	/^    if(player.focus) {$/;"	F
+if	jscrawl.html	/^    if(player.focus) {$/;"	M
+if	jscrawl.html	/^    if(player.medDepth && didSomething) {$/;"	F
+if	jscrawl.html	/^    if(player.medDepth && didSomething) {$/;"	M
+if	jscrawl.html	/^    if(player.medDepth > maxDepth) player.medDepth = maxDepth$/;"	F
+if	jscrawl.html	/^    if(playerActive) didSomething = true$/;"	F
+if	jscrawl.html	/^    if(poolIndexFrom == -1 || poolIndexTo == -1) {$/;"	F
+if	jscrawl.html	/^    if(poolIndexFrom == -1 || poolIndexTo == -1) {$/;"	M
+if	jscrawl.html	/^    if(poolTypes.length == 0) {$/;"	F
+if	jscrawl.html	/^    if(poolTypes.length == 0) {$/;"	M
+if	jscrawl.html	/^    if(poolTypes.length > 1) {$/;"	F
+if	jscrawl.html	/^    if(poolTypes.length > 1) {$/;"	M
+if	jscrawl.html	/^    if(pools.length == 0) {$/;"	F
+if	jscrawl.html	/^    if(pools.length == 0) {$/;"	M
+if	jscrawl.html	/^    if(pos) {$/;"	F
+if	jscrawl.html	/^    if(pos) {$/;"	M
+if	jscrawl.html	/^    if(possibilities == 0) {$/;"	F
+if	jscrawl.html	/^    if(possibilities == 0) {$/;"	M
+if	jscrawl.html	/^    if(potion) {$/;"	F
+if	jscrawl.html	/^    if(potion) {$/;"	M
+if	jscrawl.html	/^    if(random(3) == 0) {$/;"	F
+if	jscrawl.html	/^    if(random(3) == 0) {$/;"	M
+if	jscrawl.html	/^    if(randomizer.next(4) > 0 && spectra.length) {$/;"	F
+if	jscrawl.html	/^    if(randomizer.next(4) > 0 && spectra.length) {$/;"	M
+if	jscrawl.html	/^    if(removed > 0) {$/;"	F
+if	jscrawl.html	/^    if(removed > 0) {$/;"	M
+if	jscrawl.html	/^    if(result.length > 0) {$/;"	F
+if	jscrawl.html	/^    if(result.length > 0) {$/;"	M
+if	jscrawl.html	/^    if(screen.fontStyle) {$/;"	F
+if	jscrawl.html	/^    if(screen.fontStyle) {$/;"	M
+if	jscrawl.html	/^    if(selected && selected.sub) {$/;"	F
+if	jscrawl.html	/^    if(selected && selected.sub) {$/;"	M
+if	jscrawl.html	/^    if(selectedIndex == -1) err("No flow selected")$/;"	F
+if	jscrawl.html	/^    if(selectedInventoryType) {$/;"	F
+if	jscrawl.html	/^    if(selectedInventoryType) {$/;"	M
+if	jscrawl.html	/^    if(selectedSubjects && selectedSubjects.length > 0) {$/;"	F
+if	jscrawl.html	/^    if(selectedSubjects && selectedSubjects.length > 0) {$/;"	M
+if	jscrawl.html	/^    if(sign > 0) {$/;"	F
+if	jscrawl.html	/^    if(sign > 0) {$/;"	M
+if	jscrawl.html	/^    if(slot == 'hand' || slot == 'ring') {$/;"	F
+if	jscrawl.html	/^    if(slot == 'hand' || slot == 'ring') {$/;"	M
+if	jscrawl.html	/^    if(smell) {$/;"	F
+if	jscrawl.html	/^    if(smell) {$/;"	M
+if	jscrawl.html	/^    if(sound) {$/;"	F
+if	jscrawl.html	/^    if(sound) {$/;"	M
+if	jscrawl.html	/^    if(sounds.length) {$/;"	F
+if	jscrawl.html	/^    if(sounds.length) {$/;"	M
+if	jscrawl.html	/^    if(style != ctx.fillStyle) {$/;"	F
+if	jscrawl.html	/^    if(style != ctx.fillStyle) {$/;"	M
+if	jscrawl.html	/^    if(style != ctx.stokeStyle) {$/;"	F
+if	jscrawl.html	/^    if(style != ctx.stokeStyle) {$/;"	M
+if	jscrawl.html	/^    if(subject == null) {$/;"	F
+if	jscrawl.html	/^    if(subject == null) {$/;"	M
+if	jscrawl.html	/^    if(subject.base.act) {$/;"	F
+if	jscrawl.html	/^    if(subject.base.act) {$/;"	M
+if	jscrawl.html	/^    if(subject.base.occupant) {$/;"	F
+if	jscrawl.html	/^    if(subject.base.occupant) {$/;"	M
+if	jscrawl.html	/^    if(subjects.length == 0) {$/;"	F
+if	jscrawl.html	/^    if(subjects.length == 0) {$/;"	M
+if	jscrawl.html	/^    if(success) {$/;"	F
+if	jscrawl.html	/^    if(success) {$/;"	M
+if	jscrawl.html	/^    if(target == null) {$/;"	F
+if	jscrawl.html	/^    if(target == null) {$/;"	M
+if	jscrawl.html	/^    if(target.health <= 0) {$/;"	F
+if	jscrawl.html	/^    if(target.health <= 0) {$/;"	M
+if	jscrawl.html	/^    if(target.pos == null) {$/;"	F
+if	jscrawl.html	/^    if(target.pos == null) {$/;"	M
+if	jscrawl.html	/^    if(target.pos) {$/;"	F
+if	jscrawl.html	/^    if(target.pos) {$/;"	M
+if	jscrawl.html	/^    if(targetActor.health <= 0) {$/;"	F
+if	jscrawl.html	/^    if(targetActor.health <= 0) {$/;"	M
+if	jscrawl.html	/^    if(targetActor.health == null) {$/;"	F
+if	jscrawl.html	/^    if(targetActor.health == null) {$/;"	M
+if	jscrawl.html	/^    if(this.frontModel.fontStyle) {$/;"	F
+if	jscrawl.html	/^    if(this.frontModel.fontStyle) {$/;"	M
+if	jscrawl.html	/^    if(this.frontModel.selectCount != null) {$/;"	F
+if	jscrawl.html	/^    if(this.frontModel.selectCount != null) {$/;"	M
+if	jscrawl.html	/^    if(this.slope != null && line.slope != null) {$/;"	F
+if	jscrawl.html	/^    if(this.slope != null && line.slope != null) {$/;"	M
+if	jscrawl.html	/^    if(typeof p.textToDraw == 'string') {$/;"	F
+if	jscrawl.html	/^    if(typeof p.textToDraw == 'string') {$/;"	M
+if	jscrawl.html	/^    if(typeof pair == 'number') {$/;"	F
+if	jscrawl.html	/^    if(typeof pair == 'number') {$/;"	M
+if	jscrawl.html	/^    if(typeof size == 'number') {$/;"	F
+if	jscrawl.html	/^    if(typeof size == 'number') {$/;"	M
+if	jscrawl.html	/^    if(typeof value == 'boolean') {$/;"	F
+if	jscrawl.html	/^    if(typeof value == 'boolean') {$/;"	M
+if	jscrawl.html	/^    if(verb == 'is') verb = 'are'$/;"	F
+if	jscrawl.html	/^    if(wallStrength <= wallThreshold) {$/;"	F
+if	jscrawl.html	/^    if(wallStrength <= wallThreshold) {$/;"	M
+if	jscrawl.html	/^    if(weakestWall == null || wallStrength < weakestWall) {$/;"	F
+if	jscrawl.html	/^    if(weakestWall == null || wallStrength < weakestWall) {$/;"	M
+if	jscrawl.html	/^    if(window == mainWindows.level) {$/;"	F
+if	jscrawl.html	/^    if(window == mainWindows.level) {$/;"	M
+if	jscrawl.html	/^    if(window == screens.main.window.level) {$/;"	F
+if	jscrawl.html	/^    if(window == screens.main.window.level) {$/;"	M
+if	jscrawl.html	/^    if(window.fontStyle) {$/;"	F
+if	jscrawl.html	/^    if(window.fontStyle) {$/;"	M
+if	jscrawl.html	/^    if(window.name == 'status') {$/;"	F
+if	jscrawl.html	/^    if(window.name == 'status') {$/;"	M
+if	jscrawl.html	/^  if($/;"	F
+if	jscrawl.html	/^  if(Number.isInteger(article)) {$/;"	F
+if	jscrawl.html	/^  if(Number.isInteger(article)) {$/;"	M
+if	jscrawl.html	/^  if(actor.awakenedPools) {$/;"	F
+if	jscrawl.html	/^  if(actor.awakenedPools) {$/;"	M
+if	jscrawl.html	/^  if(actor.focus === fromPool) upBias += Math.floor(actor.medDepth + 1)$/;"	F
+if	jscrawl.html	/^  if(actor.focus === toPool) downBias += Math.floor(actor.medDepth + 1)$/;"	F
+if	jscrawl.html	/^  if(actor.growth) {$/;"	F
+if	jscrawl.html	/^  if(actor.growth) {$/;"	M
+if	jscrawl.html	/^  if(allResults.length > 0) {$/;"	F
+if	jscrawl.html	/^  if(allResults.length > 0) {$/;"	M
+if	jscrawl.html	/^  if(article) {$/;"	F
+if	jscrawl.html	/^  if(article) {$/;"	M
+if	jscrawl.html	/^  if(awakened) value *= 3$/;"	F
+if	jscrawl.html	/^  if(bounds == null) {$/;"	F
+if	jscrawl.html	/^  if(bounds == null) {$/;"	M
+if	jscrawl.html	/^  if(bounds.width < 2 || bounds.height < 2) {$/;"	F
+if	jscrawl.html	/^  if(bounds.width < 2 || bounds.height < 2) {$/;"	M
+if	jscrawl.html	/^  if(cellToTest.occupiedBy == null && cellToTest.onFloor.length == 0) {$/;"	F
+if	jscrawl.html	/^  if(cellToTest.occupiedBy == null && cellToTest.onFloor.length == 0) {$/;"	M
+if	jscrawl.html	/^  if(classifiedSpaces == null) {$/;"	F
+if	jscrawl.html	/^  if(classifiedSpaces == null) {$/;"	M
+if	jscrawl.html	/^  if(connectedRooms) {$/;"	F
+if	jscrawl.html	/^  if(connectedRooms) {$/;"	M
+if	jscrawl.html	/^  if(count != 1) {$/;"	F
+if	jscrawl.html	/^  if(count != 1) {$/;"	M
+if	jscrawl.html	/^  if(fPress > tPress + 0.01) {$/;"	F
+if	jscrawl.html	/^  if(fPress > tPress + 0.01) {$/;"	M
+if	jscrawl.html	/^  if(item.base && item.base.type == 'potion') {$/;"	F
+if	jscrawl.html	/^  if(item.base && item.base.type == 'potion') {$/;"	M
+if	jscrawl.html	/^  if(item.base.type) {$/;"	F
+if	jscrawl.html	/^  if(item.base.type) {$/;"	M
+if	jscrawl.html	/^  if(item.health) {$/;"	F
+if	jscrawl.html	/^  if(item.health) {$/;"	M
+if	jscrawl.html	/^  if(n >= 10) {$/;"	F
+if	jscrawl.html	/^  if(n >= 10) {$/;"	M
+if	jscrawl.html	/^  if(of) {$/;"	F
+if	jscrawl.html	/^  if(of) {$/;"	M
+if	jscrawl.html	/^  if(pos) {$/;"	F
+if	jscrawl.html	/^  if(pos) {$/;"	M
+if	jscrawl.html	/^  if(result == null) {$/;"	F
+if	jscrawl.html	/^  if(result == null) {$/;"	M
+if	jscrawl.html	/^  if(result) allResults.push(result)$/;"	F
+if	jscrawl.html	/^  if(typeof string == 'string') {$/;"	F
+if	jscrawl.html	/^  if(typeof string == 'string') {$/;"	M
+if	jscrawl.html	/^  if(verb) {$/;"	F
+if	jscrawl.html	/^  if(verb) {$/;"	M
+increment	jscrawl.html	/^  const increment = 1 \/ (list.length * multiplier + 1)$/;"	V
+index	jscrawl.html	/^  let index = 0$/;"	V
+indexToKey	jscrawl.html	/^  indexToKey(index) {$/;"	F
+indexToKey	jscrawl.html	/^  indexToKey(index) {$/;"	M
+indexes	jscrawl.html	/^      let indexes = []$/;"	A
+indexes	jscrawl.html	/^    let indexes = [];$/;"	A
+indigo	jscrawl.html	/^              indigo: 10,$/;"	P
+indigo	jscrawl.html	/^              indigo: 15,$/;"	P
+indigo	jscrawl.html	/^              indigo: 2,$/;"	P
+indigo	jscrawl.html	/^  indigo:     { bgStyle: '#413FFF', style: '#FFF' },$/;"	P
+indigo	jscrawl.html	/^  indigo: { $/;"	P
+initItems	jscrawl.html	/^  initItems(inherited = {}, itemBase = template.generated.sub) {$/;"	F
+initItems	jscrawl.html	/^  initItems(inherited = {}, itemBase = template.generated.sub) {$/;"	M
+initRandomizers	jscrawl.html	/^  initRandomizers() {$/;"	F
+initRandomizers	jscrawl.html	/^  initRandomizers() {$/;"	M
+initSpecies	jscrawl.html	/^  initSpecies() {$/;"	F
+initSpecies	jscrawl.html	/^  initSpecies() {$/;"	M
+initializePlayer	jscrawl.html	/^  initializePlayer() {$/;"	F
+initializePlayer	jscrawl.html	/^  initializePlayer() {$/;"	M
+intelligence	jscrawl.html	/^      intelligence: 10,$/;"	P
+interceptedCorner	jscrawl.html	/^  interceptedCorner(pos, line) {$/;"	F
+interceptedCorner	jscrawl.html	/^  interceptedCorner(pos, line) {$/;"	M
+interceptsSegment	jscrawl.html	/^  interceptsSegment(segment) {$/;"	F
+interceptsSegment	jscrawl.html	/^  interceptsSegment(segment) {$/;"	M
+interna	jscrawl.html	/^  interna: { key: 'i', },$/;"	P
+intersection	jscrawl.html	/^  intersection(line) {$/;"	F
+intersection	jscrawl.html	/^  intersection(line) {$/;"	M
+inventory	jscrawl.html	/^      inventory: {$/;"	P
+inventoryTypes	jscrawl.html	/^const inventoryTypes = {$/;"	O
+invertMultiSelect	jscrawl.html	/^    invertMultiSelect: [ ',' ],$/;"	P
+invertMultiSelect	jscrawl.html	/^  invertMultiSelect() {$/;"	F
+invertMultiSelect	jscrawl.html	/^  invertMultiSelect() {$/;"	M
+invertMultiSelect	jscrawl.html	/^  invertMultiSelect: () => {$/;"	M
+invertSelectedItems	jscrawl.html	/^    invertSelectedItems: [ '\/' ],$/;"	P
+invertSelectedItems	jscrawl.html	/^  invertSelectedItems() {$/;"	F
+invertSelectedItems	jscrawl.html	/^  invertSelectedItems() {$/;"	M
+invertSelectedItems	jscrawl.html	/^  invertSelectedItems: () => {$/;"	M
+isEquipped	jscrawl.html	/^  isEquipped(item) {$/;"	F
+isEquipped	jscrawl.html	/^  isEquipped(item) {$/;"	M
+isFieldPosOccupied	jscrawl.html	/^  isFieldPosOccupied(cellPos) {$/;"	F
+isFieldPosOccupied	jscrawl.html	/^  isFieldPosOccupied(cellPos) {$/;"	M
+isFieldPosValid	jscrawl.html	/^  isFieldPosValid(cellPos) {$/;"	F
+isFieldPosValid	jscrawl.html	/^  isFieldPosValid(cellPos) {$/;"	M
+isIndexSelected	jscrawl.html	/^  isIndexSelected(index) {$/;"	F
+isIndexSelected	jscrawl.html	/^  isIndexSelected(index) {$/;"	M
+item	jscrawl.html	/^        item,$/;"	V
+item	jscrawl.html	/^      item: null,$/;"	P
+items	jscrawl.html	/^    const [items, counts] = this.getSelectedSubjectsAndCounts()$/;"	V
+itemsEqual	jscrawl.html	/^function itemsEqual(item1, item2) {$/;"	F
+iterations	jscrawl.html	/^  let iterations = 10$/;"	V
+iterationsLeft	jscrawl.html	/^  let iterationsLeft = 5$/;"	V
+jewelry	jscrawl.html	/^        jewelry: [],$/;"	P
+keyMap	jscrawl.html	/^const keyMap = {$/;"	O
+keyModifiers	jscrawl.html	/^let keyModifiers = {$/;"	O
+keyToIndex	jscrawl.html	/^  keyToIndex(key) {$/;"	F
+keyToIndex	jscrawl.html	/^  keyToIndex(key) {$/;"	M
+keys	jscrawl.html	/^    const keys = [ 'p', 's' ]$/;"	A
+keys	jscrawl.html	/^    let keys = []$/;"	A
+large	jscrawl.html	/^  large: 2,$/;"	P
+lessThan	jscrawl.html	/^  lessThan(pair) {$/;"	F
+lessThan	jscrawl.html	/^  lessThan(pair) {$/;"	M
+lessThanOrEqualTo	jscrawl.html	/^  lessThanOrEqualTo(pair) {$/;"	F
+lessThanOrEqualTo	jscrawl.html	/^  lessThanOrEqualTo(pair) {$/;"	M
+level	jscrawl.html	/^      level: 0,$/;"	P
+level	jscrawl.html	/^      level: null,$/;"	P
+level	jscrawl.html	/^      level: {$/;"	P
+level	jscrawl.html	/^    level: [],$/;"	P
+level	jscrawl.html	/^  let level = []$/;"	A
+levelCaveGenerator	jscrawl.html	/^    levelCaveGenerator: {$/;"	P
+levelCellsChanged	jscrawl.html	/^    levelCellsChanged: [],$/;"	P
+levelChanged	jscrawl.html	/^    levelChanged: false,$/;"	P
+levelPosToWindowPos	jscrawl.html	/^  levelPosToWindowPos(levelPos, levelSize) {$/;"	F
+levelPosToWindowPos	jscrawl.html	/^  levelPosToWindowPos(levelPos, levelSize) {$/;"	M
+levelSize	jscrawl.html	/^  const levelSize = new Pair(level.length, level[0].length)$/;"	V
+levelSize	jscrawl.html	/^  let levelSize = new Pair(level.length, level[0].length)$/;"	V
+lightblue	jscrawl.html	/^  lightblue:  { bgStyle: '#8FB9FF', style: '#000' },$/;"	P
+lightgreen	jscrawl.html	/^  lightgreen: { bgStyle: '#BFFF80', style: '#000' },$/;"	P
+lightorange	jscrawl.html	/^  lightorange:{ bgStyle: '#FFDD88', style: '#000' },$/;"	P
+lightred	jscrawl.html	/^  lightred:   { bgStyle: '#FF9F9F', style: '#000' },$/;"	P
+lightviolet	jscrawl.html	/^  lightviolet:{ bgStyle: '#C89FFF', style: '#000' },$/;"	P
+lightyellow	jscrawl.html	/^  lightyellow:{ bgStyle: '#FFFF80', style: '#000' },$/;"	P
+line	jscrawl.html	/^        let line = [text(i + ':')]$/;"	A
+line	jscrawl.html	/^        line,$/;"	V
+line	jscrawl.html	/^    const line = new Line(slope, yIntercept)$/;"	V
+line	jscrawl.html	/^    let line = ''$/;"	V
+lion	jscrawl.html	/^          lion: { $/;"	P
+list	jscrawl.html	/^    const list = []$/;"	A
+longBlade	jscrawl.html	/^          longBlade: { $/;"	P
+lowerLeftQuarter	jscrawl.html	/^  lowerLeftQuarter() {$/;"	F
+lowerLeftQuarter	jscrawl.html	/^  lowerLeftQuarter() {$/;"	M
+lowerRightQuarter	jscrawl.html	/^  lowerRightQuarter() {$/;"	F
+lowerRightQuarter	jscrawl.html	/^  lowerRightQuarter() {$/;"	M
+lumina	jscrawl.html	/^    const lumina = possiblePools.filter(pool => $/;"	F
+lumina	jscrawl.html	/^  lumina:  { key: 'l', },$/;"	P
+mace	jscrawl.html	/^              mace: {$/;"	P
+mace	jscrawl.html	/^          mace: {$/;"	P
+main	jscrawl.html	/^  main: {$/;"	P
+majorHealth	jscrawl.html	/^      majorHealth: 10,$/;"	P
+majorHealth	jscrawl.html	/^  majorHealth: { $/;"	P
+makeSound	jscrawl.html	/^  makeSound(name, volume, pos) {$/;"	F
+makeSound	jscrawl.html	/^  makeSound(name, volume, pos) {$/;"	M
+mana	jscrawl.html	/^      mana: 20,$/;"	P
+mana	jscrawl.html	/^  mana: { $/;"	P
+mango	jscrawl.html	/^          mango: { $/;"	P
+map	jscrawl.html	/^  let map = [[b, b], [b, b]]$/;"	A
+mapToLevel	jscrawl.html	/^  mapToLevel(map, level, wallThreshold, size)$/;"	F
+mapToLevel	jscrawl.html	/^function mapToLevel(map, level, wallThreshold, size) {$/;"	F
+max	jscrawl.html	/^        max$/;"	V
+max	jscrawl.html	/^      const max = '' + Math.round(getPoolMax(player, poolName))$/;"	V
+maxChannelSizeDefault	jscrawl.html	/^    maxChannelSizeDefault: 2,$/;"	P
+maxChannelSizes	jscrawl.html	/^    maxChannelSizes: [],$/;"	P
+maxColumns	jscrawl.html	/^        maxColumns: 1,$/;"	P
+maxColumns	jscrawl.html	/^    const maxColumns = 3$/;"	V
+maxDamage	jscrawl.html	/^    let maxDamage = 0$/;"	V
+maxDepth	jscrawl.html	/^    const maxDepth = 4 * (1 + medSkill \/ 5)$/;"	V
+maxIterations	jscrawl.html	/^  let maxIterations = 10$/;"	V
+maxPoolSizes	jscrawl.html	/^    maxPoolSizes: {$/;"	P
+maxWidth	jscrawl.html	/^    let maxWidth = 0$/;"	V
+medDepth	jscrawl.html	/^      medDepth: 0,$/;"	P
+medRate	jscrawl.html	/^    const medRate = 2 * (1 + medSkill \/ 3)$/;"	V
+meditation	jscrawl.html	/^  meditation: { type: skillTypes.misc },$/;"	P
+medium	jscrawl.html	/^  medium: 1,$/;"	P
+memory	jscrawl.html	/^      memory: {$/;"	P
+message	jscrawl.html	/^      message: {$/;"	P
+message	jscrawl.html	/^    let message;$/;"	V
+messages	jscrawl.html	/^    messages: [],$/;"	P
+messagesChanged	jscrawl.html	/^    messagesChanged: false,$/;"	P
+messagesHeader	jscrawl.html	/^    messagesHeader: 1,$/;"	P
+milk	jscrawl.html	/^          milk: { $/;"	P
+minDamage	jscrawl.html	/^    let minDamage = 0$/;"	V
+minValue	jscrawl.html	/^      let minValue = values.reduce((a,b) => Math.min(a, b), 1)$/;"	F
+minorHealth	jscrawl.html	/^      minorHealth: 10,$/;"	P
+minorHealth	jscrawl.html	/^  minorHealth: { $/;"	P
+misc	jscrawl.html	/^  misc: {},$/;"	P
+moon	jscrawl.html	/^  moon: { $/;"	P
+motionModeAttack	jscrawl.html	/^  motionModeAttack() {$/;"	F
+motionModeAttack	jscrawl.html	/^  motionModeAttack() {$/;"	M
+motionModeMove	jscrawl.html	/^  motionModeMove() {$/;"	F
+motionModeMove	jscrawl.html	/^  motionModeMove() {$/;"	M
+moveDown	jscrawl.html	/^    moveDown: [ 'j', 'ArrowDown' ],$/;"	P
+moveDown	jscrawl.html	/^  moveDown: () => {$/;"	M
+moveDownFast	jscrawl.html	/^    moveDownFast: [ 'J' ],$/;"	P
+moveDownFast	jscrawl.html	/^  moveDownFast: () => {$/;"	M
+moveLeft	jscrawl.html	/^    moveLeft: [ 'h', 'ArrowLeft' ],$/;"	P
+moveLeft	jscrawl.html	/^  moveLeft: () => {$/;"	M
+moveLeftDown	jscrawl.html	/^    moveLeftDown: [ 'b' ],$/;"	P
+moveLeftDown	jscrawl.html	/^  moveLeftDown: () => {$/;"	M
+moveLeftFast	jscrawl.html	/^    moveLeftFast: [ 'H' ],$/;"	P
+moveLeftFast	jscrawl.html	/^  moveLeftFast: () => {$/;"	M
+moveLeftUp	jscrawl.html	/^    moveLeftUp: [ 'y' ],$/;"	P
+moveLeftUp	jscrawl.html	/^  moveLeftUp: () => {$/;"	M
+moveRight	jscrawl.html	/^    moveRight: [ 'l', 'ArrowRight' ],$/;"	P
+moveRight	jscrawl.html	/^  moveRight: () => {$/;"	M
+moveRightDown	jscrawl.html	/^    moveRightDown: [ 'n' ],$/;"	P
+moveRightDown	jscrawl.html	/^  moveRightDown: () => {$/;"	M
+moveRightFast	jscrawl.html	/^    moveRightFast: [ 'L' ],$/;"	P
+moveRightFast	jscrawl.html	/^  moveRightFast: () => {$/;"	M
+moveRightUp	jscrawl.html	/^    moveRightUp: [ 'u' ],$/;"	P
+moveRightUp	jscrawl.html	/^  moveRightUp: () => {$/;"	M
+moveUp	jscrawl.html	/^    moveUp: [ 'k', 'ArrowUp' ],$/;"	P
+moveUp	jscrawl.html	/^  moveUp: () => {$/;"	M
+moveUpFast	jscrawl.html	/^    moveUpFast: [ 'K' ],$/;"	P
+moveUpFast	jscrawl.html	/^  moveUpFast: () => {$/;"	M
+mulchChance	jscrawl.html	/^                mulchChance: 1,$/;"	P
+multiplier	jscrawl.html	/^  const multiplier = 20$/;"	V
+multiply	jscrawl.html	/^  multiply(pair) {$/;"	F
+multiply	jscrawl.html	/^  multiply(pair) {$/;"	M
+name	jscrawl.html	/^          let name = '(empty)'$/;"	V
+name	jscrawl.html	/^          let name = []$/;"	A
+name	jscrawl.html	/^        let name = '(empty)'$/;"	V
+name	jscrawl.html	/^      name: name,$/;"	P
+names	jscrawl.html	/^      let names = []$/;"	A
+names	jscrawl.html	/^    const names = [ 'pool', 'sense' ]$/;"	A
+names	jscrawl.html	/^    let names = []$/;"	A
+negate	jscrawl.html	/^  negate() {$/;"	F
+negate	jscrawl.html	/^  negate() {$/;"	M
+newCell	jscrawl.html	/^        const newCell = []$/;"	A
+newItem	jscrawl.html	/^        let newItem = { ...itemBase[itemKey], sub: null }$/;"	O
+newPos	jscrawl.html	/^        let newPos = new Pair(x, y)$/;"	V
+newSmells	jscrawl.html	/^    const newSmells = []$/;"	A
+newSound	jscrawl.html	/^        const newSound = {$/;"	O
+newSounds	jscrawl.html	/^    const newSounds = []$/;"	A
+next	jscrawl.html	/^  next(possibilities = 0) {$/;"	F
+next	jscrawl.html	/^  next(possibilities = 0) {$/;"	M
+oats	jscrawl.html	/^          oats: { $/;"	P
+object	jscrawl.html	/^  object: {$/;"	P
+occupant	jscrawl.html	/^        occupant: false,$/;"	P
+occupant	jscrawl.html	/^        occupant: true,$/;"	P
+occupant	jscrawl.html	/^      occupant: false, $/;"	P
+occupant	jscrawl.html	/^      occupant: true, $/;"	P
+occupantMove	jscrawl.html	/^  occupantMove(occupant, toPos) {$/;"	F
+occupantMove	jscrawl.html	/^  occupantMove(occupant, toPos) {$/;"	M
+occupiedBy	jscrawl.html	/^          occupiedBy: null, $/;"	P
+occupiedBy	jscrawl.html	/^          occupiedBy: { base: ot.rockWall }, $/;"	P
+offset	jscrawl.html	/^        offset: offset,$/;"	P
+onFloor	jscrawl.html	/^          onFloor: [], $/;"	P
+orange	jscrawl.html	/^              orange: 10,$/;"	P
+orange	jscrawl.html	/^              orange: 15,$/;"	P
+orange	jscrawl.html	/^              orange: 3,$/;"	P
+orange	jscrawl.html	/^              orange: 5,$/;"	P
+orange	jscrawl.html	/^          orange: { $/;"	P
+orange	jscrawl.html	/^  orange:     { bgStyle: '#FFAB12', style: '#000' },$/;"	P
+orange	jscrawl.html	/^  orange: { $/;"	P
+output	jscrawl.html	/^        output,$/;"	V
+outputCreatorModeMessages	jscrawl.html	/^  outputCreatorModeMessages() {$/;"	F
+outputCreatorModeMessages	jscrawl.html	/^  outputCreatorModeMessages() {$/;"	M
+outputTargetMessages	jscrawl.html	/^  outputTargetMessages() {$/;"	F
+outputTargetMessages	jscrawl.html	/^  outputTargetMessages() {$/;"	M
+pair	jscrawl.html	/^function pair(m) {$/;"	F
+panCellOffset	jscrawl.html	/^        panCellOffset: emptyPair,$/;"	P
+perimeter	jscrawl.html	/^  perimeter(radius) {$/;"	F
+perimeter	jscrawl.html	/^  perimeter(radius) {$/;"	M
+pickSomethingToGenerate	jscrawl.html	/^  pickSomethingToGenerate(group, randomizer) {$/;"	F
+pickSomethingToGenerate	jscrawl.html	/^  pickSomethingToGenerate(group, randomizer) {$/;"	M
+pickUpItem	jscrawl.html	/^    pickUpItem: [ ',' ],$/;"	P
+pickUpItem	jscrawl.html	/^  pickUpItem() {$/;"	F
+pickUpItem	jscrawl.html	/^  pickUpItem() {$/;"	M
+pickUpItem	jscrawl.html	/^  pickUpItem: () => {$/;"	M
+pickUpSelectedItems	jscrawl.html	/^  pickUpSelectedItems() {$/;"	F
+pickUpSelectedItems	jscrawl.html	/^  pickUpSelectedItems() {$/;"	M
+pizza	jscrawl.html	/^          pizza: { $/;"	P
+placeStuffInLevel	jscrawl.html	/^  placeStuffInLevel(randomizer) {$/;"	F
+placeStuffInLevel	jscrawl.html	/^  placeStuffInLevel(randomizer) {$/;"	M
+player	jscrawl.html	/^    player: { $/;"	P
+playerAttack	jscrawl.html	/^  playerAttack(target) {$/;"	F
+playerAttack	jscrawl.html	/^  playerAttack(target) {$/;"	M
+playerMotionRelative	jscrawl.html	/^  playerMotionRelative(relPos) {$/;"	F
+playerMotionRelative	jscrawl.html	/^  playerMotionRelative(relPos) {$/;"	M
+playerOldPos	jscrawl.html	/^        playerOldPos$/;"	V
+playerPos	jscrawl.html	/^        playerPos,$/;"	V
+polearm	jscrawl.html	/^          polearm: {$/;"	P
+poolAtMax	jscrawl.html	/^function poolAtMax(actor, poolName) {$/;"	F
+poolAwakening	jscrawl.html	/^  poolAwakening() {$/;"	F
+poolAwakening	jscrawl.html	/^  poolAwakening() {$/;"	M
+poolAwakeningLevels	jscrawl.html	/^    poolAwakeningLevels: [ 10, 30, 90 ]$/;"	P
+poolCapacity	jscrawl.html	/^        poolCapacity: { },$/;"	P
+poolChannels	jscrawl.html	/^const poolChannels = [$/;"	A
+poolCurrent	jscrawl.html	/^      poolCurrent: [],     \/\/ integers of how much is in each pool$/;"	P
+poolCurrentPast	jscrawl.html	/^      poolCurrentPast: [], \/\/ previous value of poolCurrent$/;"	P
+poolIndexToName	jscrawl.html	/^function poolIndexToName(poolIndex) {$/;"	F
+poolMax	jscrawl.html	/^      poolMax: [],         \/\/ integers of how big each pool is$/;"	P
+poolMaxPast	jscrawl.html	/^      poolMaxPast: [],     \/\/ previous value of poolMax$/;"	P
+poolNameToIndex	jscrawl.html	/^function poolNameToIndex(poolName) {$/;"	F
+poolOverloadFactorMax	jscrawl.html	/^const poolOverloadFactorMax = 1$/;"	V
+poolTypes	jscrawl.html	/^const poolTypes = {$/;"	O
+pools	jscrawl.html	/^const pools = {$/;"	O
+poolsToTry	jscrawl.html	/^    let poolsToTry = []$/;"	A
+pos	jscrawl.html	/^        const pos = new Pair(Math.floor(x), Math.floor(y))$/;"	V
+pos	jscrawl.html	/^        pos: emptyPair,$/;"	P
+pos	jscrawl.html	/^      pos$/;"	V
+pos	jscrawl.html	/^      pos: emptyPair, $/;"	P
+pos	jscrawl.html	/^      pos: null,$/;"	P
+pos	jscrawl.html	/^      pos: pos,$/;"	P
+potion	jscrawl.html	/^        potion: [],$/;"	P
+potion	jscrawl.html	/^      potion: {$/;"	P
+purple	jscrawl.html	/^  purple:  { bgStyle: '#D56FFF', style: '#FFF'  },$/;"	P
+purple	jscrawl.html	/^  purple: { $/;"	P
+rainbow	jscrawl.html	/^  rainbow: { $/;"	P
+random	jscrawl.html	/^function random(possibilities) {$/;"	F
+randomizer	jscrawl.html	/^        randomizer,$/;"	V
+randomizer	jscrawl.html	/^    const randomizer = new SeededRandomizer($/;"	V
+randomizers	jscrawl.html	/^    randomizers: {$/;"	P
+range	jscrawl.html	/^                  range: 10, $/;"	P
+range	jscrawl.html	/^                  range: 2, $/;"	P
+range	jscrawl.html	/^                  range: 3, $/;"	P
+range	jscrawl.html	/^                  range: 4, $/;"	P
+range	jscrawl.html	/^                  range: 8, $/;"	P
+range	jscrawl.html	/^            range: 1,$/;"	P
+range	jscrawl.html	/^            range: 12,$/;"	P
+range	jscrawl.html	/^            range: 2,$/;"	P
+rat	jscrawl.html	/^          rat:  { $/;"	P
+red	jscrawl.html	/^              red: 10, $/;"	P
+red	jscrawl.html	/^              red: 10,$/;"	P
+red	jscrawl.html	/^              red: 15,$/;"	P
+red	jscrawl.html	/^              red: 20,$/;"	P
+red	jscrawl.html	/^              red: 3,$/;"	P
+red	jscrawl.html	/^              red: 5,$/;"	P
+red	jscrawl.html	/^  red:        { bgStyle: '#FF2F2F', style: '#FFF' },$/;"	P
+red	jscrawl.html	/^  red: { $/;"	P
+reduceMap	jscrawl.html	/^function reduceMap(fromMap) {$/;"	F
+refresh	jscrawl.html	/^  refresh() {$/;"	F
+refresh	jscrawl.html	/^  refresh() {$/;"	M
+removeActor	jscrawl.html	/^  removeActor(actor) {$/;"	F
+removeActor	jscrawl.html	/^  removeActor(actor) {$/;"	M
+removeIsolatedWalls	jscrawl.html	/^function removeIsolatedWalls(fromMap, wallThreshold, requireSurroundingWalls) {$/;"	F
+removeItemFromInventory	jscrawl.html	/^  removeItemFromInventory(item, count) {$/;"	F
+removeItemFromInventory	jscrawl.html	/^  removeItemFromInventory(item, count) {$/;"	M
+removeItemFromInventoryByIndex	jscrawl.html	/^  removeItemFromInventoryByIndex(type, index, count) {$/;"	F
+removeItemFromInventoryByIndex	jscrawl.html	/^  removeItemFromInventoryByIndex(type, index, count) {$/;"	M
+removeSubjectFromLevel	jscrawl.html	/^  removeSubjectFromLevel(subject, pos, count) {$/;"	F
+removeSubjectFromLevel	jscrawl.html	/^  removeSubjectFromLevel(subject, pos, count) {$/;"	M
+removed	jscrawl.html	/^  let removed = 0$/;"	V
+requireSurroundingWalls	jscrawl.html	/^      requireSurroundingWalls: 2,$/;"	P
+resetSelect	jscrawl.html	/^  resetSelect() {$/;"	F
+resetSelect	jscrawl.html	/^  resetSelect() {$/;"	M
+result	jscrawl.html	/^    let result = []$/;"	A
+result	jscrawl.html	/^  let result = []$/;"	A
+return	jscrawl.html	/^          return$/;"	V
+return	jscrawl.html	/^        return$/;"	V
+return	jscrawl.html	/^      return$/;"	V
+rice	jscrawl.html	/^          rice: { $/;"	P
+ring	jscrawl.html	/^        ring: [],$/;"	P
+rock	jscrawl.html	/^              rock: { $/;"	P
+rock	jscrawl.html	/^        rock: [],$/;"	P
+rockWall	jscrawl.html	/^    rockWall: { $/;"	P
+round	jscrawl.html	/^  round(n) {$/;"	F
+round	jscrawl.html	/^  round(n) {$/;"	M
+screen	jscrawl.html	/^          screen,$/;"	V
+screen	jscrawl.html	/^        screen: screen, $/;"	P
+screen	jscrawl.html	/^        screen: screen,$/;"	P
+screen	jscrawl.html	/^      screen,$/;"	V
+screen	jscrawl.html	/^      screen: null,$/;"	P
+screenPixelPos	jscrawl.html	/^      screenPixelPos: screenPixelPos, $/;"	P
+screens	jscrawl.html	/^const screens = {$/;"	O
+scroll	jscrawl.html	/^        scroll: [],$/;"	P
+segments	jscrawl.html	/^    const segments = {$/;"	O
+select	jscrawl.html	/^  select: {$/;"	P
+selectAction	jscrawl.html	/^        selectAction()$/;"	F
+selectAction	jscrawl.html	/^    selectAction: null,$/;"	P
+selectAllowMultiple	jscrawl.html	/^    selectAllowMultiple: true,$/;"	P
+selectAmount	jscrawl.html	/^  selectAmount(afterSelect) {$/;"	F
+selectAmount	jscrawl.html	/^  selectAmount(afterSelect) {$/;"	M
+selectCount	jscrawl.html	/^        selectCount,$/;"	V
+selectCount	jscrawl.html	/^    selectCount: null,$/;"	P
+selectCountList	jscrawl.html	/^    selectCountList: [],$/;"	P
+selectCountMax	jscrawl.html	/^    selectCountMax: null,$/;"	P
+selectCountMaxList	jscrawl.html	/^    selectCountMaxList: [],$/;"	P
+selectExecute	jscrawl.html	/^    selectExecute: null,$/;"	P
+selectFlags	jscrawl.html	/^    selectFlags: null,$/;"	P
+selectItem	jscrawl.html	/^    selectItem: [],$/;"	P
+selectItem	jscrawl.html	/^  selectItem(key) {$/;"	F
+selectItem	jscrawl.html	/^  selectItem(key) {$/;"	M
+selectItem	jscrawl.html	/^  selectItem: (key) => {$/;"	M
+selectKeys	jscrawl.html	/^    selectKeys: [], $/;"	P
+selectMaxWidth	jscrawl.html	/^    selectMaxWidth: null,$/;"	P
+selectMeta	jscrawl.html	/^    selectMeta: {},$/;"	P
+selectMultiple	jscrawl.html	/^    selectMultiple: false,$/;"	P
+selectNameList	jscrawl.html	/^    selectNameList: [],$/;"	P
+selectPool	jscrawl.html	/^  selectPool(afterSelect, allowMultiple) {$/;"	F
+selectPool	jscrawl.html	/^  selectPool(afterSelect, allowMultiple) {$/;"	M
+selectPoolType	jscrawl.html	/^  selectPoolType(afterSelect, allowMultiple) {$/;"	F
+selectPoolType	jscrawl.html	/^  selectPoolType(afterSelect, allowMultiple) {$/;"	M
+selectSkill	jscrawl.html	/^  selectSkill(afterSelect, allowMultiple) {$/;"	F
+selectSkill	jscrawl.html	/^  selectSkill(afterSelect, allowMultiple) {$/;"	M
+selectSubjectList	jscrawl.html	/^    selectSubjectList: [],$/;"	P
+selectTitle	jscrawl.html	/^    selectTitle: null, $/;"	P
+selected	jscrawl.html	/^    const [ selected, total ] = $/;"	V
+selected	jscrawl.html	/^    const [selected, _] = getGrowthSelectCount($/;"	V
+selected	jscrawl.html	/^  let selected = 0$/;"	V
+selected2	jscrawl.html	/^      const [selected2, total2] = getGrowthSelectCount(value)$/;"	V
+selectedCounts	jscrawl.html	/^    let selectedCounts = []$/;"	A
+selectedFloorItems	jscrawl.html	/^    let selectedFloorItems = []$/;"	A
+selectedInventoryType	jscrawl.html	/^        selectedInventoryType$/;"	V
+selectedKeys	jscrawl.html	/^    let selectedKeys = []$/;"	A
+selectedSubjects	jscrawl.html	/^    let selectedSubjects = []$/;"	A
+senses	jscrawl.html	/^    senses: {$/;"	P
+senses	jscrawl.html	/^const senses = {$/;"	O
+set	jscrawl.html	/^    set(actor.memory.vision, [pos.x, pos.y], character)$/;"	F
+set	jscrawl.html	/^    set(this.backModel.glowGrid, [pos.x, pos.y], amount)$/;"	F
+set	jscrawl.html	/^function set(array, indexes, value) {$/;"	F
+setCellGlow	jscrawl.html	/^  setCellGlow(pos, amount) {$/;"	F
+setCellGlow	jscrawl.html	/^  setCellGlow(pos, amount) {$/;"	M
+setChannelFlow	jscrawl.html	/^  setChannelFlow(actor, channelIndex, flow) {$/;"	F
+setChannelFlow	jscrawl.html	/^  setChannelFlow(actor, channelIndex, flow) {$/;"	M
+setCreatorMode	jscrawl.html	/^  setCreatorMode() {$/;"	F
+setCreatorMode	jscrawl.html	/^  setCreatorMode() {$/;"	M
+setKeyMode	jscrawl.html	/^  setKeyMode(keyModeName) {$/;"	F
+setKeyMode	jscrawl.html	/^  setKeyMode(keyModeName) {$/;"	M
+setLevelChanged	jscrawl.html	/^  setLevelChanged(changed) {$/;"	F
+setLevelChanged	jscrawl.html	/^  setLevelChanged(changed) {$/;"	M
+setMessagesChanged	jscrawl.html	/^  setMessagesChanged(changed) {$/;"	F
+setMessagesChanged	jscrawl.html	/^  setMessagesChanged(changed) {$/;"	M
+setMotionMode	jscrawl.html	/^  setMotionMode(mode) {$/;"	F
+setMotionMode	jscrawl.html	/^  setMotionMode(mode) {$/;"	M
+setMotionModeAttack	jscrawl.html	/^    setMotionModeAttack: [ 'a' ],$/;"	P
+setMotionModeAttack	jscrawl.html	/^  setMotionModeAttack: () => {$/;"	M
+setMotionModeAttackOrMove	jscrawl.html	/^    setMotionModeAttackOrMove: [ 'A' ],$/;"	P
+setMotionModeAttackOrMove	jscrawl.html	/^  setMotionModeAttackOrMove: () => {$/;"	M
+setMotionModeMove	jscrawl.html	/^    setMotionModeMove: [ 'M' ],$/;"	P
+setMotionModeMove	jscrawl.html	/^  setMotionModeMove: () => {$/;"	M
+setPool	jscrawl.html	/^  setPool(actor, pool, amount) {$/;"	F
+setPool	jscrawl.html	/^  setPool(actor, pool, amount) {$/;"	M
+setScreen	jscrawl.html	/^  setScreen(screenName) {$/;"	F
+setScreen	jscrawl.html	/^  setScreen(screenName) {$/;"	M
+setSelectAction	jscrawl.html	/^  setSelectAction(action) {$/;"	F
+setSelectAction	jscrawl.html	/^  setSelectAction(action) {$/;"	M
+setSelectAllowMultiple	jscrawl.html	/^  setSelectAllowMultiple(allow) {$/;"	F
+setSelectAllowMultiple	jscrawl.html	/^  setSelectAllowMultiple(allow) {$/;"	M
+setSelectCountMax	jscrawl.html	/^  setSelectCountMax(value) {$/;"	F
+setSelectCountMax	jscrawl.html	/^  setSelectCountMax(value) {$/;"	M
+setSelectCountMaxList	jscrawl.html	/^  setSelectCountMaxList(list) {$/;"	F
+setSelectCountMaxList	jscrawl.html	/^  setSelectCountMaxList(list) {$/;"	M
+setSelectExecute	jscrawl.html	/^  setSelectExecute(action) {$/;"	F
+setSelectExecute	jscrawl.html	/^  setSelectExecute(action) {$/;"	M
+setSelectFlags	jscrawl.html	/^  setSelectFlags(indexes) {$/;"	F
+setSelectFlags	jscrawl.html	/^  setSelectFlags(indexes) {$/;"	M
+setSelectKeys	jscrawl.html	/^  setSelectKeys(list) {$/;"	F
+setSelectKeys	jscrawl.html	/^  setSelectKeys(list) {$/;"	M
+setSelectMaxWidth	jscrawl.html	/^  setSelectMaxWidth(maxWidth) {$/;"	F
+setSelectMaxWidth	jscrawl.html	/^  setSelectMaxWidth(maxWidth) {$/;"	M
+setSelectMeta	jscrawl.html	/^  setSelectMeta(key, value) {$/;"	F
+setSelectMeta	jscrawl.html	/^  setSelectMeta(key, value) {$/;"	M
+setSelectMultiple	jscrawl.html	/^  setSelectMultiple(multiple) {$/;"	F
+setSelectMultiple	jscrawl.html	/^  setSelectMultiple(multiple) {$/;"	M
+setSelectNameList	jscrawl.html	/^  setSelectNameList(list) {$/;"	F
+setSelectNameList	jscrawl.html	/^  setSelectNameList(list) {$/;"	M
+setSelectSubjectList	jscrawl.html	/^  setSelectSubjectList(list) {$/;"	F
+setSelectSubjectList	jscrawl.html	/^  setSelectSubjectList(list) {$/;"	M
+setSelectTitle	jscrawl.html	/^  setSelectTitle(titleFunction) {$/;"	F
+setSelectTitle	jscrawl.html	/^  setSelectTitle(titleFunction) {$/;"	M
+setSkill	jscrawl.html	/^  setSkill(actor, skillName, value) {$/;"	F
+setSkill	jscrawl.html	/^  setSkill(actor, skillName, value) {$/;"	M
+setStatusChanged	jscrawl.html	/^  setStatusChanged(changed) {$/;"	F
+setStatusChanged	jscrawl.html	/^  setStatusChanged(changed) {$/;"	M
+setTarget	jscrawl.html	/^  setTarget(pos) {$/;"	F
+setTarget	jscrawl.html	/^  setTarget(pos) {$/;"	M
+shift	jscrawl.html	/^  shift: false,$/;"	P
+showEquipment	jscrawl.html	/^    showEquipment: [ 'e' ],$/;"	P
+showEquipment	jscrawl.html	/^  showEquipment() {$/;"	F
+showEquipment	jscrawl.html	/^  showEquipment() {$/;"	M
+showEquipment	jscrawl.html	/^  showEquipment: () => {$/;"	M
+showInventory	jscrawl.html	/^    showInventory: [ 'i' ],$/;"	P
+showInventory	jscrawl.html	/^  showInventory() {$/;"	F
+showInventory	jscrawl.html	/^  showInventory() {$/;"	M
+showInventory	jscrawl.html	/^  showInventory: () => {$/;"	M
+showInventoryActions	jscrawl.html	/^  showInventoryActions() {$/;"	F
+showInventoryActions	jscrawl.html	/^  showInventoryActions() {$/;"	M
+showInventoryGroup	jscrawl.html	/^  showInventoryGroup() {$/;"	F
+showInventoryGroup	jscrawl.html	/^  showInventoryGroup() {$/;"	M
+showInventoryGroup	jscrawl.html	/^  showInventoryGroup(inventoryGroup) {$/;"	F
+showInventoryGroup	jscrawl.html	/^  showInventoryGroup(inventoryGroup) {$/;"	M
+showSelectedItems	jscrawl.html	/^  showSelectedItems() {$/;"	F
+showSelectedItems	jscrawl.html	/^  showSelectedItems() {$/;"	M
+silver	jscrawl.html	/^              silver: 20,$/;"	P
+silver	jscrawl.html	/^  silver:  { $/;"	P
+silver	jscrawl.html	/^  silver: { $/;"	P
+silverEgg	jscrawl.html	/^          silverEgg: { $/;"	P
+simplePursuit	jscrawl.html	/^  simplePursuit(actor) {$/;"	F
+simplePursuit	jscrawl.html	/^  simplePursuit(actor) {$/;"	M
+size	jscrawl.html	/^  let size = new Pair(fromMap.length, fromMap[0].length)$/;"	V
+size	jscrawl.html	/^const size = {$/;"	O
+skillTypes	jscrawl.html	/^const skillTypes = {$/;"	O
+skills	jscrawl.html	/^        skills: { },$/;"	P
+skills	jscrawl.html	/^const skills = {$/;"	O
+small	jscrawl.html	/^  small: 0,$/;"	P
+smell	jscrawl.html	/^            smell: {$/;"	P
+smell	jscrawl.html	/^        smell: [],$/;"	P
+smell	jscrawl.html	/^      smell: 10,$/;"	P
+smell	jscrawl.html	/^  smell: { key: 's', },$/;"	P
+smellIndexes	jscrawl.html	/^    smellIndexes: [] \/\/ of smell, index aligns with smells array$/;"	P
+smells	jscrawl.html	/^    smells: [],      \/\/ [smell index][x][y] = amount$/;"	P
+somethingBig	jscrawl.html	/^    somethingBig: {$/;"	P
+somethingSmall	jscrawl.html	/^    somethingSmall: {$/;"	P
+sound	jscrawl.html	/^            sound: {$/;"	P
+sounds	jscrawl.html	/^    sounds: [],$/;"	P
+spear	jscrawl.html	/^              spear: {$/;"	P
+species	jscrawl.html	/^      species: null,$/;"	P
+species	jscrawl.html	/^const species = {$/;"	O
+spectra	jscrawl.html	/^    const spectra = possiblePools.filter(pool => $/;"	F
+spectra	jscrawl.html	/^  spectra: { key: 's', },$/;"	P
+spinach	jscrawl.html	/^          spinach: { $/;"	P
+splitAtBlankBefore	jscrawl.html	/^            splitAtBlankBefore(remaining, maxWidth - prefix.length)$/;"	F
+splitAtBlankBefore	jscrawl.html	/^function splitAtBlankBefore(string, pos) {$/;"	F
+spreadSmell	jscrawl.html	/^  spreadSmell() {$/;"	F
+spreadSmell	jscrawl.html	/^  spreadSmell() {$/;"	M
+stamina	jscrawl.html	/^      stamina: 20,$/;"	P
+stamina	jscrawl.html	/^  stamina: { $/;"	P
+star	jscrawl.html	/^  star: { $/;"	P
+status	jscrawl.html	/^      status: {$/;"	P
+statusChanged	jscrawl.html	/^    statusChanged: false,$/;"	P
+stop	jscrawl.html	/^  let stop = 0$/;"	V
+strawberries	jscrawl.html	/^          strawberries: { $/;"	P
+strength	jscrawl.html	/^      strength: 10,$/;"	P
+style	jscrawl.html	/^    const style = "#0000C080"$/;"	V
+style	jscrawl.html	/^    let style = "#8080FF40"$/;"	V
+sub	jscrawl.html	/^            sub: {$/;"	P
+sub	jscrawl.html	/^        sub: {$/;"	P
+sub	jscrawl.html	/^    sub: {$/;"	P
+subjects	jscrawl.html	/^      let [subjects, counts] = fc.getSelectedSubjectsAndCounts()$/;"	V
+subjects	jscrawl.html	/^      let subjects = []$/;"	A
+subjects	jscrawl.html	/^    let subjects = []$/;"	A
+subtract	jscrawl.html	/^  subtract(pair) {$/;"	F
+subtract	jscrawl.html	/^  subtract(pair) {$/;"	M
+subtractEnergy	jscrawl.html	/^  subtractEnergy(actor, energyType, amount) {$/;"	F
+subtractEnergy	jscrawl.html	/^  subtractEnergy(actor, energyType, amount) {$/;"	M
+sun	jscrawl.html	/^  sun: { $/;"	P
+supportMulti	jscrawl.html	/^    supportMulti: true,$/;"	P
+surroundLevelWithWalls	jscrawl.html	/^function surroundLevelWithWalls(oldLevel, size) {$/;"	F
+sushiRoll	jscrawl.html	/^          sushiRoll: { $/;"	P
+switch	jscrawl.html	/^    switch(event.key) {$/;"	F
+switch	jscrawl.html	/^    switch(event.key) {$/;"	M
+switch	jscrawl.html	/^    switch(slot) {$/;"	F
+switch	jscrawl.html	/^    switch(slot) {$/;"	M
+switch	jscrawl.html	/^  switch(type) {$/;"	F
+switch	jscrawl.html	/^  switch(type) {$/;"	M
+sword	jscrawl.html	/^              sword: {$/;"	P
+tPress	jscrawl.html	/^  const [fPress, tPress] = getEffectivePressures($/;"	V
+tRoom	jscrawl.html	/^        tRoom,$/;"	V
+tab	jscrawl.html	/^    const tab = 8$/;"	V
+target	jscrawl.html	/^          const target = new Pair(x, y)$/;"	V
+target	jscrawl.html	/^          target: target,$/;"	P
+target	jscrawl.html	/^        target$/;"	V
+target	jscrawl.html	/^    target: {$/;"	P
+target	jscrawl.html	/^  target: {$/;"	P
+template	jscrawl.html	/^          template: newTemplate,$/;"	P
+template	jscrawl.html	/^const template = {$/;"	O
+text	jscrawl.html	/^            text(prefix), $/;"	F
+text	jscrawl.html	/^          text(prefix), $/;"	F
+text	jscrawl.html	/^          text: characterToDraw,$/;"	P
+text	jscrawl.html	/^        text('Focus: '),$/;"	F
+text	jscrawl.html	/^        text: line $/;"	P
+text	jscrawl.html	/^    text(direction),$/;"	F
+text	jscrawl.html	/^function text(t) {$/;"	F
+textToDraw	jscrawl.html	/^        textToDraw: characterToDraw, $/;"	P
+textToDraw	jscrawl.html	/^        textToDraw: message,$/;"	P
+textToDraw	jscrawl.html	/^        textToDraw: statusRow,$/;"	P
+thickness	jscrawl.html	/^    const thickness = 0$/;"	V
+thickness	jscrawl.html	/^    const thickness = 2$/;"	V
+threshold	jscrawl.html	/^      const threshold = 1 \/ sensitivity$/;"	V
+throwable	jscrawl.html	/^          throwable: {$/;"	P
+tier	jscrawl.html	/^    tier: 0,$/;"	P
+tier	jscrawl.html	/^    tier: 1,$/;"	P
+tier	jscrawl.html	/^    tier: 2,$/;"	P
+tier	jscrawl.html	/^    tier: 3,$/;"	P
+tier	jscrawl.html	/^    tier: 4,$/;"	P
+tierMultiplier	jscrawl.html	/^    const tierMultiplier = 10 ** (from.tier - to.tier)$/;"	V
+title	jscrawl.html	/^    title,$/;"	V
+to	jscrawl.html	/^                to,$/;"	V
+to	jscrawl.html	/^              to,$/;"	V
+to	jscrawl.html	/^    to,$/;"	V
+to	jscrawl.html	/^    to: [$/;"	P
+to	jscrawl.html	/^    to: [pools.black],$/;"	P
+to	jscrawl.html	/^    to: [pools.blue],$/;"	P
+to	jscrawl.html	/^    to: [pools.brown],$/;"	P
+to	jscrawl.html	/^    to: [pools.criticalHealth],$/;"	P
+to	jscrawl.html	/^    to: [pools.cyan],$/;"	P
+to	jscrawl.html	/^    to: [pools.gray],$/;"	P
+to	jscrawl.html	/^    to: [pools.green],$/;"	P
+to	jscrawl.html	/^    to: [pools.indigo],$/;"	P
+to	jscrawl.html	/^    to: [pools.majorHealth],$/;"	P
+to	jscrawl.html	/^    to: [pools.mana],$/;"	P
+to	jscrawl.html	/^    to: [pools.minorHealth],$/;"	P
+to	jscrawl.html	/^    to: [pools.moon],$/;"	P
+to	jscrawl.html	/^    to: [pools.orange],$/;"	P
+to	jscrawl.html	/^    to: [pools.purple],$/;"	P
+to	jscrawl.html	/^    to: [pools.rainbow],$/;"	P
+to	jscrawl.html	/^    to: [pools.red],$/;"	P
+to	jscrawl.html	/^    to: [pools.stamina],$/;"	P
+to	jscrawl.html	/^    to: [pools.star],$/;"	P
+to	jscrawl.html	/^    to: [pools.violet],$/;"	P
+to	jscrawl.html	/^    to: [pools.willpower],$/;"	P
+to	jscrawl.html	/^    to: [pools.yellow],$/;"	P
+toDraw	jscrawl.html	/^              toDraw: characterToDraw,$/;"	P
+toMap	jscrawl.html	/^  let toMap = []$/;"	A
+toMapColumn	jscrawl.html	/^      let toMapColumn = []$/;"	A
+toMapColumn	jscrawl.html	/^    let toMapColumn = []$/;"	A
+toggleSelectedItem	jscrawl.html	/^  toggleSelectedItem(index) {$/;"	F
+toggleSelectedItem	jscrawl.html	/^  toggleSelectedItem(index) {$/;"	M
+tomato	jscrawl.html	/^          tomato: { $/;"	P
+tool	jscrawl.html	/^        tool: [],$/;"	P
+tool	jscrawl.html	/^      tool: {$/;"	P
+topController	jscrawl.html	/^const topController = new TopController()$/;"	V
+torch	jscrawl.html	/^          torch: {$/;"	P
+total	jscrawl.html	/^    const [ selected, total ] = $/;"	V
+total	jscrawl.html	/^    let total = 0$/;"	V
+total	jscrawl.html	/^  let total = 0$/;"	V
+total2	jscrawl.html	/^      const [selected2, total2] = getGrowthSelectCount(value)$/;"	V
+totalBrightness	jscrawl.html	/^    let totalBrightness = 0$/;"	V
+totalWeight	jscrawl.html	/^    let totalWeight = 0$/;"	V
+true	jscrawl.html	/^        true,$/;"	V
+true	jscrawl.html	/^      true$/;"	V
+true	jscrawl.html	/^      true,$/;"	V
+unequip	jscrawl.html	/^  unequip: {$/;"	P
+unequipItem	jscrawl.html	/^  unequipItem(item) {$/;"	F
+unequipItem	jscrawl.html	/^  unequipItem(item) {$/;"	M
+unequipUntilHandsFree	jscrawl.html	/^  unequipUntilHandsFree(handsNeeded) {$/;"	F
+unequipUntilHandsFree	jscrawl.html	/^  unequipUntilHandsFree(handsNeeded) {$/;"	M
+unwrap	jscrawl.html	/^  unwrap(target, size) {$/;"	F
+unwrap	jscrawl.html	/^  unwrap(target, size) {$/;"	M
+upBias	jscrawl.html	/^  let upBias = 0$/;"	V
+update	jscrawl.html	/^  update(forceRefresh = false) {$/;"	F
+update	jscrawl.html	/^  update(forceRefresh = false) {$/;"	M
+updateCellVisionMemory	jscrawl.html	/^  updateCellVisionMemory(actor, pos, character) {$/;"	F
+updateCellVisionMemory	jscrawl.html	/^  updateCellVisionMemory(actor, pos, character) {$/;"	M
+updateScreen	jscrawl.html	/^  updateScreen(screen, forceRefresh = false) {$/;"	F
+updateScreen	jscrawl.html	/^  updateScreen(screen, forceRefresh = false) {$/;"	M
+updateWindow	jscrawl.html	/^  updateWindow(screen, window, forceRefresh = false) {$/;"	F
+updateWindow	jscrawl.html	/^  updateWindow(screen, window, forceRefresh = false) {$/;"	M
+upperLeftQuarter	jscrawl.html	/^  upperLeftQuarter() {$/;"	F
+upperLeftQuarter	jscrawl.html	/^  upperLeftQuarter() {$/;"	M
+upperRightQuarter	jscrawl.html	/^  upperRightQuarter() {$/;"	F
+upperRightQuarter	jscrawl.html	/^  upperRightQuarter() {$/;"	M
+value	jscrawl.html	/^    let value = 0$/;"	V
+values	jscrawl.html	/^        let values = []$/;"	A
+values	jscrawl.html	/^      let values = []$/;"	A
+violet	jscrawl.html	/^              violet: 10,$/;"	P
+violet	jscrawl.html	/^              violet: 2,$/;"	P
+violet	jscrawl.html	/^              violet: 5,$/;"	P
+violet	jscrawl.html	/^  violet:     { bgStyle: '#825FFF', style: '#FFF' },$/;"	P
+violet	jscrawl.html	/^  violet: { $/;"	P
+visibility	jscrawl.html	/^    let visibility = 0$/;"	V
+vision	jscrawl.html	/^        vision: [],$/;"	P
+vision	jscrawl.html	/^      vision: 10,$/;"	P
+vision	jscrawl.html	/^  vision: { key: 'v', },$/;"	P
+volume	jscrawl.html	/^              volume: 4,$/;"	P
+volume	jscrawl.html	/^            volume: volume,$/;"	P
+volume	jscrawl.html	/^          volume: newVolume,$/;"	P
+w	jscrawl.html	/^  const w = 100$/;"	V
+wait	jscrawl.html	/^    wait: [ '.' ],$/;"	P
+wait	jscrawl.html	/^  wait() {$/;"	F
+wait	jscrawl.html	/^  wait() {$/;"	M
+wait	jscrawl.html	/^  wait: () => {$/;"	M
+wand	jscrawl.html	/^        wand: [],$/;"	P
+warn	jscrawl.html	/^      warn("Don't know how to draw this window yet: " + windowName)$/;"	F
+warn	jscrawl.html	/^      warn('Ran out of iterations to connectRooms')$/;"	F
+warn	jscrawl.html	/^function warn(message) {$/;"	F
+watermelon	jscrawl.html	/^          watermelon: { $/;"	P
+weapon	jscrawl.html	/^        weapon: [],$/;"	P
+weapon	jscrawl.html	/^      weapon: {$/;"	P
+while	jscrawl.html	/^        while(prefix.length + complexLength(remaining) $/;"	F
+while	jscrawl.html	/^        while(prefix.length + remaining.length >= maxWidth) {$/;"	F
+while	jscrawl.html	/^        while(prefix.length + remaining.length >= maxWidth) {$/;"	M
+while	jscrawl.html	/^    while(handsAvailable < handsNeeded) {$/;"	F
+while	jscrawl.html	/^    while(handsAvailable < handsNeeded) {$/;"	M
+while	jscrawl.html	/^    while(remaining != 0 && poolsToTry.length) {$/;"	F
+while	jscrawl.html	/^    while(remaining != 0 && poolsToTry.length) {$/;"	M
+while	jscrawl.html	/^  while(map.length < size.x) {$/;"	F
+while	jscrawl.html	/^  while(map.length < size.x) {$/;"	M
+while	jscrawl.html	/^  while(n < 0) {$/;"	F
+while	jscrawl.html	/^  while(n < 0) {$/;"	M
+while	jscrawl.html	/^  while(n >= size) {$/;"	F
+while	jscrawl.html	/^  while(n >= size) {$/;"	M
+while	jscrawl.html	/^  while(true) {$/;"	F
+while	jscrawl.html	/^  while(true) {$/;"	M
+white1	jscrawl.html	/^  white1:  { bgStyle: '#D0D0D0', style: '#000' },$/;"	P
+white2	jscrawl.html	/^  white2:  { bgStyle: '#E8E8E8', style: '#000' },$/;"	P
+white3	jscrawl.html	/^  white3:  { bgStyle: '#FFFFFF', style: '#000' },$/;"	P
+width	jscrawl.html	/^  width: 1600,$/;"	P
+willpower	jscrawl.html	/^              willpower: 10,$/;"	P
+willpower	jscrawl.html	/^      willpower: 20,$/;"	P
+willpower	jscrawl.html	/^  willpower: { $/;"	P
+willpowerFocus	jscrawl.html	/^    willpowerFocus: [ 'f' ],$/;"	P
+willpowerFocus	jscrawl.html	/^  willpowerFocus() {$/;"	F
+willpowerFocus	jscrawl.html	/^  willpowerFocus() {$/;"	M
+willpowerFocus	jscrawl.html	/^  willpowerFocus: () => {$/;"	M
+willpowerFocusExecute	jscrawl.html	/^  willpowerFocusExecute() {$/;"	F
+willpowerFocusExecute	jscrawl.html	/^  willpowerFocusExecute() {$/;"	M
+willpowerFocusSelectFocusType	jscrawl.html	/^  willpowerFocusSelectFocusType() {$/;"	F
+willpowerFocusSelectFocusType	jscrawl.html	/^  willpowerFocusSelectFocusType() {$/;"	M
+willpowerFocusSelectPool	jscrawl.html	/^  willpowerFocusSelectPool() {$/;"	F
+willpowerFocusSelectPool	jscrawl.html	/^  willpowerFocusSelectPool() {$/;"	M
+willpowerFocusSelectPoolType	jscrawl.html	/^  willpowerFocusSelectPoolType() {$/;"	F
+willpowerFocusSelectPoolType	jscrawl.html	/^  willpowerFocusSelectPoolType() {$/;"	M
+willpowerFocusSelectSense	jscrawl.html	/^  willpowerFocusSelectSense() {$/;"	F
+willpowerFocusSelectSense	jscrawl.html	/^  willpowerFocusSelectSense() {$/;"	M
+window	jscrawl.html	/^          window,$/;"	V
+window	jscrawl.html	/^        window: window, $/;"	P
+window	jscrawl.html	/^        window: window,$/;"	P
+window	jscrawl.html	/^      window,$/;"	V
+window	jscrawl.html	/^      window: null,$/;"	P
+window	jscrawl.html	/^    window: {$/;"	P
+windowCellPosToLevel	jscrawl.html	/^  windowCellPosToLevel(window, windowCellPos, levelSize) {$/;"	F
+windowCellPosToLevel	jscrawl.html	/^  windowCellPosToLevel(window, windowCellPos, levelSize) {$/;"	M
+windowCellPosToScreenPixelPos	jscrawl.html	/^  windowCellPosToScreenPixelPos(screen, window, windowPos) {$/;"	F
+windowCellPosToScreenPixelPos	jscrawl.html	/^  windowCellPosToScreenPixelPos(screen, window, windowPos) {$/;"	M
+windowPos	jscrawl.html	/^        windowPos: windowPos, $/;"	P
+windowPosIsValid	jscrawl.html	/^  windowPosIsValid(window, windowPos) {$/;"	F
+windowPosIsValid	jscrawl.html	/^  windowPosIsValid(window, windowPos) {$/;"	M
+windowToWindowName	jscrawl.html	/^  windowToWindowName(screen, window) {$/;"	F
+windowToWindowName	jscrawl.html	/^  windowToWindowName(screen, window) {$/;"	M
+within	jscrawl.html	/^  within(minPair, maxPairExclusive) {$/;"	F
+within	jscrawl.html	/^  within(minPair, maxPairExclusive) {$/;"	M
+wrap	jscrawl.html	/^            wrap(c, size.x), $/;"	F
+wrap	jscrawl.html	/^            wrap(r, size.y),$/;"	F
+wrap	jscrawl.html	/^  wrap(size) {$/;"	F
+wrap	jscrawl.html	/^  wrap(size) {$/;"	M
+wrap	jscrawl.html	/^function wrap(n, size) {$/;"	F
+wrappedDistance	jscrawl.html	/^  wrappedDistance(target, size) {$/;"	F
+wrappedDistance	jscrawl.html	/^  wrappedDistance(target, size) {$/;"	M
+xOffset	jscrawl.html	/^    let xOffset = 0$/;"	V
+xOffset	jscrawl.html	/^  xOffset: 0,$/;"	P
+yOffset	jscrawl.html	/^    let yOffset = 0$/;"	V
+yOffset	jscrawl.html	/^  yOffset: 0,$/;"	P
+yellow	jscrawl.html	/^              yellow: 10,$/;"	P
+yellow	jscrawl.html	/^              yellow: 15,$/;"	P
+yellow	jscrawl.html	/^              yellow: 20,$/;"	P
+yellow	jscrawl.html	/^              yellow: 3,$/;"	P
+yellow	jscrawl.html	/^              yellow: 5, $/;"	P
+yellow	jscrawl.html	/^              yellow: 5,$/;"	P
+yellow	jscrawl.html	/^  yellow:     { bgStyle: '#FFFF00', style: '#000' },$/;"	P
+yellow	jscrawl.html	/^  yellow: { $/;"	P

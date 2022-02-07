@@ -1,0 +1,2060 @@
+create api server
+  02: get simple vertx server up with example code
+      make first test
+  03: make login function
+  make connect to game / create game function
+
+creatures / players have same energy pool flow, heat, smell and sound generation
+  line up model
+    split spirits from creatures
+  make actions handle it
+should creatures starve to death too?
+  maybe fed by the dungeon?
+baseline dungeon temp
+baseline rat temp
+player produces heat
+player reacts to heat
+make smell drop off whenever below threshold
+make creatures and players have the same energy flow / heat / sense 
+basic senses
+  feel 
+    can only feel squares immediately around the player
+    heat
+      moves like energy
+    vibration / pressure
+  energy
+    not lost like smell
+      unless absorbed into an energy sink
+    for each cell
+      choose a single random adjacent cell
+      do normal pressure based energy transfer
+  how to view different senses?
+    view command switches view
+      vision
+      hearing
+      smell
+      feel
+      energy
+    dimensions
+  if one sense is lost, others should be magnified
+  negative impact
+  can reduce senses (like channels)
+  senses are species specific, and can't easily be enhanced
+generate different quantities of items
+energy in environment
+  cells store energy
+  energy moves between cells
+    conductance different for different materials
+      typically slow (1-3)
+    capacity different for different materials
+      typically fairly large (1000)
+make target not reveal things not yet seen
+external channels
+  all pools can vent except interna
+  OO=SG OO=ED
+difference between body and spirit
+  body
+    interna
+    spectra
+  spirit
+    etherea
+    lumina
+    exotica
+      used to help spirit act
+    limits
+      can't drink potions or carry things or equip items
+      can eat an item on the floor, although unless it gives an energy that the spirit can hold, it does no good
+      can draw energy from gems
+      will be seen by other spirit creatures, and can be destroyed
+      naturally leaks all energy pools at 100x normal leak speed
+      can see and feel, but not smell or hear
+different times for actions
+game clock
+  enemy actions don't execute until they have received enough time
+movement
+  fast / loud
+  normal (lowest stamina usage)
+  slow / quiet
+ranged count item generation
+weapon usage
+  weapon prioritization
+  chance to hit
+    check against dodge, deflect, block
+    force
+      skill
+      weapon
+      dex
+      speed
+      enemy size
+    resist
+      distance
+      enemy dodge/deflect/block skill
+      enemy dex
+      enemy movement
+  damage
+    force
+      skill
+      weapon
+      str (depending on weapon)
+    resist
+      enemy armor
+ranged attacks
+export / import game
+armor
+receiving major / critical damage will have different effects
+  minor damage has no effect
+  major damage
+    causes random damage to other interna: mana, stamina, and willpower
+  critical damage gives a chance of a bad status: (in addition to major damage effect)
+    confused (occasional misdirected attack / movement)
+    stunned (occasional missed turn)
+    slowed (all movement is 25% slower)
+    dulled (senses are reduced in effectiveness)
+    these statuses are removed as healing energy enters this interna, which is absorbed by the
+      status before increasing the actual pool
+examine pools
+  use scratch space
+  data model 
+  out and in commands
+  draw target based on what's being focussed
+  define visual blocks
+  add details to visual blocks
+  show details associated with selected object
+auto-help
+  based on input mode
+  should describe windows also
+auto-save after 10 turns
+ask if we should load game when starting
+multi-floor
+  stairs
+  10 floors for now
+  floor difficulty level concept
+    somewhat random, with 1, 50, and 100 floors being fixed. 50 will be set to difficulty level
+how to vary item generation?
+  item energy, gets used by each item generated
+  if not enough energy, then item isn't generated
+  each item has a generation cost
+  top floor starts with 100 points of each generation color
+  each floor has a core, which adds points to that generation color * the level of the floor
+core attributes
+  str
+  dex
+  int
+  charisma 
+    good for a summoner
+  constitution
+    does not boost health, but does improve disease and poison resistance
+example spell masteries
+  necromancer
+  timelord
+  shapeshifter
+  summoner
+  elementalist
+  planeswalker
+  translocator
+  beast tamer
+  alchemist
+  healer
+  enchanter
+  evoker
+  inscriber
+  jeweler
+  artificer
+  weapon smith
+  armor smith
+  hunter
+quick travel
+  auto-explore
+  auto-attack
+  instant move 
+    to a place on an empty floor
+    from an empty floor
+  auto-travel
+    works even if monsters are around
+    attitudes:
+      avoid monsters
+      ignore all items
+willpower is gained from successful activities
+  killing a monster
+  discovering valuable items
+  achievements
+  successful spell casting
+  successful weapon strike
+  successful dodge or deflect or block
+  scroll of motivation
+  most food gives a small amount of willpower
+    dessert food gives larger amount: chocolate, cake, etc
+  stealth success
+willpower is drained by 
+  being hit
+  pain
+  spells failing
+  fear
+  stealth detection
+low interna
+  starvation constantly attempts to deplete HP, MP, SP (not WP)
+    red, orange, yellow energy is consumed to counter this, unless there is no energy available, in which case hp is lost
+    there is an idle rate that these deplete, although it is slow
+    HP = 0 : dead
+    SP = 0 : occasional fainting
+    MP = 0 : occasional confusion
+instadeath avoidance
+  the player must receive damage after all health < 1 at beginning of turn before death occurs
+monster enemy identification
+  sight
+    changes quickly
+  hearing
+    changes a little quick
+  smell
+    changes slowly
+  energy
+    changes slowly
+  persuasion
+everything destructable
+monster corpses and spirits
+  their intent and skills are part of the spirit
+  spirit dissipates slowly
+  body decays slowly
+if player dies, spirit is still alive for a time
+  player has mp and wp, but not hp or sp
+  can cast spells, but not hold items
+  once wp is gone, spirit falls apart
+  can't eat or drink potions or read scrolls
+  can possess another body if powerful enough
+  or resurrect original body
+  invisible to most monsters, although other spirits can see 
+  can still be attacked with magic
+  physical attacks don't work
+  does changing species change spirit?
+    yes, changes are retained
+  all energy pools leak slowly as a spirit
+  can pass through walls as spirit
+water
+  shallow
+  deep
+variable size browser windows
+smarter monsters
+monsters have equip
+  they drop their equip and money on death
+attributes
+more sophisticated attack
+client / server
+multiple simultaneous clients
+spawning monsters
+curses
+  wear off over time, or can be immediately cancelled with a remove curse scroll
+spawned items
+  weapons [
+  armor ]
+  ammo (
+  shield )
+  potions !: doesn't require energy or intelligence. Alters the user, or can affect weapons. Takes a medium amount of time
+  scrolls @: can cast any spell without energy as long as there's enough intelligence. But it takes more time than most actions
+  wands /: convert mp into a single spell, without needing intelligence. Takes very little time. No charges
+  rings =:
+    attribute: boost that attribute
+    pool: increase size of that pool
+  amulets -: much more powerful than rings, but only one can be worn, and it takes more time to take effect
+    polymorph: changes character to the given creature while worn
+    protection
+    deflection
+    mana shield
+    stamina shield
+    stasis
+    will (boost willpower generation)
+    hp (boost red -> hp regen)
+    mp (boost yellow -> mp regen)
+    sp (boost orange -> sp regen)
+  runes ~: alters attribute of holder permanently while carrying it, or item it's installed into
+    always a simple attribute boost of whatever it's inserted in, or the user if they wield it
+    accuracy
+    damage
+    defense
+    speed
+  gems ~: stores energy
+    if a player equips a gem in their hand, it connects with the native container of the player of the same color
+      generated with random level of charge?
+        either 
+          10  0 
+          3   0.5
+          1   1
+    L1  30 points of capacity
+    L2  100 points of capacity
+    L3  300 points of capacity
+    L4  1000 points of capacity
+    L5  3000 points of capacity
+    L6  10000 points of capacity
+    L7  30000 points
+    L8  100000
+    L9  300000
+    L10 1000000
+    opal: changes to the energy type of the highest pressure energy the user has at the time they first hold it
+    pearl: white
+    ruby: red
+gems and runes (stones) can be merged into weapons
+  sockets aren't used
+  each insertion reduces durability (1/3)
+shops
+  fixed shops
+  monsters can't enter
+  player can't attack when inside of a shop
+  can they heal, read scrolls, etc?
+  dropping item onto floor sells it
+  picking item up buys it
+  They can buy and sell, but price is based on demand
+    price of every item is based on how many are held by shops throughout the dungeon
+    the more of a given type of item, the cheaper it is
+    if you sell an item, that item's price becomes lower, since there is more supply. But calculated price is what the value is after it was sold, making re-buy price = sell price
+    sell price != buy price for a single item at one time
+  merchants occupy real level space: 
+    1/2   3x3
+    1/4   4x4
+    1/8   5x5
+    1/16  6x6
+    1/32  7x7
+    1/64  8x8
+    1/64  9x9
+    <5x5 is usually a speciality store
+    >=5x5 is usually a general store (although there's a small chance of the opposite)
+  buy, then reselling must always be the same price
+  total price is product of several factors
+    rarity based: (rarity_factor = (1 + count of that type) / total_items_spawned)
+      item class: potion, weapon, armor, scroll...
+      item type: spear, axe, dagger...
+      item enhancement level: 0, 1, 2, 3, 4...
+      item brand: fire, ice, none
+    scale based: (rarity_factor = 1/(1+level))
+      item level
+      item charge
+      socket count
+    inverting the product of the rarity_factors gives the actual price of the product
+  every 3 floors should have a store
+  every 3 stores should be a mega-store
+    either a large store (6+)
+    or a bazaar (3+ normal stores)
+  items are sorted by rarity
+  shops half full
+  generated item count is fixed when level is generated, and is multiplied by store stability factor (10?)
+trees
+  wet
+  normal
+  dry
+    can catch on fire, and dry out or light other trees nearby
+consume item
+dungeon is a stack of 100 floors, but there are some branches and planes
+branches
+  5 floors which lead to a boss floor and a rune
+  20 runes total (one for each energy pool)
+  each branch is of a single energy pool color
+    branches will tend to be found on a floor of the same color, but if there are no floors of that color, a random one will be chosen
+  difficulty level of the branch is the difficulty level of the floor on which the branch entrance is found, with each level of the branch increasing difficulty by 20%
+dimensions
+  5 z positions for each cell?
+  w dimension to get to ketheric, etheric, astral, dungeon, abyss, void, pandemonium, oblivion
+  can set dimensions, 2 or 3 on main view
+planes
+  lower planes have less energy
+  bringing creatures to higher planes makes them have a better attitute towards the player (easier to command)
+  easier to travel down planes than up
+  each plane has a different background color
+  attributes of each
+    ketheric (violet)
+    etheric (blue)
+    astral (green)
+    dungeon (gray)
+      one energy core per level
+    abyss (yellow)
+    sheol (orange)
+    pandemonium (red)
+    void (black)
+    oblivion (nothing)
+      can't travel here without dying (no spirit either)
+      anything sent here is lost forever
+starting equipment, selected at beginning
+  maybe not: nothing to start with
+  philanthropist: pile of gold
+  scholar: start with book of identification
+  warrior: weapon and armor
+  sniper: ranged weapon and light armor
+  evoker: start with some wands
+  artificer: start with gems
+  alchemist: start with potions
+  scribe: start with scrolls
+disciplines (from books)
+  abilities are paid with one particular interna
+    hp
+    sp
+    mp
+    wp
+    gp
+  identifier
+    while studying this book, if you come across any unidentified items, they become identified
+  abilities are gained with experience, and don't come immediately
+    based on levels gained after starting the discipline study
+    can only study one discipline at a time, but can change without loss
+    provide permanent abilities (which usually cost some resource)
+    abilities do not require intelligence or mana, only ability points (which recover as player gains exp)
+  slow master
+    abilities based on speed difference
+  equip master
+    can request a type of equipment periodically, randomly selected
+  magic master
+    can request refill of mana
+  escape master
+    can create walls around self or target (only if spaces are empty)
+    repulse: push all neighboring creatures back a few spaces
+  vision master
+    can sense things through walls, under ground, etc
+    can search for a type of creature
+  growth master
+    allows adjusting growth points
+    faster growth rate, depending on level of discipline gained
+  travel master
+    provides teleportation abilities, even across dimensions
+  time master
+    cheap power: foresight
+      can test a future, which automatically rewinds after time limit expires
+    strong power: checkpoint rewind (must happen before death)
+    time bubble: time slows down outside of bubble, but inside normal flow
+    super strong power: second chance (must be cast before dying), will rewind a short time before death should death occur
+  spirit master
+    can't carry equipment unless possessing another creature
+    can move from one creature to another
+    must store up enough energy before dying to be able to possess another 
+    leaving before dying is better, since death causes a backlash greatly reducing the spirits power
+game achievements (increase score)
+  raider: obtain the orb of power (doubles all pools while in inventory, but attracts monsters)
+  each rune: 1000 points
+  destroyer: destroy all bad creatures in the main dungeon
+  anhilator: destroy all bad creatures in all branches
+  explorer: to explore every part of the dungeon
+  entrepreneur: obtain 1 million gold
+  peacemaker: to get to the bottom and return without killing any creature
+  seasoned: gain all experience potions in dungeon
+  survivor: escape dungeon alive, 4x score
+score
+  each achievement adds to the score
+  escaping the dungeon alive multiplies score by 4
+altars
+  always require a certain kind of sacrifice in exchange for a temporary boost of some attribute or gifted item
+  sacrifices
+    experience potions
+    skill levels
+    attributes
+    hand
+    gold
+    gem
+    rune
+  reward
+    known wish, 3 of:
+    common
+      small growth points
+    rare
+      random energy awakening
+      medium growth points
+    legendary
+      chosen energy awakening
+      large growth points
+multiple species
+  change species through polymorph potions
+    normally they are temporary, but there are special scrolls that can make them permanent
+      start with one permanent scroll
+friendly and neutral creatures
+  can pacify creatures by healing or giving gifts
+multiplayer observation
+  messages
+  all actions recorded
+  snapshots of variables
+  can rewind, fast forward, search
+multiplayer in same dungeon
+  taking over another player
+  forking another player
+  playing with a separate character
+  real time simultaneous changes, but each player that moves gives the level a turn also
+    maybe disabled when monsters are around?
+challenge / defense calculation
+  diff = challenge - defense 
+  power = 2^(diff/4)
+  chance = power/(power+1)
+damage calculation
+  (damage_range * random + base_damage) * chance * 2
+  max_damage = (damage_range + base_damage) * 2
+  min_damage = 0
+defenses
+  dodge
+  deflect
+  block
+  magic armor
+  physical armor
+leaving a floor causes time to stop for that floor. When returning to that floor, time is advanced based on how much time the player was away, up to a maximum amount
+identification
+  potions, scrolls, wands, weapons, armor, rings, etc.  are not identified at first
+  identification scrolls are rare
+  items are auto identified based on level of item and skills of the player
+    if they have skills for that item
+    if they have high int
+    if they have curse recognition skills?
+    if they have rarity recognition skills
+    if they have special insight mutation
+item classes / sub
+  equipment
+    weapons
+    armor
+    accessories
+      ring
+      amulet
+  stones
+    gem
+    runes
+  consumable
+    scroll
+    potion
+    wand
+    food
+  misc
+    book
+    wards (scare certain types of monsters away)
+    lures (attract some monsters)
+scrolls
+  inspection
+  identify (identifies all carried items)
+  remove curse
+  duplication
+  amplification
+  duration: double the length of time of the next scroll
+  permanence: makes a potion effect permanent
+  inversion: makes a potion or scroll do the opposite
+  blink: instant teleport to some space that can be seen
+  floor teleportation
+  branch teleportation
+  dimension teleportation
+  level map
+  mineral report
+  treasure map: shows where all of the gold or high rarity items on the floor is 
+  recharge
+  remove curse
+  instant skill upgrades
+  contain info about spell recipes
+  contains a fundamental spell principle
+  time (stops time for 10 auts)
+wands
+  some wands auto-recharge, which boosts their value considerably
+  some wands auto-discharge
+  some wands draw energy directly from the user
+  have durability
+  digging
+  wall
+  teleportation
+  stasis
+  lightning
+  fireball
+  freezing
+  confusion
+  inaccuracy
+  light
+  silence
+  apport
+  disarm
+  paralysis
+potions
+  have a magic world effect definition
+  can be applied to a weapon to add an effect (replaces other applied effects)
+  can be thrown for a splash effect (equipped as a weapon)
+  can be crafted from ingredients
+    alchemy skill boost effectiveness and success rate, and reduces side effects
+    most ingredients have positive and negative effects
+  non-energy pools are much less likely
+    healing (full)
+      minor 
+      major
+      critical
+    stamina
+    mental energy
+  pure boost of energy, health, mp etc
+  stat altering: temporary effect
+  mutations: temporary effect
+  species altering: temporary effect
+books
+  can provide study disciplines
+  or can boost skill aptitudes
+ranged attacks
+  more distance reduces chance to hit
+skills
+  aptitudes
+    normal is 1.0, but can be 0.5, 1.5, 2.0, 2.5, etc
+    0 means can't be trained
+  offense
+    unarmed combat
+    polearm
+      can attack 2 spaces away
+    axe
+      can attack all adjacent spaces
+    mace
+      effective against armor, harder to deflect
+    short blade
+      fast attack, high critical potential
+    long blade
+      high damage, but weaker against armor
+      can ripost
+    staves
+      can block or deflect
+      easily enchanted
+      bridges two energy pools while equipped (usually chosen randomly)
+        mostly between two spectra
+        rarely between a spectra and lumina, or etherea, or interna
+    blowgun
+      causes specific effects
+      can select ammo types, requiring different mp:
+        slow: 1
+        confusion: 1
+        poison: 2
+        sleep: 2
+        curarae: 10
+      requires high dex to hit accurately
+    bow
+      faster ranged attack
+      negative time
+      high skill requirement
+    crossbow
+      slow, but higher damage ranged attack
+      negative time
+      high skill requirement
+    throwing
+      low skill requirement
+      damage heavily based on strength
+      lower accuracy
+      positive time
+      slow reload
+      requires stones or boulders to throw
+    slings
+      high skill requirement
+  defense
+    dodge
+    armor
+    block
+    deflect
+    stealth
+    disguise
+  misc
+    weapons
+      reduces durability loss when using weapons
+    armor
+      reduces durability loss when using armor
+    fighting
+    spellcasting
+    cooking
+    alchemy
+    inscription
+    tracking
+    crafting
+    scholarship
+    medical
+    meditation (depth and speed)
+    farming (seed extraction)
+    mining
+    wands
+  magic
+spells / magic
+  teleportation requires setting up a target
+    which requires distance vision
+    this process can be disrupted, or even altered to a different target
+  transformation tree
+    levels
+      subatomic
+      proton
+      electron
+      spirit
+      mind
+      body
+    sapling to small tree to large tree
+    dry tree to normal tree to wet tree
+    turning a wall into water
+  delayed execution
+  triggered execution
+  manipulating an existing spell or curse
+    easier to alter later words
+  forces hold forms in place
+    they can be weakened or reversed
+    must reduce the force resisting change before making a change
+    then increase force resisting change after, to make change persistent
+  all item enchantments and potions and scrolls are woven from magic properties
+  even weapons and armor can be fabricated with magic if the user is powerful enough
+  spell start / end keys
+  principles
+    teleportation
+    summoning
+    attack
+    defense
+    speed
+    attribute alteration
+    item alteration
+    item construction
+    illusion
+    channeling
+  different ways of failing depending on what exactly fails
+    each component of a spell has it's own chance of success and energy costs
+  spells can be analyzed and altered
+    player has to turn analysis on (which consumes mp)
+    there is a chance that the spell can be analyzed, which allows the player to alter various parameters
+  a way to reinforce spells to make them harder to hack
+  alteration levels
+    duration
+      resist change
+      temp
+      perm
+    change class
+      alteration
+      replication
+      creation
+    size
+    distance
+    interference
+      direct touch
+      open air
+      through wall
+      through a creature
+    teleportation
+    info gathering
+    control
+    targetting
+  can increase chance of success by doubling mp costs (challenge +5)
+  can reduce chance of success by halving mp costs (challenge -5)
+  can double or half time taken (challenge +5 / -5)
+  silent spell (challenge -5)
+  loud spell (singing and dancing, challenge +5)
+  hands free (challenge +5 each hand, also counts if wand or staff equipped)
+  wand or staff equipped (challenge +5 each hand)
+  heavy armor (challenge -5)
+  no armor (challenge +5)
+  dexterity boost
+  intelligence boost
+  pool types
+    spectra determines nature of change
+    lumina determines level of change
+    etherea determines permanence / duration
+    exotica can influence other aspects of the spell itself
+      cost, speed, success, disruption resistance
+    mp is used for connecting and guiding energy
+macros
+  can save keystrokes, especially for spells
+traps
+  may be created, but they take a lot of time to set up, so they typically can't be setup up during a battle
+  can immobilize or damage
+damage types
+  chop
+  pierce
+  bash
+  heat
+  freeze
+  shock
+tombstones
+  each player that dies is saved with all of their equipment and stats
+  tombstones are randomly generated on floors, with info about the player who died,
+    and what items are left behind
+  if player digs at tombstone they will get an item left behind by that dead player,
+    but there is a 1/3 chance of waking the dead, and they will have to fight a spirit
+    with reduced specs of the original player
+species
+  common:
+    human
+      strong: 
+        experience 
+        sh, se
+        awaken a new spectra pool every 10 levels, max of 2 pools
+    elf
+      strong:
+        ages more slowly
+        dex
+        int
+        smell sensitivity
+        spirit sensitivity
+        mh, me
+        immediate core awakening
+        awaken a new spectra pool every 15 levels, max of 4 pools
+        get more food from plants
+      weak:
+        str
+        experience gain
+        can't eat meat
+    orc
+      strong:
+        str
+        ph, pe
+        pain resistance
+        awaken a new spectra pool every 5 levels, max of 1 pool
+      weak:
+        ages more quickly
+        int
+        can't eat fruit
+    dwarf
+      strong:
+        ages more slowly
+        str
+        pe
+        night vision
+        magic resistance
+        awaken a new spectra pool every 20 levels, max of 2 pools
+      weak:
+        low health regen (1/4)
+      other:
+        size = small
+    halfling
+      strong:
+        dex
+        mutation resistance
+        hearing sensitivity
+        stealthy
+        awaken a new spectra pool every 7 levels, max of 2 pools
+      weak:
+        str
+      other:
+        size = small
+  uncommon
+    spriggan
+      strong:
+        run speed
+      weak:
+        can't eat meat
+      other:
+        size = small
+    merfolk
+      strong:
+        swim speed
+      weak:
+    kobold
+      strong:
+        auto lose negative mutations
+        auto gain mutations
+      other:
+        size = small
+    ogre
+      strong:
+        str
+        hp
+      weak:
+        dex
+      other:
+        size = large
+    troll
+      strong:
+        minor hp core
+      weak:
+        int
+      other:
+        size = large
+  rare
+    mummy
+      strong:
+        no hp, mp, or sp decay
+        no critical or major health, all minor
+        high stealth
+    vampire
+      strong:
+        can transform to a bat
+        can drain red energy from others on contact
+        starts with blue core
+      weak:
+        damaged by Sun energy
+    demigod
+      strong: (all +1 each level up)
+        str
+        dex
+        int
+        hp
+        mp
+        sp
+        wp
+      weak:
+        can't have a guardian
+        xp gain
+    demon
+      strong:
+        demonic mutations
+      weak:
+        slow experience gain
+    draconian
+      strong:
+        gain a color alignment at level 10
+          gain a double core of the given color
+          capacity of that color is doubled
+          resistance of the corrosponding element
+        can fly
+        natural armor that gets stronger as level goes up
+      weak:
+        can't gain any other core awakenings
+        weakness to the opposing element
+        can't wear most armor
+    minotaur
+      strong:
+        fighting
+        all fighting aptitudes
+        str
+      weak:
+        spellcasting
+        magic aptitudes
+        int
+    gargoyle
+    ghoul
+      strong:
+      weak:
+    centaur
+      strong:
+        land speed
+        ranged weapons
+      weak:
+        skill growth
+      other:
+        size = large
+    tengu
+      strong:
+        can fly
+        beak and claws
+      weak:
+        low hp
+    vine stalker
+      strong:
+        gets a yellow or red core after level 5
+        mp / hp are linked
+      weak:
+        no potions
+    formicid
+      strong:
+        4 arms
+        can dig
+        str
+      weak:
+        resistant to teleportation (stasis)
+    naga
+    octopode
+      strong:
+        8 rings
+        4 weapons
+        stealth
+        can generate black cloud blocking vision in nearby area
+      weak:
+        can't use most armor
+    felid
+      strong:
+        9 lives
+        unarmed combat
+        4 rings
+        fast
+      weak:
+        can't use weapons
+        can't use much armor
+      other:
+    fairy
+      strong:
+        fly
+        start with white core
+      weak:
+        small hp, sp, mp
+      other:
+        size = small
+    dryad
+      strong:
+        start with green core
+        can accelerate plant growth
+      weak:
+    djinn
+      strong:
+        fly
+        hp, mp, sp all linked
+      weak:
+        can't use scrolls
+      other:
+        size = large
+
+info
+energy management
+  hunger / display hunger
+  where does it come from?
+    dungeon core generates energy for the dungeon
+      always one color
+      player auto-absorbs if pressure is in the right direction
+  connection flow
+    max amount of lower energy to move in an aut
+    levels:
+      9 = 100%
+      8 = 50%
+      7 = 25%
+      6 = 12%
+      5 = 6%
+      4 = 3%
+      3 = 1.5%
+      2 = 0.75%
+      1 = 0.37%
+      0 = 0.1%
+  overdriving energy capacity
+    causes damage to the energy pool
+      pain and reduction of max capacity of pools involved
+      energy leaks from the pool if there is damage, proportional to the damage level
+      how to repair damaged pools
+        higher tier pools that are connected will first repair the damage before filling the pool
+        repair cost is one higher tier point per damage point
+      damage per aut = ([overloaded amount] / [max]) ^ 4 / 10
+  tiers 0-4
+    1 tier 4 = 10 tier 3 = 100 tier 2 = 1000 tier 1 = 10000 tier 0
+  energy types
+    lumina (5)
+      white: sUn (tier 4)
+        connects to *all* etherea
+        element = high life
+      white: Moon (tier 3)
+        connects to *all* spectra
+        connects to sun
+        element = low life
+      white: sTar (tier 2)
+        connects to any etherea
+        connects to moon
+        element = light
+      grAy (tier 1)
+        connects to any spectra
+        connects to star
+        element = shadow
+      blacK (tier 0)
+        connects to any interna or gray
+        element = darkness
+    etherea (tier 3) (4)
+      Diamond (cyan, blue, indigo, violet, red)
+      goLd (yellow, green, cyan, blue)
+      Silver (orange, yellow, green)
+      coppEr (red, orange)
+    spectra (tier 2) (8)
+      violet
+        element = purity / poison
+        provided by mushrooms
+        used by: 
+          time spells
+      indigo
+        element = metal
+        provided by dairy
+        used by: 
+          planes spells
+          deep creation
+      blue
+        element = water
+        provided by seafood
+        used by: 
+          deep aleration spells
+          critical healing
+      cyan
+        element = ice
+        provided by roots 
+        used by: 
+          translocation spells
+          freeze magic
+          perception magic
+      green
+        element = earth
+        provided by veggies
+        used by: 
+          simple creation spells
+          major healing
+      yellow
+        element = electric
+        provided by fruits
+        used by:
+          mana gen
+          control magic
+          lightning magic
+      orange
+        element = stone
+        provided by grains
+        used by: 
+          simple aleration spells
+          stamina gen
+      red
+        element = fire
+        provided by meat (land meat, not seafood)
+        used by:
+          minor healing
+          fire magic
+    interna (tier 1) (N) (6) (form pools)
+      1 hp1 critical_health (from blue)
+      2 hp2 major_health (from green)
+      3 hp3 minor_health (from red)
+      4 sp  stamina (from orange)
+      5 mp  mana (from yellow)
+      6 wp  willpower (from violet)
+    eXotica (4) (tier 1) (extremely rare to find these energies)
+      raiNbow 
+        connects to *all* spectra
+      broWn 
+        connects to *all* lumina
+      Purple
+        connects to red AND blue
+      Pink
+        connects to red AND white
+night vision
+  two kinds:
+    low light magnification
+    infra red
+dynamic monsters
+  not fixed
+  a-z A-Z
+  probably not fun
+environmental effects
+  cycle
+    sun
+      boosts sun energy effectiveness (2.0)
+      boosts red (fire) effectiveness (2.0)
+      black (0.5)
+      special:
+        comet: 
+          red effectivness (8.0)
+        eclipse:
+          red effectiveness reduction (0.5)
+          black effectivness increase (8.0)
+      night: 
+        black (2.0)
+        meteor shower
+          star (8.0)
+        star (2.0)
+    moon (phase changes each day)
+      boosts moon energy effectiveness
+      phases:
+        new moon: 
+          blue (0.5)
+          moon (0.5)
+          black (2.0)
+        crescent: (1.5)
+        half: (2.0)
+        gibbous: (3.0)
+        full: (4.0)
+      special:
+        blood: 
+          blue (2.0)
+          red (8.0)
+          purple (8.0)
+  weather
+    cloudy
+      reduces sun, moon, and star boosts
+      increases air boost
+    wind
+      boosts air effectiveness
+      altars smell flow
+      special:
+        blizzard
+          cyan (4.0)
+          wind (4.0)
+    rain
+      boosts blue (water) effectiveness
+      sub-types:
+        thunder
+          boosts electric effectiveness
+        hail
+          cyan (8.0)
+        snow
+          cyan (4.0)
+       
+improved energy system
+  tier 6:
+    vitality(I6) -> hp1(I5), sp1(I5), mp1(I5), sun(L5)
+  tier 5:
+    hp1(I5) -> hp2(I4), moon(L4)
+    sp1(I5) -> sp2(I4), moon(L4)
+    mp1(I5) -> yellow(S2), moon(L4)
+    sun(L5) -> moon(L4)
+  tier 4:
+    hp2(I4)     -> hp3(I3), star(L3)
+    sp2(I4)     -> orange(S2), star(L3)
+    rainbow(X4) -> red..violet(S2), star(L3)
+    pink(X4)    -> hp3(I3), silver(E3), star(L3)
+    purple(X4)  -> hp3(I3), diamond(E3), star(L3)
+    bronze(X4)  -> copper(E3), gold(E3), star(L3)
+    clear(X4)   -> diamond(E3), silver(E3), star(L3)
+    moon(L4)    -> star(L3)
+  tier 3:
+    hp3(I3)     -> red(S2), brown(L2)
+    copper(E3)  -> red(S2), orange(S2), brown(L2)
+    silver(E3)  -> orange(S2), yellow(S2), green(S2), brown(L2)
+    gold(E3)    -> yellow(S2), green(S2), cyan(S2), blue(S2), brown(L2)
+    diamond(E3) -> cyan(S2), blue(S2), indigo(S2), violet(S2), red(S2), brown(L2)
+    star(L3)    -> brown(L2)
+  tier 2:
+    red(S2)    -> gray(L1)
+    orange(S2) -> gray(L1)
+    yellow(S2) -> gray(L1)
+    green(S2)  -> gray(L1)
+    cyan(S2)   -> gray(L1)
+    blue(S2)   -> gray(L1)
+    indigo(S2) -> gray(L1)
+    violet(S2) -> gray(L1)
+    brown(L2)  -> gray(L1)
+    black(L2)  -> gray(L1)
+  tier 1:
+    gray(L1)
+
+alchemy
+  each ingredient has multiple effects
+  only dominant 2 effects will happen, lower ones will be ignored
+  combining ingredients can cancel out dominant effects to allow weaker effect to come out
+  amplification process works by combining the same ingredients
+  gathering ingredients:
+    not dropped from monsters
+    automatically picked up as you discover new empty floor spaces
+    higher chance of finding quality ingredients based on alchemy skill
+
+crafting
+  describe what can be crafted from given materials
+    two groups: 
+      directly craftable
+      indirectly craftable
+  materials are gathered in the same way as alchemy ingredients
+  higher chance of finding quality ingredients based on crafting skill
+
+magic foundation
+  templates maintain physical existence
+  physical properties randomly decay, and templates resist that (but then decay themselves)
+  can create templates to stabilize templates, as many levels as needed
+  a template won't change anything unless there is the right kind of energy available
+
+bodies
+  spirit is foundation, and fundamentally different than other bodies
+    can only store 5 points of each energy type (making energy refinement impossible)
+    energy generation is the same
+    can't eat
+    but can quickly absorb energy from surroundings
+    can use spells
+    can't use weapons or armor
+    not damaged by physical attacks
+    can pass through walls
+    much more sensitive to energy
+    can influence corporeal bodies
+    moves by spreading out spirit and gathering it back up
+      one space is designated as spirit core, and spirit will either gather to or spread away from it
+      distance is controllable also
+        0, 1, 2, 3, 4, 6, 9, 15
+      spread may be radial or directional
+        360 degrees, 180, 90, 45, 22, 11, 5, 2, 1 (depending on focus ability)
+      concentration ratio
+        two modes: spread / gather
+        spread
+          9:1
+          6:1
+          4:1 more concentrated around root, less spread
+          3:1 
+          2:1 means spirit will only transfer from A to B if B contains less than half of A
+          1:1 evenly spreads out spirit everywhere
+          1:2 will reduce root concentration to below spread
+    senses also through spirit
+      higher concentration provides higher vision distance
+      generally weaker than physical body though, except for energy sensitivity
+      spirits can't automatically identify other spirits in the same space, but can potentially
+        recognize through energy signatures
+    if physical material is bound to a spirit, foreign spirits can't pass through
+      neutral matter allows multiple spirits to pass through at once
+    spreading out spirit matter also spreads out energy contained by that spirit
+  corporeal
+  undead
+  synthetic
+
+do we need complex surfaces?
+  strictly 2d is simpler
+  support clouds which combine with character if character moves onto space, then cloud is gone
+  can spaces generate clouds? No, better to have a cloud generator
+  even items can work this way
+  each space can only hold one type of item (although there can be a multiplier with it)
+  moving onto an item space can either swap spaces with the item or merge with it
+    swap by default, pickup is a special command
+  but having water, fire, lava on the floor is meaningful
+    can't have swimming, oil, lava, ice otherwise
+    so each cell can hold a single object / character type, and has a single surface type
+    surface type can be seen as background color of cell
+  swimming requires more than just a surface mechanic
+    do we support ground mechanic and surface mechanic?
+      greatly complicates
+      hard to know what is covered up
+      can make it exclusive: either a shallow surface over stone, or a deep surface
+  best to have under, surface, and over slots
+
+  surfaces
+    shallow water - light blue
+    deep water - dark blue
+    ice - cyan
+    stone - dark grey
+    dirt - brown
+    poison - green
+    lava - red
+    fire - orange
+    oil - black
+
+  still too complicated
+  go to only under and over, no surface:
+
+  under
+    hot rock - orange ,
+    rock - black ,
+    cold rock - dark blue ,
+    dirt - brown .
+    grass - green . 
+    burning grass - red .
+    forest - green !
+    burning forest - red !
+    shallow water - light blue ~
+    deep water - dark blue ~
+    lava - red ~
+    tar pit - black ~
+    elevated rock - yellow ^
+
+matter
+  level 1 matter can only move through unoccupied level 0 space
+  level 2 matter can only move through unoccupied level 1 space
+  level 1 matter creates level 1 space
+  spirit matter must have physical matter to pass through, lower densities means slower movement
+    1 point of spacial mass holds 1 points of physical 
+    1 point of physical mass can hold 1 points of astral mass
+    1 point of astral mass can support 1 points of spirit mass
+    1 point of spirit mass can support 1 points of etheric mass
+    each level cell typically has 1000 spacial mass
+      maybe this can be altered by various circumstances?
+  mass of below vs above?
+    does spirit pass through ground?
+    [ ] support multiple levels (z dimension)
+    [ ] flat only
+    [*] above and below only, but travel only through above
+  physical matter must have spacial matter to pass through
+  each type of matter is grouped into pairs
+  levels 
+    0 spacial matter
+    1 physical matter
+    2 astral matter
+    3 spirit matter
+    4 etheric matter
+  no just allow matter to pass through independent of other levels of matter
+    spirit matter can exist independently of physical
+    but doesn't spirit matter need to move with physical?
+    spirit matter can be inside or outside
+    outside matter steadily dissipates
+    inside moves with body
+
+new energy pools
+  can't convert from one spectral energy color to another, but can convert between different brightness levels
+  black <-  navy      <-> blue        <-> azure       -> white
+  black <-  crimson   <-> red         <-> pink        -> white
+  black <-  brown     <-> yellow      <-> blonde      -> white
+  black <-> dark gray <-> medium gray <-> light gray <-> white
+
+  many basic functions can be performed with pure lumina, but specialized magic requires spectra
+
+  multiple spectra can be combined to form etherea
+  etherea has 3 brightness levels like spectra, but can't convert to lumina
+  (red orange) <-> copper
+  (orange yellow green) <-> silver
+  (yellow green cyan blue) <-> gold
+  (cyan blue indigo violet red) <-> diamond
+  (all spectra) <-> rainbow
+
+  exotica doesn't have multiple brightness levels
+  translucent
+  opal
+  sparkle
+
+  24 spectra
+  5 lumina
+  5 etherea
+  3 exotica
+
+replace hp with health status
+  levels
+    fortified
+    undamaged
+    minor wound
+      easy to heal, can heal by time
+    major wound
+      can't heal over time, must assist
+    critical
+      degrades over time
+    dead
+  to go from 
+    undamaged to minor (1 level): 0 challenge
+    undamaged to major (2 levels): 3+constitution (min 1) challenge
+    undamaged to critical (3 levels): 2*(3+constitution) (min 2) challenge
+    undamaged to dead (4 levels): 3*(3+constitution) (min 3) challenge
+      example con=0, one-shot difficulty=9
+
+success rate calculator:
+  (1 + diff) / (2 + diff) is chance of success, where diff >= 0
+  0 = 50%
+  1 = 66%
+  2 = 75%
+  3 = 80%
+  4 = 83%
+  5 = 85%
+  10 = 91%
+  15 = 94%
+  20 = 95%
+  50 = 98%
+  100 = 99%
+
+attack calculation
+  dodge attempt
+  block attempt
+  deflect attempt
+  damage calculation
+start as spirit
+  can sense physical state of adjacent spaces
+
+attributes
+  astral
+    will
+    intelligence
+    focus
+    mp, wp
+  corporeal
+    constitution
+    strength
+    dexterity
+    hp, sp
+
+npcs:
+  blacksmith
+    can forge a new item for money
+    can repair items for money
+    can upgrade durability / quality of items
+  enchanter
+    can enchant an item
+  trader
+    can sell items to a player
+    includes common items and 1 or two other specialty categories
+  banker
+    can invest money from player, which increases 20% per level the player ascends
+    can loan money to player, increasing 10% interest per level the player ascends
+      if player doesn't pay at least interest amount each time banker appears, repo will take one random item from the player, or will generate enemies to attack player if no items left
+
+enchantment
+  each item can only have one enchantment
+
+money
+  more rare to find than other games
+  can't sell items
+  can be invested (bankers?)
+    whatever's invested goes up 20% every level the player goes up
+    2 levels = 1.4
+    5 levels = 2.4
+    10 levels = 6.2
+
+experience potions
+  add one level to the player
+    which gives them 3 primary attribute points to spend, which when spent automatically gives secondary points etc
+  applies regen
+  cures temporary debuffs
+  receives one per level
+  advances age
+
+going to a new floor
+  pick up floor items
+  get new exp potion
+  applies regen
+
+attribute / skill tree
+  physical
+    strength
+    dexterity
+  mental
+    intelligence
+    integrity
+  spiritual
+    virtue
+    passion
+
+throwing
+  items can be thrown, but they don't go to the ground, but instead remain where they were with a cooldown before they can be used again
+    they can be moved to a different place while in cooldown
+  same applies to weapons with projectiles
+    projectiles don't have a seperate item each, but instead have a quiver or bag of those projectiles
+    once projectiles are fired, they go to a cooldown before they can be fired again
+  some weapons are also projectiles themselves, in which case they become inactive until their cooldown completes when thrown
+    spear / trident
+    boulder
+    javelins are quivered
+    tomahawks are quivered
+  some throwables are special and don't disappear when thrown, but end up on ground
+    other characters may be thrown
+    scenery items can be thrown (boulders, altars, statues)
+    trees become logs when uprooted. Logs are like boulders that remain
+  heavier items can displace lighter items
+  actors can be pushed into lava pools if a heavier item is thrown
+
+if a flying creature is hit physically, and it's flight comes from a physical mechanism, that flight may be temporarily disabled
+  same with a magic attack for flight that is maintained magically
+
+pushing / charging
+  a heavier creature can push a lighter creature around, possibly into water or lava pools, or into pits or traps
+    but lighter creature has a chance to dodge also, which could result in heavier creature falling down instead
+
+passing
+  a creature can pass another non-hostile creature by swapping places with it
+
+inventory
+  no actual inventory without a bag, only equippable slots
+    high degress of flexibility
+      can hold any kind of item in each hand, although can't use a weapon then
+      some equipment carries other equip (belts can carry potions or swords)
+  slots
+    hat: helmet
+    face: glasses, mask
+    neck / amulet:
+    chest:
+    cloak:
+    back 1: backpacks, shield, quiver, bow
+    back 2:
+    arms:
+    hands:
+    wrist / bracelet 1:
+    wrist / bracelet 2:
+    both grips: (can assign the same item to both hands, to reduce stamina or magic cost, and increase strength)
+      some items must be placed here: bows, slings
+    grip 1:
+    grip 2:
+    finger / ring 1:
+    finger / ring 2:
+    hips 1:
+    hips 2:
+    legs:
+    feet:
+  can carry bags, expanding inventory (fairly rare)
+    hip bag: 3 small items (scales with player size)
+      reduces maneuverability and speed
+    small backpack: has 6 item spaces (should scale with size of player, 2 for tiny, 4 for small, 6 for medium, 9 for large, 12 for huge)
+      reduces maneuverability and speed
+    large backpack: has 20 item spaces (10 for tiny, 15 for small, 20 for medium, 30 for large, 40 for huge)
+      reduces maneuverability and speed
+    space ring: takes a ring slot, can hold a random number of items (1-256, weighted to lower numbers, powers of 2)
+      all items take one spot regardless of size
+      taking items out or putting them in will consume mp based on size of ring, independent of size of item
+        for a 8 item ring, it will require 8 mp to add or remove an item. 
+      50% chance: 1
+      25% chance: 2
+      12% chance: 4
+      6% chance: 8
+      3% chance: 16
+      1.5% chance: 32
+      0.7% chance: 64
+      0.3% chance: 128
+      0.3% chance: 256
+    space bracelet: same as space ring, except space starts at 4 instead of 1
+    cart: can carry unlimited items of space
+      when attached, it makes player 1/2 speed, and costs sp, but will follow player around
+      the more items the cart holds, the more strength it requires to move
+      sp cost = items / strength
+    belt carries potions 4-12 or scrolls (any small items, includes wands)
+      can also carry up to two swords
+    pants usually have 2 small item spaces available
+    cloaks can have 4-8 small OR medium item spaces
+  no stash
+  no items on floor
+    items are made available just after leaving a floor
+      player chooses which to pick up / equip, and what to leave behind, which perishes forever
+      each floor exit reveals it's own set of items
+      always one experience potion if one hasn't already been picked up from this floor
+    what about treasure rooms?
+      treasure chest is a special fixed location item that allows the player to pick up items
+        one time use
+  carrying food?
+    very limited, often must be eaten on the spot
+    food deteriorates (different rates for different foods)
+      fresh (1 time unit): full benefit
+      stale (2 time units): half benefit
+      rotten (4 time units): poisonous, quarter benefit
+
+food
+  linear gradation:
+    0%   food = 100% form repair,   0% energy production
+    100% food =   0% form repair, 100% energy production
+
+baseline decay
+  different for different species
+  human: 
+    1% of max energy drain
+    1% of max form drain
+
+age:
+  affects different species differently
+  usually advances slowly
+    but spells or curses can accelerate
+    advances with experience
+      humans:   5 exp levels = 1 age advancement
+      elves:   10 exp levels = 1 age advancement
+      orcs:     3 exp levels = 1 age advancement
+      dwarves:  7 exp levels = 1 age advancement
+      mummy:    immortal, but doesn't auto-repair form decay
+  very difficult to stop or reverse
+  levels
+    junior (0-9 levels)
+      20-80% of attribute capacity
+      smaller max
+      faster energy regen and form regen
+    middle (0-9 levels)
+      100% base attributes
+    senior (0-9 levels)
+      80-20% physical attributes
+      80-20% mental attributes
+      120-180% spirit attributes
+    immortal (no levels)
+      normally a character will die of old age at this point, but special circumstances can enable immortality
+      120% phys, mental, and spirit attributes
+      energy and form regen equal to junior
+    age examples: j5 m2 m9 s0 s2 i
+  potions can temporarily adjust
+
+different way to break down prime health stats:
+  ep: physical energy (regen quick) (stamina)
+  hp: physical health (regen slow)
+  em: mental energy (regen medium) (mana)
+  hm: mental health (regen medium)
+  es: spirit energy (regen slow) (willpower)
+  hs: spirit health (regen quick)
+
+guardians
+  prodigy <- 50% aging resistance
+    50% chance of going up 2 levels from a potion 
+  protection <- 50% experience
+    takes 50% of all experience gain (exp potions have a 50% chance of success)
+    reduces maximum damage between turns to 1/3 instead of 1/2
+    fatal blows have a 50% chance of failing
+  equipment master <- 50% equip integrity (decay resistance)
+    allows similar equipment to be merged together, combining the best attributes of both
+    equip decays at twice the rate
+  jeweler <- 50% money and 50% treasure
+    can wear 8 rings and 3 amulets
+  robust body <- 50% potion success
+    poison and disease immune, including rotten food
+  <- 50% scroll success
+  treasure <- 50% movement speed
+    treasure generation doubled (including gold)
+  rapid health regen <- 50% food effectiveness
+  <- 50% energy absorption
+  ageless <- 50% stamina charge rate
+    food doesn't spoil either
+  knowledge <- 50% mana charge rate
+    when entering a new area, will reveal important features (strong monsters, treasure chests)
+    give automatic map of entire floor each time
+    can give info about monsters
+  energy armor <- 50% healing rate (including potions and self healing and spells)
+    damage takes from mana, then stamina, then health
+  formless <- random top level attribute allocation when levelling up
+    unified hp, sp, mp. Regen is average of the 3
+  fortified <- rapid age regression (twice normal speed in reverse)
+    all defenses are 50% stronger
+  chaos <- remove max damage cap
+    good and bad things randomly happen to the player
+    good will outweigh the bad in the long term, but player must survive to get there
+      3x chance of good vs bad
+    50% chance to be saved from a fatal blow
+    chance of being removed from a dangerous area if health is low
+    can give an item, but may be cursed
+    can make monsters appear if situation is too easy for too long
+    can buff monsters that are too easy
+    can debuff monsters that are tough
+  hp after killing monster <- 
+  <- harder monsters
+
+pets
+  loyalty increases when favors are given
+    and tested against challenge / hunger
+  can be given commands
+
+start with
+  food
+  survival guardian
+  dog
+  teleport scroll
+  rusty dagger
+  small belt (4 slots for small items)
+  hip bag (can fit a medium item or 3 small)
+
+no story or randomized evolving story
+
+first floor doesn't contain items or exp potion
+  must survive to the second floor for that
+  not needed, getting items only applies to floor transitions anyway
+
+moving to a new floor restores energy, but doesn't heal
+  maybe not, fleeing to another floor when exhausted is risky and should be
+
+exp potion different than time advancing potion
+  one of each per floor?
+  no, regen happens while eating
+    but then you get full?
+  eat in addition to time potions
+    although time potions make you more hungry
+
+level up potions
+  one per floor
+  level up
+  fills energy and health
+
+time potions
+  one per floor
+  applies regeneration
+  makes you more hungry
+  advances age
+
+eating
+  species have different nutrition values from different food types
+  makes you less hungry
+  applies regeneration
+
+potions can be applied to weapons or arrows
+
+special scrolls
+  reverse scroll
+    level up potion becomes level down
+    time potion becomes reverse time potion
+    poison becomes regen
+    exp becomes lose exp
+  amp scroll
+
+creator mode
+  rune editor
+  search
+
+spirit mechanics
+  spirit needs to be able to weave runes
+  spirit intrinsic sense can only perceive runes, not anything visible, etc
+ 
+weapons
+  sword
+    auto attack if enemy attack is dodged
+    can deflect sword or polearm attacks
+    cutting or piercing damage
+    faster attacks than the other weapon types
+  polearm
+    reaches one space further
+    cutting or piercing based on weapon
+    spears can be accurately thrown
+  axe
+    attacks all adjacent enemies
+    cutting damage
+  mace
+    bashing damage
+    armor has 50% effectiveness against bashing damage compared with cutting or piercing
+    slower than other weapons, so is easier to dodge
+    heavier so higher damage than other weapons
+  unarmed or claw
+    bashing damage
+    faster and more accurate than other weapons
+    generally lower damage
+
+fixtures
+  typically 1 per level, but:
+    1/3 chance of small cluster (3)
+    1/9 chance of large cluster (7)
+    of same kind of fixture (fountains, portals, statues, stores, etc)
+  announces at beginning of level fixtures that are there:
+    a small cluster of stores are on this floor
+    a portal is on this floor
+    a large cluster of statues are on this floor
+  some should cost money, some should not (one time use)
+  fountains (no cost) (could be bad)
+    can drink or store into vials
+    unlimited use
+    pf / max pf
+    pe / max pe
+    mf / max mf
+    me / max me
+    sf / max sf
+    se / max se
+    str+5x20 / orc
+    dex+5x20 / elf
+    int+5x20 / gnome
+    youth (-1 age)
+  portal (unlimited use)
+  statue (unlimited use, as long as gem can power it)
+    miner
+    farmer
+    fisher
+    transporter
+    fighter
+    requires a gem of any type or quality, but effect is according to the gem
+      will run until gem's energy runs out
+  shrine (unlimited use)
+  altar (unlimited use)
+    can sacrifice an item for a blessing
+  forge (costs money)
+    can combine items to mix the best attributes of each
+    can improve items
+    can improve item quality
+  enchantment circle (costs ?)
+    can add or remove one enchantment
+  magic mirror (one time use)
+    can duplicate one item
+  magic lamp or wishing well (one time use)
+    can make a wish for a new item
+  mine (costs age)
+    gold
+      level 1: 1 
+      level 2: 3
+      level 3: 10
+      level 4: 30
+      level 5: 100
+    gem
+    iron
+  forest (costs age)
+    can forage for various items
+  pond (costs age)
+    can fish
+  field (costs money)
+    produces food
+  orchard (costs money)
+    can plant a tree seed which regularly produces fruit
+  bank (costs money, or debt)
+    can take a loan or invest money
+    invest
+      level 1: 10% payment
+      level 2: 25% payment
+      level 3: 50% payment
+      level 4: 100% payment
+    loan
+      level 1: 5% payment
+      level 2: 10% payment
+      level 3: 25% payment
+      level 4: 50% payment
+      when paying interest, can optionally pay extra toward principal
+        may choose not to pay interest either, but then monster will appear to reclaim
+  treasure chest (one time)
+    holds a reward item
+  store (costs money)
+    has 10 items. If player buys one, another one replaces it
+    types of stores:
+      general
+        fighter
+          weapon
+          armor
+            hat
+            shield
+            shoe
+        jewelry
+          ring
+          amulet
+        magic
+          potion
+            medical
+            morph
+            boost
+          scroll
+          wand
+        book store
+  periodic production:
+    1/4 chance of producing
+    once successful, chance increases
+      20/100 chance
+      (20+20)/(100+20) chance = 33% chance
+      (20+40)/(100+40) chance = 42%
+      50%
+      55%
+      60%
+    if item is produced right after another item, level goes up by 1
+
+fixtures vs scrolls and potions and wands
+  fixtures can be used repeatedly, but have a cost each time
+  scrolls don't cost anything, but only work one time, and can affect things outside of player
+  potions can be used a certain number of times, but have no other cost, but only affect player
+  wands can be charged for a cost
+    possible costs: exp, pe, ph, me, mh, se, sh, time, killing monsters
+    max charges: 9
+
+does gold take a slot?
+  no, special spot for it
+  nothing stacks
+
+base rune language
+  needs to combine power of programming with simplicity of a magic mythology
+  start with a simple temperature run on a space to increase temp of that space
+    how is it created
+    how is it altered
+    how is it protected
+    how can it be conditionally triggered
+  different resistance for ally vs enemy
+    depending on if item has spirit or not in it, that spirit may resist change
+  some properties have a heirarchy of stages, where going up is twice as difficult as going down
+  within a stage each form has a different order cost
+  all operations need to have balance
+    temporary are much cheaper because they balance future with present of same entity
+    permanent must balance two different present entities
+  each change has activation energy and sustain energy
+  subject properties
+    existence: no <- yes
+    size: 0 <- 12
+      0             1kg
+      1             2kg
+      2             4kg
+      3     1ft     8kg
+      4     2ft     16kg
+      5     3ft     32kg
+      6     4ft     64kg
+      7     6ft     128kg
+      8     9ft     256kg
+      9     12ft    512kg
+      10    18ft    1024kg
+      11    24ft    2048kg
+      12    32ft    4096kg
+    domain: simple mineral <- complex mineral <- simple organic <- complex organic <- simple life <- medium life <- advanced life <- sentient life
+    class: specific to domain
+    L3 props:
+    L2 props:
+    L1 props:
+      heat: zero <- higher
+  simple mineral
+    water
+    air
+    oxygen
+    copper
+    iron
+    lead
+    gold
+    acid
+    rock
+    glass
+  complex mineral
+    weapon
+    tool
+    armor
+    gems
+  simple organic
+    sugar water
+    plastic
+  complex organic
+    enzymes
+  simple life
+    bacteria
+    virus
+  medium life
+    plant
+  advanced life
+    animal
+  sentient life
+    human
+    elf
+
+foundation scroll
+  only original foundation will have one (can rarely find one)
+  will create a new foundation that the player can start with
+  can choose one thing to save:
+    species
+    hard mutations
+    guardians
+    profession
+    discipline (book is kept)
+    one skill
+    one item
+    gold
+    age
+  inverse of this?
+    choose a foundation to load into present character (doesn't reset exp or anything else)
+  amp of this?
+    choose two things to save
+
+can backtrack one floor, but not two
+  items and fixtures remain
+  upstairs won't exist for second floor up
+  not sure about this
+
+qualities of items
+  fragile: 1-2 units of durabilty (0%, only special items have this)
+  poor: 10 units of durabilty (10 uses before expired) (10%)
+  fair: 100 (40%)
+  good: 1000 (40%)
+  high: 10,000 (8%)
+  superior: 100,000 (1.9%)
+  extraordinary: 1,000,000 (0.1%)
+  a forge can improve the quality of an item, but not the durability, thus a poor durability 6/10 item becomes 
+    a fair durability 60/100, prolonging it's life, but in proportion to where it was
+  even gems have a quality
+  acid slimes will more rapidly reduce durability 10x
+  enchantment reduces durability of items
+    you can layer as many enchantments onto an item as you want, but each will reduce base durability one level
+    so a good quality sword enchanted with 2 bonuses becomes a poor quality sword, which can only be used a max of 10 times
+
+gems
+  quality / durability
+  size: 
+    tiny: stores 100 energy
+    small: 1000
+    medium: 10,000
+    large: 100,000
+    huge: 1,000,000
+  type: 
+    diamond
+    ruby
+    emerald
+    topaz
+    sapphire
+    opal
+    obsidian
+
+no identification
+  not fun enough to be worth it
+  rarely will a potion or fountain or scroll be unknown
+    1/4 chance of an unidentified item being cursed
+
+no selling
+  but you can barter an item when buying
+    adding an item to the exchange when buying will reduce the price, but won't ever give extra money back
+
+hazards
+  acid rain
+    a fixed area that drains durability of exposed items
+  lava pool
+    high temperature transfer with high heat capacity
+  blizzard
+
+building up foundation runes
+  one floor simple empty room
+    root game rune
+      create concept of floors
+      each floor has a grid of spaces
+
+study (discipline)
+  whatever books are being carried automatically are studied
+  exp gains also boost skills in books being studied
+  books can have attribute requirements
+
+example rune space
+  player.1.location.n.ne.occupant
+    player.1.location = zzz
+    zzz.n = zzy
+    zzy.ne = zzx
+    zzx.occupant = zzw
+  key/object/player.1/prop/inventory
+  value/sword
+  value/key
+  value/shield
+  key/...
+  zzz.class = ...
+    classes list relators which go with that object
+    .parents
+    .props required props
+      can specify default
+  prop.relator = ...
+    points to relator which connects one or more props
+    .one list of props which can only point to one object
+    .many list of props which may point to zero or more objects
+  need to record
+    resistance to all change
+      exists by default, can't be changed
+    resistance to enemy change
+      can be added with a key
+    observation resistance
+      10 steps easier than changing
+    key to unlock
+      complexity of key can make it harder to unlock
+
+store runespace snapshots, separated by diff lists
+  but if we store full game logic in the runespace, then this is too much info to be snapshotted, will need to use hashed trees instead
+  we could pull core game logic out of runespace, since we don't really want to change that anyway?
+    core game logic still different than game state, so snapshots are possible still? snapshots may be faster
+  putting game logic into save state also has the benefit of preserving a version of the game within the save game itself, making them more resilient
+
+rune refs, rune ops
+  some runes combine properties on top of stack
+  unary ops immediately take top of stack and modify
+  binary ops take two items on top of stack and combine
+  higher intelligence allows for more runes in a structure
+  trigger runes are starting points, and have a direction?
+  redirection runes can change flow direction, or even split the flow
+  
+
+  

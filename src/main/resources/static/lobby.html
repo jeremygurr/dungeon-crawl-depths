@@ -1,0 +1,134 @@
+<!--
+ source for page: https://www.taniarascia.com/getting-started-with-react/
+ babel is used to allow es6+ functions in older browsers.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crawl Lobby</title>
+  <link rel="stylesheet" href="lobby.css">
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+class Lobby extends React.Component {
+  render () {
+    return (
+    <div>
+      <Header />
+      <Main />
+      <Table />
+    </div>
+    )
+  }
+}
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      uname: '',
+      pass: ''
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    if(event.target.id == "uname") {
+      this.setState({
+        uname: event.target.value
+      });
+    } else {
+      this.setState({
+        pass: event.target.value
+      });
+    }
+  }
+
+  handleSubmit(event) {
+    console.log('A name was submitted: ' + this.state.uname + ' ' + this.state.pass);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <div id="header">
+        <p id="welcome">~Welcome to Dungeon Crawl Depths!~</p>
+        <div id="loginForm">
+          <form onSubmit={this.handleSubmit}>
+            <input id='uname' placeholder='username' value={this.state.uname} onChange={this.handleChange} />
+            <input id='pass' placeholder='password' value={this.state.pass} onChange={this.handleChange} />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+      )
+    }
+  }
+
+class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+
+  render() {
+    return (
+    <div id="saves">
+      <p>New game with latest version (1.2.5) <br/>
+      ProfileName the level 3 tengu sorcerer (floor 2)v1.2.4 <br/>
+      ProfileName the level 6 merfolk Necromancer (floor 5) v1.2.3</p>
+    </div>
+    )
+  }
+
+}
+
+class Table extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+
+  render() {
+    return (
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Player:</th>
+              <th>Score:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Vincero</td>
+              <td>10200</td>
+            </tr>
+            <tr>
+              <td>Bobo</td>
+              <td>13800</td>
+            </tr>
+          </tbody>
+        </table>
+    )
+  }
+
+}
+
+ReactDOM.render(<Lobby />, document.getElementById('root'))
+
+</script>
+</body>
+</html>
