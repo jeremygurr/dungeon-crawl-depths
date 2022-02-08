@@ -26,6 +26,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.stream.Collectors;
+import static com.ple.observabilityBridge.R;
 
 public class HttpServerVerticle extends AbstractVerticle {
 
@@ -35,6 +36,7 @@ public class HttpServerVerticle extends AbstractVerticle {
   public Completable rxStart() {
 
     LOGGER.info("Http Verticle is starting. ");
+
     HttpServer server = vertx.createHttpServer();
 
     Router router = Router.router(vertx);

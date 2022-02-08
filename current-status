@@ -1,2 +1,0 @@
-base vertx files and folders 
-you can run ./gradlew test and the basic test should pass
