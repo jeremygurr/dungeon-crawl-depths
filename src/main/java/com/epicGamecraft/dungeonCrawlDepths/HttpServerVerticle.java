@@ -5,6 +5,8 @@ import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.annotations.Nullable;
 import io.vertx.core.json.JsonObject;
+import io.vertx.ext.bridge.PermittedOptions;
+import io.vertx.ext.web.handler.sockjs.SockJSBridgeOptions;
 import io.vertx.reactivex.core.AbstractVerticle;
 import io.vertx.reactivex.core.MultiMap;
 import io.vertx.reactivex.core.eventbus.EventBus;
@@ -16,6 +18,7 @@ import io.vertx.reactivex.ext.web.RoutingContext;
 import io.vertx.reactivex.ext.web.Session;
 import io.vertx.reactivex.ext.web.handler.BodyHandler;
 import io.vertx.reactivex.ext.web.handler.SessionHandler;
+import io.vertx.reactivex.ext.web.handler.sockjs.SockJSHandler;
 import io.vertx.reactivex.ext.web.sstore.LocalSessionStore;
 import io.vertx.reactivex.ext.web.sstore.SessionStore;
 
@@ -46,13 +49,20 @@ public class HttpServerVerticle extends AbstractVerticle {
     final SessionHandler mySesh = SessionHandler.create(store);
     mySesh.setSessionTimeout(86400000); //24 hours in milliseconds.
 
+    final SockJSHandler sockJSHandler = SockJSHandler.create(vertx);
+    final SockJSBridgeOptions options = new SockJSBridgeOptions();
+    final PermittedOptions inboundPermitted = new PermittedOptions()
+      .setAddress(BusEvent.browserInput.name());
+    options.addInboundPermitted(inboundPermitted);
+
     router.route().handler(this::routeStartHandler);
     router.get("/status").handler(this::statusHandler);
     router.route().handler(mySesh);
     router.get("/static/*").handler(this::staticHandler);
 //    router.route().handler(this::debugHandler);
     router.route().handler(BodyHandler.create());
-    router.post("/bus/*").handler(this::busHandler);
+    router.mountSubRouter("/bus", sockJSHandler.bridge(options));
+    router.errorHandler(500, this::errorHandler);
     router.route().handler(this::routeEndHandler);
 
     final HttpServer server = vertx.createHttpServer();
@@ -87,7 +97,7 @@ public class HttpServerVerticle extends AbstractVerticle {
   private void routeEndHandler(RoutingContext context) {
 
     final HttpServerRequest request = context.request();
-    HttpServerResponse response = context.response();
+    final HttpServerResponse response = context.response();
     @Nullable final String path = request.path();
     final RecordingService rs = (RecordingService) context.data().get("rs");
 
@@ -98,6 +108,17 @@ public class HttpServerVerticle extends AbstractVerticle {
 
     int code = response.getStatusCode();
     rs.close("HTTP request", "path", path, "statusCode", code);
+
+  }
+
+  private void errorHandler(RoutingContext context) {
+
+    final HttpServerRequest request = context.request();
+    @Nullable final String path = request.path();
+    final RecordingService rs = (RecordingService) context.data().get("rs");
+
+    rs.log(10, "Internal error", "path", path, "message", "Uncaught exception in http route handlers");
+    routeEndHandler(context);
 
   }
 

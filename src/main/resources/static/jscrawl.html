@@ -33,7 +33,7 @@ canvas {
 		const ctx = canvas.getContext("2d")
 		let eb = new EventBus(window.location.protocol + "//" + window.location.host + "/bus")
 		eb.onopen = function() {
-			eb.send("BrowserInput", "test")
+			eb.send("browserInput", "test")
 		}
 
 		//Add event listener, then have java send the event to it. look up in vertx
