@@ -62,7 +62,7 @@ public class HttpServerVerticle extends AbstractVerticle {
       .requestHandler(router)
       .rxListen(port)
       .doOnSuccess(e -> { startupRecordingService.log("HTTP server running", "port", port); })
-      .doOnError(e -> {  startupRecordingService.log(-10, "Could not start HTTP server", "exception", e); })
+      .doOnError(e -> {  startupRecordingService.log(10, "Could not start HTTP server", "exception", e); })
       .doFinally(() -> { startupRecordingService.close("Deploying", verticleDim); });
 
     return rxListen.ignoreElement();
@@ -71,7 +71,7 @@ public class HttpServerVerticle extends AbstractVerticle {
 
   private void debugHandler(RoutingContext context) {
     final RecordingService rs = (RecordingService) context.data().get("rs");
-    rs.log(10, "debug hit");
+    rs.log(-10, "debug hit");
     context.next();
   }
 
@@ -79,7 +79,7 @@ public class HttpServerVerticle extends AbstractVerticle {
     final HttpServerRequest request = context.request();
     @Nullable final String path = request.path();
     final RecordingService rs = startupRecordingService.clone();
-    rs.open("http request", "path", path);
+    rs.open("HTTP request", "path", path);
     context.data().put("rs", rs);
     context.next();
   }
@@ -97,7 +97,7 @@ public class HttpServerVerticle extends AbstractVerticle {
     }
 
     int code = response.getStatusCode();
-    rs.close("http request", "path", path, "statusCode", code);
+    rs.close("HTTP request", "path", path, "statusCode", code);
 
   }
 
@@ -120,7 +120,7 @@ public class HttpServerVerticle extends AbstractVerticle {
       } else if (path.endsWith(".js")) {
         response.putHeader("Content-Type", "text/javascript");
       } else {
-        rs.log(-5, "Filetype unknown", "path", path);
+        rs.log(5, "Filetype unknown", "path", path);
       }
 
       response.setStatusCode(200);
@@ -128,7 +128,7 @@ public class HttpServerVerticle extends AbstractVerticle {
 
     } else {
 
-      rs.log(-5, "Resource not found: " + path);
+      rs.log(5, "Resource not found: " + path);
       response.setStatusCode(404);
       response.end();
 
@@ -172,7 +172,7 @@ public class HttpServerVerticle extends AbstractVerticle {
 
     } catch (Throwable e) {
 
-      rs.log(-10, "Problem fetching static file", "path", path, "exception", e);
+      rs.log(10, "Problem fetching static file", "path", path, "exception", e);
       response.setStatusCode(502);
       response.end();
 
@@ -197,9 +197,9 @@ public class HttpServerVerticle extends AbstractVerticle {
       response.setChunked(true);
 
       final String absoluteURI = request.absoluteURI();
-      rs.log(10, "debug", "absoluteURI", absoluteURI);
+      rs.log(-10, "debug", "absoluteURI", absoluteURI);
       final String busAddress = absoluteURI.replaceAll("^.*/bus/", "");
-      rs.log(10, "debug", "busAddress", busAddress);
+      rs.log(-10, "debug", "busAddress", busAddress);
       Session session = context.session();
       JsonObject object = new JsonObject();
       for (Map.Entry<String, String> entry : params.entries()) {
@@ -223,19 +223,19 @@ public class HttpServerVerticle extends AbstractVerticle {
 */
             } else if (redirect.equals("jscrawl.html")) {
               session.put(SessionKey.username.name(), object.getString("username"));
-              rs.log(5, "session equals: " + session.data());
+              rs.log(-5, "session equals: " + session.data());
             }
             WebUtils.redirect(response, "/static/" + redirect);
           },
           err -> {
-            rs.log(-10, "Failed login : " + err.getMessage());
+            rs.log(10, "Failed login : " + err.getMessage());
             if (err.getMessage() == null) {
-              rs.log(-10, "Error with busAddress " + busAddress + " " + err.getMessage());
+              rs.log(10, "Error with busAddress " + busAddress + " " + err.getMessage());
               WebUtils.redirect(response, "/static/serverError.html");
             }
           });
     } catch (Exception e) {
-      rs.log(-10, "Exception in bus handler", "exception", e);
+      rs.log(10, "Exception in bus handler", "exception", e);
     } finally {
       rs.close("busHandler");
     }

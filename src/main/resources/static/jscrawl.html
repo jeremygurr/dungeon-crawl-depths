@@ -31,7 +31,7 @@ canvas {
 
 		const canvas = document.getElementById("mainCanvas")
 		const ctx = canvas.getContext("2d")
-		let eb = new EventBus(window.location.protocol + "//" + window.location.host + "/eventbus")
+		let eb = new EventBus(window.location.protocol + "//" + window.location.host + "/bus")
 		eb.onopen = function() {
 			eb.send("BrowserInput", "test")
 		}

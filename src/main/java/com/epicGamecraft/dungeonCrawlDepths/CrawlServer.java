@@ -21,7 +21,8 @@ public class CrawlServer {
 			options.setBlockedThreadCheckInterval(Long.MAX_VALUE >> 2);
 		}
 
-    RecordingService recordingService = RecordingService.make(SystemOutLogHandler.only);
+    final RecordingService recordingService = RecordingService.make(SystemOutLogHandler.only);
+    recordingService.verbosity = 20;
 
     vertx = Vertx.vertx(options);
 		vertx.deployVerticle(new HttpServerVerticle(recordingService.clone()));
