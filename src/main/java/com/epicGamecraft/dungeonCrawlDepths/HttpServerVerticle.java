@@ -50,6 +50,7 @@ public class HttpServerVerticle extends AbstractVerticle {
     router.get("/status").handler(this::statusHandler);
     router.route().handler(mySesh);
     router.get("/static/*").handler(this::staticHandler);
+//    router.route().handler(this::debugHandler);
     router.route().handler(BodyHandler.create());
     router.post("/bus/*").handler(this::busHandler);
     router.route().handler(this::routeEndHandler);
@@ -66,6 +67,12 @@ public class HttpServerVerticle extends AbstractVerticle {
 
     return rxListen.ignoreElement();
 
+  }
+
+  private void debugHandler(RoutingContext context) {
+    final RecordingService rs = (RecordingService) context.data().get("rs");
+    rs.log(10, "debug hit");
+    context.next();
   }
 
   private void routeStartHandler(RoutingContext context) {
@@ -99,10 +106,13 @@ public class HttpServerVerticle extends AbstractVerticle {
     rs.log("Fetching file", "path", path);
     path = path.substring(1);
     final InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream(path);
+
     if (stream != null) {
+
       final String text = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))
         .lines()
         .collect(Collectors.joining("\n"));
+
       if (path.endsWith(".html")) {
         response.putHeader("Content-Type", "text/html");
       } else if (path.endsWith(".css")) {
@@ -112,13 +122,18 @@ public class HttpServerVerticle extends AbstractVerticle {
       } else {
         rs.log(-5, "Filetype unknown", "path", path);
       }
+
       response.setStatusCode(200);
       response.end(text);
+
     } else {
+
       rs.log(-5, "Resource not found: " + path);
       response.setStatusCode(404);
       response.end();
+
     }
+
   }
 
   private void statusHandler(RoutingContext context) {
@@ -155,7 +170,7 @@ public class HttpServerVerticle extends AbstractVerticle {
       }
       writeStaticHtml(rs, response, path);
 
-    } catch (Exception e) {
+    } catch (Throwable e) {
 
       rs.log(-10, "Problem fetching static file", "path", path, "exception", e);
       response.setStatusCode(502);
