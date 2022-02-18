@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Collectors;
 
+import com.ple.observabilityBridge.RecordingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,8 +31,13 @@ import io.vertx.ext.web.handler.sockjs.SockJSHandler;
 public class BrowserInputVerticle extends AbstractVerticle {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(BrowserInputVerticle.class);
+  private final RecordingService recordingService;
 
-	@Override
+  public BrowserInputVerticle(RecordingService recordingService) {
+    this.recordingService = recordingService;
+  }
+
+  @Override
 	public void start(Promise<Void> promise) throws Exception {
 		vertx.eventBus().consumer(browserInput.name(), this::handleKey);
 	}

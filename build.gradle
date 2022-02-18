@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.epicGamecraft.dungeonCrawlDepths'
-version = '1.0.0-SNAPSHOT'
+version = '0.1'
 
 repositories {
   mavenCentral()
@@ -25,6 +25,9 @@ def watchForChange = 'src/**/*'
 def doOnChange = './gradlew classes'
 
 dependencies {
+  implementation "org.ple:immutable-collections"
+  implementation "org.ple:observability-bridge"
+
   implementation "io.reactivex.rxjava2:rxjava:2.2.19"
   implementation "io.vertx:vertx-rx-java2:$vertxVersion"
   implementation "io.vertx:vertx-micrometer-metrics:$vertxVersion"

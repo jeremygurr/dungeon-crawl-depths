@@ -1,5 +1,6 @@
 package com.epicGamecraft.dungeonCrawlDepths;
 
+import com.ple.observabilityBridge.RecordingService;
 import io.reactivex.Completable;
 import io.vertx.core.json.JsonObject;
 import io.vertx.reactivex.core.AbstractVerticle;
@@ -14,6 +15,11 @@ import static com.epicGamecraft.dungeonCrawlDepths.MessageKey.response;
 public class UserVerticle extends AbstractVerticle {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(UserVerticle.class);
+  private final RecordingService recordingService;
+
+  public UserVerticle(RecordingService recordingService) {
+    this.recordingService = recordingService;
+  }
 
 
   @Override

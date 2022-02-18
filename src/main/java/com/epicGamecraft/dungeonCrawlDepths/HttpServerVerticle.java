@@ -1,5 +1,6 @@
 package com.epicGamecraft.dungeonCrawlDepths;
 
+import com.ple.util.IArrayMap;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.annotations.Nullable;
@@ -17,8 +18,6 @@ import io.vertx.reactivex.ext.web.handler.BodyHandler;
 import io.vertx.reactivex.ext.web.handler.SessionHandler;
 import io.vertx.reactivex.ext.web.sstore.LocalSessionStore;
 import io.vertx.reactivex.ext.web.sstore.SessionStore;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -26,47 +25,58 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.stream.Collectors;
-import static com.ple.observabilityBridge.R;
+import com.ple.observabilityBridge.RecordingService;
 
 public class HttpServerVerticle extends AbstractVerticle {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(HttpServerVerticle.class);
+  private final RecordingService startupRecordingService;
+
+  public HttpServerVerticle(RecordingService startupRecordingService) {
+    this.startupRecordingService = startupRecordingService;
+  }
 
   @Override
   public Completable rxStart() {
 
-    LOGGER.info("Http Verticle is starting. ");
+    final IArrayMap<String, Object> verticleDim = IArrayMap.make("verticle", "HttpServerVerticle");
+    startupRecordingService.open("Deploying", verticleDim);
 
-    HttpServer server = vertx.createHttpServer();
-
-    Router router = Router.router(vertx);
-    SessionStore store = LocalSessionStore.create(vertx);
-    SessionHandler mySesh = SessionHandler.create(store);
+    final Router router = Router.router(vertx);
+    final SessionStore store = LocalSessionStore.create(vertx);
+    final SessionHandler mySesh = SessionHandler.create(store);
     mySesh.setSessionTimeout(86400000); //24 hours in milliseconds.
 
+    router.route().handler(this::metricsHandler);
     router.get("/status").handler(this::statusHandler);
     router.route().handler(mySesh);
     router.get("/static/*").handler(this::staticHandler);
     router.route().handler(BodyHandler.create());
     router.post("/bus/*").handler(this::busHandler);
+
+    final HttpServer server = vertx.createHttpServer();
     final int port = 8080;
+
     final Single<HttpServer> rxListen = server
       .requestHandler(router)
       .rxListen(port)
-      .doOnSuccess(e -> {
-        LOGGER.info("HTTP server running on port " + port);
-      })
-      .doOnError(e -> {
-        LOGGER.error("Could not start a HTTP server", e.getMessage());
-      });
+      .doOnSuccess(e -> { startupRecordingService.log("HTTP server running", "port", port); })
+      .doOnError(e -> {  startupRecordingService.log(-10, "Could not start HTTP server", "exception", e); })
+      .doFinally(() -> { startupRecordingService.close("Deploying", verticleDim); });
 
     return rxListen.ignoreElement();
 
   }
 
-  public static void writeStaticHtml(HttpServerResponse response, String path) {
+  private void metricsHandler(RoutingContext context) {
+    final HttpServerResponse response = context.response();
+    final HttpServerRequest request = context.request();
+    @Nullable final String path = request.path();
+    startupRecordingService.log("http request", "path", path);
+  }
 
-    LOGGER.debug("GET " + path);
+  public void writeStaticHtml(RecordingService rs, HttpServerResponse response, String path) {
+
+    rs.log("Fetching file", "path", path);
     path = path.substring(1);
     final InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream(path);
     if (stream != null) {
@@ -85,7 +95,7 @@ public class HttpServerVerticle extends AbstractVerticle {
       response.setStatusCode(200);
       response.end(text);
     } else {
-      LOGGER.warn("Resource not found: " + path);
+      rs.log(-5, "Resource not found: " + path);
       response.setStatusCode(404);
       response.end();
     }
@@ -103,28 +113,34 @@ public class HttpServerVerticle extends AbstractVerticle {
 
     final HttpServerResponse response = context.response();
     final HttpServerRequest request = context.request();
+    final RecordingService rs = startupRecordingService.clone();
     response.setChunked(true);
     @Nullable
     String path = request.path();
+    rs.open("Static handler");
     try {
       Session session = context.session();
       String username = session.get(SessionKey.username.name());
       if (username != null && path.equals("/static/login.html") || username != null && path.equals("/static/jscrawl.html")) {
         WebUtils.redirect(response, "/static/jscrawl.html");
+        rs.log("Rediracting to crawl page");
+        rs.close("Static handler");
         return;
       }
-      writeStaticHtml(response, path);
+      writeStaticHtml(rs, response, path);
     } catch (Exception e) {
-      LOGGER.error("Problem fetching static file: " + path, e);
+      rs.log(-10, "Problem fetching static file", "path", path, "exception", e);
       response.setStatusCode(502);
       response.end();
     }
+    rs.close("Static handler");
 
   }
 
 
   private void busHandler(RoutingContext context) {
 
+    final RecordingService rs = startupRecordingService.clone();
     try {
       final EventBus eb = vertx.eventBus();
 
@@ -134,9 +150,9 @@ public class HttpServerVerticle extends AbstractVerticle {
       response.setChunked(true);
 
       final String absoluteURI = request.absoluteURI();
-      LOGGER.debug("absoluteURI=" + absoluteURI);
+      rs.log(10, "debug", "absoluteURI", absoluteURI);
       final String busAddress = absoluteURI.replaceAll("^.*/bus/", "");
-      LOGGER.debug("busAddress=" + busAddress);
+      rs.log(10, "debug", "busAddress=", busAddress);
       Session session = context.session();
       JsonObject object = new JsonObject();
       for (Map.Entry<String, String> entry : params.entries()) {
@@ -147,7 +163,7 @@ public class HttpServerVerticle extends AbstractVerticle {
             final JsonObject json = JsonObject.mapFrom(e.body());
             final String message = json.getString("response");
             final String redirect = json.getString("redirect");
-            LOGGER.debug("HttpServer Verticle Received reply: " + e.body());
+            rs.log("HttpServer Verticle Received reply: " + e.body());
 
             if (redirect.equals("login.html")) {
               // redirect to login page.
@@ -155,24 +171,24 @@ public class HttpServerVerticle extends AbstractVerticle {
               String html = WebUtils.generateHtml("/home/jaredgurr/training-crawl/03_java_backend/src/main/resources/static/login.html", message);
               response.write(html);
               writeStaticHtml(response, "/static/login.html");
-              LOGGER.debug("message =" + message);
-              LOGGER.debug("html = " + html);
+              R.debug("message =" + message);
+              R.debug("html = " + html);
 */
             } else if (redirect.equals("jscrawl.html")) {
               session.put(SessionKey.username.name(), object.getString("username"));
-              LOGGER.debug("session equals: " + session.data());
+              rs.log(5, "session equals: " + session.data());
             }
             WebUtils.redirect(response, "/static/" + redirect);
           },
           err -> {
-            LOGGER.debug("Failed login : " + err.getMessage());
+            rs.log(-10, "Failed login : " + err.getMessage());
             if (err.getMessage() == null) {
-              LOGGER.debug("Error with busAddress " + busAddress + " " + err.getMessage());
+              rs.log(-10, "Error with busAddress " + busAddress + " " + err.getMessage());
               WebUtils.redirect(response, "/static/serverError.html");
             }
           });
     } catch (Exception e) {
-      LOGGER.error(e.getMessage(), e);
+      rs.log(-10, "Exception in bus handler", "exception", e);
     }
   }
 

@@ -1,5 +1,6 @@
 package com.epicGamecraft.dungeonCrawlDepths;
 
+import com.ple.observabilityBridge.RecordingService;
 import io.reactivex.Completable;
 import io.vertx.reactivex.core.AbstractVerticle;
 import io.vertx.reactivex.core.eventbus.EventBus;
@@ -12,6 +13,11 @@ import static com.epicGamecraft.dungeonCrawlDepths.BusEvent.*;
 public class GameListVerticle extends AbstractVerticle {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(MysqlVerticle.class);
+  private final RecordingService recordingService;
+
+  public GameListVerticle(RecordingService recordingService) {
+    this.recordingService = recordingService;
+  }
 
   @Override
   public Completable rxStart() {
