@@ -127,20 +127,24 @@ public class HttpServerVerticle extends AbstractVerticle {
     response.putHeader("Content-Type", "text/html");
     response.setStatusCode(200);
     response.end("<html><body>All is well</body></html>");
-    context.next();
+
+    // we are not doing context.next() here because we don't want to create a session for every health check
+    routeEndHandler(context);
 
   }
 
   private void staticHandler(RoutingContext context) {
 
+    final RecordingService rs = (RecordingService) context.data().get("rs");
     final HttpServerResponse response = context.response();
     final HttpServerRequest request = context.request();
-    final RecordingService rs = (RecordingService) context.data().get("rs");
-    response.setChunked(true);
-    @Nullable
-    String path = request.path();
-    rs.open("Static handler");
+    @Nullable String path = request.path();
+
     try {
+
+      response.setChunked(true);
+      rs.open("Static handler");
+
       Session session = context.session();
       String username = session.get(SessionKey.username.name());
       if (username != null && path.equals("/static/login.html") || username != null && path.equals("/static/jscrawl.html")) {
@@ -150,11 +154,15 @@ public class HttpServerVerticle extends AbstractVerticle {
         return;
       }
       writeStaticHtml(rs, response, path);
+
     } catch (Exception e) {
+
       rs.log(-10, "Problem fetching static file", "path", path, "exception", e);
       response.setStatusCode(502);
       response.end();
+
     }
+
     rs.close("Static handler");
     context.next();
 
