@@ -46,12 +46,13 @@ public class HttpServerVerticle extends AbstractVerticle {
     final SessionHandler mySesh = SessionHandler.create(store);
     mySesh.setSessionTimeout(86400000); //24 hours in milliseconds.
 
-    router.route().handler(this::metricsHandler);
+    router.route().handler(this::routeStartHandler);
     router.get("/status").handler(this::statusHandler);
     router.route().handler(mySesh);
     router.get("/static/*").handler(this::staticHandler);
     router.route().handler(BodyHandler.create());
     router.post("/bus/*").handler(this::busHandler);
+    router.route().handler(this::routeEndHandler);
 
     final HttpServer server = vertx.createHttpServer();
     final int port = 8080;
@@ -67,11 +68,30 @@ public class HttpServerVerticle extends AbstractVerticle {
 
   }
 
-  private void metricsHandler(RoutingContext context) {
-    final HttpServerResponse response = context.response();
+  private void routeStartHandler(RoutingContext context) {
     final HttpServerRequest request = context.request();
     @Nullable final String path = request.path();
-    startupRecordingService.log("http request", "path", path);
+    final RecordingService rs = startupRecordingService.clone();
+    rs.open("http request", "path", path);
+    context.data().put("rs", rs);
+    context.next();
+  }
+
+  private void routeEndHandler(RoutingContext context) {
+
+    final HttpServerRequest request = context.request();
+    HttpServerResponse response = context.response();
+    @Nullable final String path = request.path();
+    final RecordingService rs = (RecordingService) context.data().get("rs");
+
+    if (!response.ended()) {
+      response.setStatusCode(404);
+      response.end();
+    }
+
+    int code = response.getStatusCode();
+    rs.close("http request", "path", path, "statusCode", code);
+
   }
 
   public void writeStaticHtml(RecordingService rs, HttpServerResponse response, String path) {
@@ -88,9 +108,9 @@ public class HttpServerVerticle extends AbstractVerticle {
       } else if (path.endsWith(".css")) {
         response.putHeader("Content-Type", "text/css");
       } else if (path.endsWith(".js")) {
-          response.putHeader("Content-Type", "text/javascript");
+        response.putHeader("Content-Type", "text/javascript");
       } else {
-        response.end("<html><body>Error filetype unknown: " + path + "</body></html>");
+        rs.log(-5, "Filetype unknown", "path", path);
       }
       response.setStatusCode(200);
       response.end(text);
@@ -105,7 +125,9 @@ public class HttpServerVerticle extends AbstractVerticle {
 
     final HttpServerResponse response = context.response();
     response.putHeader("Content-Type", "text/html");
+    response.setStatusCode(200);
     response.end("<html><body>All is well</body></html>");
+    context.next();
 
   }
 
@@ -113,7 +135,7 @@ public class HttpServerVerticle extends AbstractVerticle {
 
     final HttpServerResponse response = context.response();
     final HttpServerRequest request = context.request();
-    final RecordingService rs = startupRecordingService.clone();
+    final RecordingService rs = (RecordingService) context.data().get("rs");
     response.setChunked(true);
     @Nullable
     String path = request.path();
@@ -134,13 +156,15 @@ public class HttpServerVerticle extends AbstractVerticle {
       response.end();
     }
     rs.close("Static handler");
+    context.next();
 
   }
 
 
   private void busHandler(RoutingContext context) {
 
-    final RecordingService rs = startupRecordingService.clone();
+    final RecordingService rs = (RecordingService) context.data().get("rs");
+    rs.open("busHandler");
     try {
       final EventBus eb = vertx.eventBus();
 
@@ -152,7 +176,7 @@ public class HttpServerVerticle extends AbstractVerticle {
       final String absoluteURI = request.absoluteURI();
       rs.log(10, "debug", "absoluteURI", absoluteURI);
       final String busAddress = absoluteURI.replaceAll("^.*/bus/", "");
-      rs.log(10, "debug", "busAddress=", busAddress);
+      rs.log(10, "debug", "busAddress", busAddress);
       Session session = context.session();
       JsonObject object = new JsonObject();
       for (Map.Entry<String, String> entry : params.entries()) {
@@ -189,7 +213,12 @@ public class HttpServerVerticle extends AbstractVerticle {
           });
     } catch (Exception e) {
       rs.log(-10, "Exception in bus handler", "exception", e);
+    } finally {
+      rs.close("busHandler");
     }
+
+    context.next();
+
   }
 
 }
