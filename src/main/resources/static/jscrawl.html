@@ -27,17 +27,84 @@ canvas {
 			crossorigin="anonymous"></script>
 
 	<script>
-		"use strict";
 
-		const canvas = document.getElementById("mainCanvas")
-		const ctx = canvas.getContext("2d")
-		let eb = new EventBus(window.location.protocol + "//" + window.location.host + "/bus")
-		eb.onopen = function() {
-			eb.send("browserInput", "test")
-		}
+"use strict";
 
-		//Add event listener, then have java send the event to it. look up in vertx
-    //sock.js bridge how to listen on event bus.
+const canvas = document.getElementById("mainCanvas")
+const ctx = canvas.getContext("2d")
+let eb = new EventBus(window.location.protocol + "//" + window.location.host + "/bus")
+
+document.removeEventListener("keyup", handleKeyUp, false)
+document.addEventListener("keyup", handleKeyUp, false)
+document.removeEventListener("keydown", handleKeyDown, false)
+document.addEventListener("keydown", handleKeyDown, false)
+
+let keyModifiers = {
+  alt: false,
+  command: false,
+  control: false,
+  shift: false,
+}
+
+function handleKeyDown(event) {
+  switch(event.key) {
+    case 'Alt':
+      keyModifiers.alt = true
+      break
+    case 'Meta':
+      keyModifiers.command = true
+      break
+    case 'Control':
+      keyModifiers.control = true
+      break
+    case 'Shift':
+      keyModifiers.shift = true
+      break
+  }
+}
+
+function debug(message) {
+  console.log(message)
+}
+
+function warn(message) {
+  console.log(message)
+}
+
+function err(message) {
+  throw new Error(message)
+}
+
+function handleKeyUp(event) {
+  switch(event.key) {
+    case 'Alt':
+      keyModifiers.alt = false
+      return
+    case 'Meta':
+      keyModifiers.command = false
+      return
+    case 'Control':
+      keyModifiers.control = false
+      return
+    case 'Shift':
+      keyModifiers.shift = false
+      return
+  }
+  debug("Key Up: " + event.key)
+  eb.send("browserInput", `
+    {
+      "alt": ${keyModifiers.alt},
+      "command": ${keyModifiers.command},
+      "control": ${keyModifiers.control},
+      "shift": ${keyModifiers.shift},
+      "key": "${event.key}"
+    }
+    `)
+}
+
+<!--		eb.onopen = function() {-->
+<!--			eb.send("browserInput", "test")-->
+<!--		}-->
 
 	</script>
 
