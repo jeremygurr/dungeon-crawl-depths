@@ -1,5 +1,8 @@
 package com.epicGamecraft.dungeonCrawlDepths;
 
+import com.epicGamecraft.dungeonCrawlDepths.verticle.BrowserInputVerticle;
+import com.epicGamecraft.dungeonCrawlDepths.verticle.GameCreationVerticle;
+import com.epicGamecraft.dungeonCrawlDepths.verticle.HttpServerVerticle;
 import com.ple.observabilityBridge.SystemOutLogHandler;
 import com.ple.observabilityBridge.RecordingService;
 import io.vertx.core.Vertx;
@@ -27,10 +30,11 @@ public class CrawlServer {
     vertx = Vertx.vertx(options);
 		vertx.deployVerticle(new HttpServerVerticle(recordingService.clone()));
 		vertx.deployVerticle(new BrowserInputVerticle(recordingService.clone()));
-		vertx.deployVerticle(new UserVerticle(recordingService.clone()));
+    vertx.deployVerticle(new GameCreationVerticle(recordingService.clone()));
+//		vertx.deployVerticle(new UserVerticle(recordingService.clone()));
 //		vertx.deployVerticle(new CouchbaseVerticle(recordingService.clone()));
 //		vertx.deployVerticle(new MysqlVerticle(recordingService.clone()));
-		vertx.deployVerticle(new GameListVerticle(recordingService.clone()));
+//		vertx.deployVerticle(new GameListVerticle(recordingService.clone()));
 
 	}
 

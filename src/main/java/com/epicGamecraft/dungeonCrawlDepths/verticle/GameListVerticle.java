@@ -1,9 +1,9 @@
-package com.epicGamecraft.dungeonCrawlDepths;
+package com.epicGamecraft.dungeonCrawlDepths.verticle;
 
+import com.epicGamecraft.dungeonCrawlDepths.verticle.MysqlVerticle;
 import com.ple.observabilityBridge.RecordingService;
 import io.reactivex.Completable;
 import io.vertx.reactivex.core.AbstractVerticle;
-import io.vertx.reactivex.core.eventbus.EventBus;
 import io.vertx.reactivex.core.eventbus.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,5 +1,8 @@
-package com.epicGamecraft.dungeonCrawlDepths;
+package com.epicGamecraft.dungeonCrawlDepths.verticle;
 
+import com.epicGamecraft.dungeonCrawlDepths.BusEvent;
+import com.epicGamecraft.dungeonCrawlDepths.SessionKey;
+import com.epicGamecraft.dungeonCrawlDepths.WebUtils;
 import com.ple.util.IArrayMap;
 import io.reactivex.Completable;
 import io.reactivex.Single;
@@ -52,7 +55,9 @@ public class HttpServerVerticle extends AbstractVerticle {
     final SockJSHandler sockJSHandler = SockJSHandler.create(vertx);
     final SockJSBridgeOptions options = new SockJSBridgeOptions();
     final PermittedOptions inboundPermitted = new PermittedOptions()
-      .setAddress(BusEvent.browserInput.name());
+      .setAddress(BusEvent.browserInput.name())
+      .setAddress(BusEvent.newGame.name())
+      ;
     options.addInboundPermitted(inboundPermitted);
 
     router.route().handler(this::routeStartHandler);

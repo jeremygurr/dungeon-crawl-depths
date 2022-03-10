@@ -1,8 +1,8 @@
-package com.epicGamecraft.dungeonCrawlDepths;
+package com.epicGamecraft.dungeonCrawlDepths.verticle;
 
 import static com.epicGamecraft.dungeonCrawlDepths.BusEvent.*;
 
-import com.couchbase.client.java.kv.GetResult;
+import com.epicGamecraft.dungeonCrawlDepths.ContextKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,9 +12,6 @@ import io.vertx.reactivex.core.eventbus.EventBus;
 import io.vertx.reactivex.core.eventbus.Message;
 
 import com.couchbase.client.java.*;
-import com.couchbase.client.java.query.ReactiveQueryResult;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 import com.couchbase.client.java.json.JsonObject;
 
 import java.io.IOException;

@@ -1,7 +1,7 @@
 package com.epicGamecraft.dungeonCrawlDepths.test.integration;
 
-import com.epicGamecraft.dungeonCrawlDepths.CouchbaseVerticle;
-import com.epicGamecraft.dungeonCrawlDepths.MysqlVerticle;
+import com.epicGamecraft.dungeonCrawlDepths.verticle.CouchbaseVerticle;
+import com.epicGamecraft.dungeonCrawlDepths.verticle.MysqlVerticle;
 import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
 import io.vertx.reactivex.core.Vertx;
@@ -9,10 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 import static com.epicGamecraft.dungeonCrawlDepths.BusEvent.*;
 

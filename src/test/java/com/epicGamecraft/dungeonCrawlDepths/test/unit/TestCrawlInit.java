@@ -1,9 +1,9 @@
 package com.epicGamecraft.dungeonCrawlDepths.test.unit;
 
-import com.epicGamecraft.dungeonCrawlDepths.GameCreationVerticle;
-import com.epicGamecraft.dungeonCrawlDepths.GameListVerticle;
-import com.epicGamecraft.dungeonCrawlDepths.HttpServerVerticle;
-import com.epicGamecraft.dungeonCrawlDepths.UserVerticle;
+import com.epicGamecraft.dungeonCrawlDepths.verticle.GameCreationVerticle;
+import com.epicGamecraft.dungeonCrawlDepths.verticle.GameListVerticle;
+import com.epicGamecraft.dungeonCrawlDepths.verticle.HttpServerVerticle;
+import com.epicGamecraft.dungeonCrawlDepths.verticle.UserVerticle;
 import io.vertx.core.json.JsonObject;
 import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
@@ -149,7 +149,7 @@ public class TestCrawlInit {
       .flatMap(e -> vertx.rxDeployVerticle(runeVerticle))
       .flatMap(e -> vertx.rxDeployVerticle(new GameCreationVerticle()))
       .subscribe(e -> {
-        vertx.eventBus().rxRequest(gameCreation.name(), "normal")
+        vertx.eventBus().rxRequest(newGame.name(), "normal")
           .subscribe(ar -> {
             LOGGER.debug("Test.GameCreate received reply: " + ar.body());
             context.completeNow();

@@ -1,8 +1,34 @@
-create api server
-  02: get simple vertx server up with example code
-      make first test
-  03: make login function
-  make connect to game / create game function
+make newGame 
+  create new game in session
+
+make newView (attaches to a given Game)
+  view has a size, which is shared for all viewers
+
+make newViewer (attaches to a given View)
+  a view may have many people watching it, with it's own buffered changes
+  buffered changes may get so big that a full refresh is needed
+    buffer is emptied, and tooMany=true
+
+make viewController, which intercepts events to update view
+
+make map view
+
+make getViewUpdates
+  send either diff list or full refresh
+  can send tile updates also
+
+inputs for movement
+  update game state
+
+make status view/controller
+
+persist game
+
+make tile editor
+
+make view scale with browser size
+
+different maps exist for different creatures, with a reality map containing all info
 
 creatures / players have same energy pool flow, heat, smell and sound generation
   line up model
@@ -142,9 +168,11 @@ core attributes
   int
   charisma 
     good for a summoner
+    boosts healing of others
+    less likely to provoke enemies
   constitution
     does not boost health, but does improve disease and poison resistance
-example spell masteries
+example skill masteries
   necromancer
   timelord
   shapeshifter
@@ -174,7 +202,7 @@ quick travel
     attitudes:
       avoid monsters
       ignore all items
-willpower is gained from successful activities
+motivation is gained from successful activities
   killing a monster
   discovering valuable items
   achievements
@@ -185,7 +213,7 @@ willpower is gained from successful activities
   most food gives a small amount of willpower
     dessert food gives larger amount: chocolate, cake, etc
   stealth success
-willpower is drained by 
+motivation is drained by 
   being hit
   pain
   spells failing
@@ -340,6 +368,8 @@ trees
   normal
   dry
     can catch on fire, and dry out or light other trees nearby
+    burning trees have a 1/4 chance of extinguishing each turn
+    and 1/4 chance of drying out each adjacent tree (if they aren't already dry), or catching dry trees on fire if they are dry
 consume item
 dungeon is a stack of 100 floors, but there are some branches and planes
 branches
@@ -2056,5 +2086,298 @@ rune refs, rune ops
   trigger runes are starting points, and have a direction?
   redirection runes can change flow direction, or even split the flow
   
+starting points
+  can choose: money, skills, weapons, armor, jewelry, scrolls, potions
+  always keep: species, mutations, occupation, guardian
+  no items spawn with ghost
+elements
+  fire: high damage, better against armor
+  ice: slow, weaker against armor
+  poison: continued damage
+  electric: can paralyze, bounces, strong against armor
+  light: can blind
+  earth: high damage, lower cost, good defense
+  air: movement
+damage types
+  armors defend against specific damage types
+  slice
+  pierce
+  bash
+runes
+view a property
+change a property
 
+experience gives 1 point to phys, spirit, mind
+adding to those gives a point in the next lower level
+phys: str, dex, con
+spirit: will, int, vir
+mind: know, wis, fortitude
+1+3+9 = 13 attributes
+hp = exp + phys + con
+sp = exp + phys + spirit + will
+mp = exp + mind + fortitude
+wp = exp + mind + spirit + will
+
+aptitudes are different: +4 means level will be doubled, not exp
+
+separate two energies, and lock them apart
+how to move?
+
+containers and conduits
+cell contains:
+  creature container (single)
+  item container (multi)
+  cloud container (single)
+  floor container (single)
+containers have a specific content
+spirits can occupy any entity
+  can directly move entity but expensive
+  if entity has nervous system and muscles, more easy to move
+spirits have minimal perception inherently
+
+world/plane/branch/stage
+spirits can move around in any container
+  only by focusing their energy on a point
+spirit spreads out naturally unless focussing
+spirits produce either yin or yang energy
+  the other it must draw from environment
+yin can form containers
+yang can form conduits
+
+template form
+
+after death you can keep one thing?
+  one time
+  gold, skill, species, guardian, item
+
+guardians provide 
+  a passive effect
+  a sacrifice
+  piety paid effects
+  piety gained by experience
+guardian passives
+  health gain when experience gained
+  magic gained with experience
+  enhanced experience growth
+  boosted attributes
+if player hasn't chosen a guardian by level 10, they have an option to accept demigod heritage from a random guardian
+  if they refuse, their attributes will be boosted 50% (superhero status), but will lose that bonus if they choose a guardian later
+  as demigod their parent may intervene if a fatal attack occurs
+example demigod attributes
+  warrior
+    attack * 1.2
+    defense * 1.2
+  healer
+    int * 1.2
+    health * 1.2
+    damage resist * 1.2
+    str * 0.8
+  rage
+    damage * 1.2
+    att speed * 1.2
+    int * 0.8
+  knowledge
+    int * 1.2
+    id * 1.5
+  light
+    sense * 1.2
+    accuracy * 1.2
+    stealth * 0.8
+  shadow
+    stealth * 1.5 (or apt boost?)
+    dex * 1.2
+  ponderousness
+    movement speed * 0.8 (slower)
+    all att * 1.2
+  destruction
+    str * 1.2
+    hp * 1.2
+levelling is slower (3 potions per level?)
+two exp potions on a floor?
+  easy and hard?
+can choose to reject heritage
+double attribute gain until first guardian chosen 
+
+runes
+  root rune, encourages radial design
+  when runes touch, energy is transferred/lost, encouraging some spacing between runes
+
+rune types: rule, template, instance
+runes can operate on classes or instances
+polarm < weapon < brandable < equipment < item < thing
+ring < enchantable < jewelry < equipment < item < thing
+place
+
+different class levels provide different properties
+  weapon: base damage
+  brandable: brand
+  equipment: cursed
+  item: inventory
+  thing: cell
+
+simple case:
+  define cell 
+    floor
+    cloud
+    items
+    creature
+  create space 4x4
+    attach to world
+  create rat
+    attach to cell
+    rat < living < creature < thing
+    props branch off of each superclass
+    if prop isn't defined, then it can be anything
+    super classes can be skipped
+
+temp vs permanent?
+  everything is a balanced separation with a wall between
+    deeper and stronger separations are more permanent
   
+sizes:
+  items
+    small (rock)
+    medium (sword)
+    large (body armor)
+  creatures
+    tiny (fairy)
+    small (spriggan)
+    medium (human)
+    large (ogre)
+    giant (dragon)
+
+fireball 
+  rock <     item < thing(mass = tiny)
+         fireball < thing(mass = tiny)
+  transformation should trigger when rock is thrown
+    uses throw skill
+  the next rock I throw transforms to a fireball
+  by default rules execute only once, and expire (they must be set up as a loop otherwise)
+
+cross examples
+  the next rock I throw transforms to a fireball
+  increase my health by 20
+    trigger immediate self class creature prop health increase 2d10
+    energy aspect?
+  slow down the current target
+  enhance damage of my weapon
+  change floor to lava
+
+runes establish containers and conduits and adjust the properties of them
+state runes pull the instance towards the desired state
+process runes run a specific procedure
+query runes provide knowledge about something
+
+level info is generated from seed and player actions
+  actions must be broken down into
+    passive / info
+    active / game altering
+  must have snapshots
+    stored in etcd or redis?
+
+rules must be versioned to manage older levels
+  rules in mysql?
+
+player can recycle character instead of quitting (before death)
+  new character created with same starting point and chosen item
+
+can recite or trace runes in addition to inscribing into objects
+
+reciting is faster but louder
+tracing is silent but slower, depending on dex
+mental tracing is silent and fast, but requires more skill
+tracing and reciting lowers skill requirement
+
+if spell doesn’t have enough energy, nothing happens
+some spells can draw energy from the object inscibed
+caster may inject their own energy instead
+or spell may draw energy from other sources
+
+how do wands work?
+can trace spells, but energy comes from wand
+may also be inscribed (difficult to inscribe because of material), which then can be activated directly without tracing, speeding up casting
+
+quality of inscription?
+  low: 10x
+  medium: 100x
+  high: 1000x
+  exceptional: 10k
+  legendary: 100k
+
+amp scroll
+  amps power applies to scroll, spell, wand, item, potion or food
+
+time stretcher scroll
+  makes next spell or potion longer
+
+reduction scroll
+  inverse of amp
+
+inverse scroll (more common than amp)
+  degeneration -> progeneration
+  poison -> heal
+  magic draining
+  stamina draining
+
+do we want evocable items?
+  basically like wands?
+  different though because they can’t trace
+  same as scroll?
+
+food:
+  when full, stamina regen is higher, but mana regen is lower
+  when empty, stamina regen is lower, but mana regen is higher
+  some food gives immediate boosts
+  meat provides higher fill
+  carbs and cheese provide medium fill
+  fruit and veg provides low fill
+
+potions can be combined to improve potency
+  or reduce/increase negative effects
+potions can be combined with weapons to apply effect. effect fades based on longevity (10x, 100x, etc)
+water potion with poison dilutes it
+  if diluted enough, can build poison resistance
+empty vials?
+
+random number pool (64k x 16 bit)
+most resistances are temporary
+
+flame potion
+  causes flame damage unless made into a resistance potions
+
+inverting poison or flame potions creates antidote
+
+water potion will increase stamina
+potions to increase or dull senses
+
+water + poison 2 = poison 0
+water + poison 0 = poison -2
+
+duplication scroll
+  inverse is erase scroll
+  applied to another scroll or item or potion or wand, etc
+    or creature (summons?)
+  amped will triplicate instead
+  can't be applied to same scroll
+
+inverse of identify scroll is amnesia: forget
+amped identify will identify all possessions
+
+what can be saved as a starting state:
+  species
+  guardian / heritage
+  profession
+  education
+
+professions
+  warrior
+    level 2 weapon + skill in that weapon
+    level 2 armor + skill
+    level 2 shield + skill
+    fighting skill
+  monk
+  mage
+    level 2 robe
+    spell school + related spells
+    spellcasting skill
+

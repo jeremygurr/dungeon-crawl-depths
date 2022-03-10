@@ -1,4 +1,4 @@
-package com.epicGamecraft.dungeonCrawlDepths;
+package com.epicGamecraft.dungeonCrawlDepths.verticle;
 
 import com.ple.observabilityBridge.RecordingService;
 import io.reactivex.Completable;

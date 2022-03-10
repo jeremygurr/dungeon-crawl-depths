@@ -1,3 +1,4 @@
 rootProject.name = 'dungeonCrawlDepths'
 includeBuild '../observability-bridge'
 includeBuild '../immutable-collections'
+includeBuild '../jerbil'

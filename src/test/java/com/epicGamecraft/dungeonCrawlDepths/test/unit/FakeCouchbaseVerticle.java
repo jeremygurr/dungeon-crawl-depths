@@ -1,8 +1,7 @@
 package com.epicGamecraft.dungeonCrawlDepths.test.unit;
 
-import com.couchbase.client.java.ReactiveCluster;
 import com.couchbase.client.java.json.JsonObject;
-import com.epicGamecraft.dungeonCrawlDepths.CouchbaseVerticle;
+import com.epicGamecraft.dungeonCrawlDepths.verticle.CouchbaseVerticle;
 import io.reactivex.Completable;
 import io.vertx.reactivex.core.AbstractVerticle;
 import io.vertx.reactivex.core.eventbus.EventBus;

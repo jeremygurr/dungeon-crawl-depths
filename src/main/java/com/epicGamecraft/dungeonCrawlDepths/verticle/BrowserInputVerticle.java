@@ -1,4 +1,4 @@
-package com.epicGamecraft.dungeonCrawlDepths;
+package com.epicGamecraft.dungeonCrawlDepths.verticle;
 
 import static com.epicGamecraft.dungeonCrawlDepths.BusEvent.*;
 
