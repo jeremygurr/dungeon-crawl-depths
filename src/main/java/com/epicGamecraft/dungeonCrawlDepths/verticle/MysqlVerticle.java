@@ -36,15 +36,17 @@ public class MysqlVerticle extends AbstractVerticle {
     eb.consumer(mysqlDelete.name(), this::handleDelete);
     eb.consumer(mysqlGameList.name(), this::handleGameList);
     final Properties config = new Properties();
+
     try {
       config.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("config.properties"));
     } catch (
       IOException e) {
       e.printStackTrace();
     }
-    final String url = config.getProperty("mysqlurl");
-    final String user = config.getProperty("mysqluser");
-    final String pass = config.getProperty("mysqlpass");
+
+    final String url = config.getProperty("host") + ":" + config.getProperty("port");
+    final String user = config.getProperty("user");
+    final String pass = config.getProperty("password");
 
     MySQLConnectOptions connectOptions = new MySQLConnectOptions()
       .setPort(3306)

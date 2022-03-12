@@ -6,10 +6,12 @@ import com.epicGamecraft.dungeonCrawlDepths.model.Game;
 import io.vertx.reactivex.core.shareddata.LocalMap;
 import io.vertx.reactivex.core.shareddata.SharedData;
 
-public class GameService {
+import java.util.Map;
 
-  public static GameState getCurrentState(Game game, SharedData sharedData) {
-    return SharedDataService.getCurrentGameStates(sharedData).get(game);
+public class SharedDataService {
+
+  public static LocalMap<Game, GameState> getCurrentGameStates(SharedData sharedData) {
+    return sharedData.getLocalMap(SharedMaps.currentGameStates.name());
   }
 
 }

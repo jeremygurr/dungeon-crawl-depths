@@ -370,6 +370,7 @@ trees
     can catch on fire, and dry out or light other trees nearby
     burning trees have a 1/4 chance of extinguishing each turn
     and 1/4 chance of drying out each adjacent tree (if they aren't already dry), or catching dry trees on fire if they are dry
+  charred tree
 consume item
 dungeon is a stack of 100 floors, but there are some branches and planes
 branches
@@ -1466,12 +1467,46 @@ money
     10 levels = 6.2
 
 experience potions
-  add one level to the player
+  typically three potions per level advancement (depending on species)
     which gives them 3 primary attribute points to spend, which when spent automatically gives secondary points etc
   applies regen
   cures temporary debuffs
-  receives one per level
+  receives three per level
+    two easy, one challenging?
+    same # of potions in E gate vs A gate?
   advances age
+  1/3 chance of sparkling exp potions:
+    gives experience based on difficulty of dungeon floor
+    E: 0.5 - 1.0
+    D: 1.0 - 1.5
+    C: 1.5 - 2.0
+    B: 2.0 - 2.5
+    A: 2.5 - 3.0
+    S: 3.0 - 4.0
+    SS: 4.0 - 5.0
+    SSS: 5.0 - 6.0
+
+potion drinking takes 0.5 aut
+  
+scroll reading takes 0.5 aut
+
+gates:
+  gates disappear when boss is killed
+  when entering a gate, a player gets a choice to go straight to the boss
+  common
+    green gates don't have a time limit and will never allow monsters to exit
+    blue gates have a time limit after which monsters will appear (steadily getting more difficult over time) unless it is beaten
+  uncommon
+    yellow gates don't allow the player out until boss is beaten, or a timer has expired, but may be any difficulty level, but will not allow monsters out
+    red gates release monsters in waves at predetermined times, and will expire once all 3 waves have completed.
+  rare
+    black gates
+      have only monsters and exp potions and a hard boss
+    white gates
+      are full of treasure, no monsters
+      can be used to destroy another gate if not entered
+
+  if boss is defeated, all experience potions and items missed are given to the player
 
 going to a new floor
   pick up floor items
@@ -1605,10 +1640,10 @@ age:
   usually advances slowly
     but spells or curses can accelerate
     advances with experience
-      humans:   5 exp levels = 1 age advancement
-      elves:   10 exp levels = 1 age advancement
-      orcs:     3 exp levels = 1 age advancement
-      dwarves:  7 exp levels = 1 age advancement
+      humans:   5 exp potions = 1 age advancement
+      elves:   10 exp potions = 1 age advancement
+      orcs:     3 exp potions = 1 age advancement
+      dwarves:  7 exp potions = 1 age advancement
       mummy:    immortal, but doesn't auto-repair form decay
   very difficult to stop or reverse
   levels
@@ -1694,33 +1729,6 @@ start with
   rusty dagger
   small belt (4 slots for small items)
   hip bag (can fit a medium item or 3 small)
-
-no story or randomized evolving story
-
-first floor doesn't contain items or exp potion
-  must survive to the second floor for that
-  not needed, getting items only applies to floor transitions anyway
-
-moving to a new floor restores energy, but doesn't heal
-  maybe not, fleeing to another floor when exhausted is risky and should be
-
-exp potion different than time advancing potion
-  one of each per floor?
-  no, regen happens while eating
-    but then you get full?
-  eat in addition to time potions
-    although time potions make you more hungry
-
-level up potions
-  one per floor
-  level up
-  fills energy and health
-
-time potions
-  one per floor
-  applies regeneration
-  makes you more hungry
-  advances age
 
 eating
   species have different nutrition values from different food types

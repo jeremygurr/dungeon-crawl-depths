@@ -1,6 +1,5 @@
 package com.epicGamecraft.dungeonCrawlDepths.test.integration;
 
-import com.epicGamecraft.dungeonCrawlDepths.verticle.CouchbaseVerticle;
 import com.epicGamecraft.dungeonCrawlDepths.verticle.MysqlVerticle;
 import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
@@ -95,56 +94,6 @@ public class TestMysql {
         },
         err -> {
           LOGGER.debug("TestMysql.retrieveGameList issue deploying verticle : " + err.getMessage());
-          context.failNow(err);
-        });
-  }
-
-  //Below are two for the CouchbaseVerticle. Requires couchbase container running.
-  //TODO: Make this auto-run couchbase container.
-  //FIXME: Make it query and insert for something besides login.
-  @Test
-  void queryCouchbase(Vertx vertx, VertxTestContext context) throws Throwable {
-
-    vertx.rxDeployVerticle(new CouchbaseVerticle())
-      .subscribe(e -> {
-          vertx.eventBus().rxRequest(couchbaseQuery.name(), "{\"username\":\"jgurr\",\"password\":\"password\"}")
-            .subscribe(ar -> {
-                LOGGER.debug("Test.queryCouchbase received reply : " + ar.body());
-                context.completeNow();
-              },
-              err -> {
-                LOGGER.debug("Communication between Test.queryCouchbase error : " + err.getMessage());
-                context.failNow(err);
-              });
-        },
-        err -> {
-          LOGGER.debug("TestMysql.queryCouchbase issue deploying verticle : " + err.getMessage());
-          context.failNow(err);
-        });
-  }
-
-  @Test
-  void insertCouchbase(Vertx vertx, VertxTestContext context) throws Throwable {
-
-    vertx.rxDeployVerticle(new CouchbaseVerticle())
-      .subscribe(e -> {
-          vertx.eventBus().rxRequest(couchbaseInsert.name(), "{\"username\":\"jgurr\",\"password\":\"password\",\"email\":\"som@gmail.com\"}")
-            .subscribe(ar -> {
-                if (ar.body() == null) {
-                  LOGGER.debug("Couchbase successfully inserted document.");
-                } else {
-                  LOGGER.debug("Couchbase failed to insert document : " + ar.body());
-                }
-                context.completeNow();
-              },
-              err -> {
-                LOGGER.debug("Communication between Test.queryCouchbase error : " + err.getMessage());
-                context.failNow(err);
-              });
-        },
-        err -> {
-          LOGGER.debug("TestMysql.insertCouchbase issue communicating with " +
-            "couchbase verticle. : " + err.getCause());
           context.failNow(err);
         });
   }
