@@ -1,3 +1,125 @@
+split utils and reactive-utils
+get rebul working
+  design
+    questions
+      how does run know what to run?
+        xec handler
+      how does a target pull in it's previous target's output?
+        need to aggregate output for multi-part targets
+      how to include generated source into source folder?
+        include out/src-java of any subfolder
+      how does test know which driver to run
+        xec handler
+      how to update libs to new version
+        delete artifact
+        --update flag?
+    each folder may be a target
+    archetypes in home folder
+      rebul-new [{path}] {archetype}
+    folders
+      package
+        00-test -> ../../test
+        pkg/jar/project
+          compile -> ../../compile/out/bytecode/java
+        out/artifact/project.jar
+      run
+        00-compile -> ../../compile
+        xec/launchApp
+      test
+        00-compile -> ../../compile
+        src-java
+        lib/
+        out/report/index.html
+      default -> compile
+      compile
+        commonUtils
+          fileUtils
+            src-java
+            out/classes
+          dataUtils
+            src-java
+            out/
+          annotations
+            src-java
+            out/
+        dbTools
+          00-generate -> ../../../../generate
+          src-java
+          out/
+        myCoolGame
+          00-dbTools -> ../../dbTools
+          00-commonUtils -> ../../commonUtils
+          src-java
+          lib/
+            {repo}:{group}:{artifact}:{version-spec}/jar file, scripts, or checked out repo
+            mvn:com.mysql:client:5.4..<6.0
+            docker:mysql:...
+            github.com:lz4/lz4-java:1.8.0...
+            local:{whatever} direct link to folder
+          out/classes/...
+      generate
+        src-bash
+        src-go
+        src-java
+        lib-repo
+        out/src-java
+    minimal example:
+      src-java
+    rebul command
+      shell script wraps docker run
+      rebul [--cd {path of targets}] [{target...}]
+        path defaults to current folder
+          first arg is path if it's a folder that exists
+        target defaults to build
+        -target means skip that target
+        if no target specified, builds everything in folder
+        won't run same target twice in an execution
+        uses out folder to determine if change has happened
+          find . -newer out -print -quit
+        updates out when target completes successfully
+      rebul-new
+      rebul-save-archetype
+    special files:
+      .handler/
+        override handlers
+    rebul home ($REBUL_HOME)
+      archetypes/
+        java-lib.tbz
+        java-app.tbz
+        go-cli.tbz
+        bash-cli.tbz
+      implicit-targets/ (will be searched if target not found)
+        clean
+      handlers/ # .{file} is always ignored
+        all-others
+          for all other folders
+        clean
+        lib-repo
+          {url}/
+            {version_spec}/
+              {fetched artifact}
+        lib-maven
+        lib-docker
+        out
+          do nothing?
+        pkg-jar
+          links to what to include
+        pkg-tbz
+        src-java
+        src-node
+        src-golang
+        xec
+
+----------------------------------------------------------------------------------------------------
+  for utils
+    build 
+    test
+  for jerbil
+    test
+    including other projects
+  for crawl
+    code gen
+
 make newGame 
   create new game in session
 
@@ -1997,7 +2119,9 @@ qualities of items
   good: 1000 (40%)
   high: 10,000 (8%)
   superior: 100,000 (1.9%)
-  extraordinary: 1,000,000 (0.1%)
+  outstanding: 1M (0.1%)
+  extraordinary: 10M (0.01%)
+  
   a forge can improve the quality of an item, but not the durability, thus a poor durability 6/10 item becomes 
     a fair durability 60/100, prolonging it's life, but in proportion to where it was
   even gems have a quality
@@ -2094,10 +2218,6 @@ rune refs, rune ops
   trigger runes are starting points, and have a direction?
   redirection runes can change flow direction, or even split the flow
   
-starting points
-  can choose: money, skills, weapons, armor, jewelry, scrolls, potions
-  always keep: species, mutations, occupation, guardian
-  no items spawn with ghost
 elements
   fire: high damage, better against armor
   ice: slow, weaker against armor
@@ -2111,9 +2231,6 @@ damage types
   slice
   pierce
   bash
-runes
-view a property
-change a property
 
 experience gives 1 point to phys, spirit, mind
 adding to those gives a point in the next lower level
@@ -2371,11 +2488,15 @@ duplication scroll
 inverse of identify scroll is amnesia: forget
 amped identify will identify all possessions
 
+locker at home in village:
+  can contain one item that remains between games
+
 what can be saved as a starting state:
   species
   guardian / heritage
   profession
   education
+  auto-unlock?
 
 professions
   warrior

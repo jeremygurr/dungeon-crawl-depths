@@ -7,22 +7,22 @@ if [ "${debug:-}" ]; then
   flags=-it
 fi
 
-if [ -z "${couchbase_crawl_data:-}" ]; then
-  echo 'error: missing couchbase_crawl_data.' >&2
-  echo 'Export this variable in your bash profile or ~/.bashrc' >&2
-  exit 1
-fi
+#if [ -z "${couchbase_crawl_data:-}" ]; then
+#  echo 'error: missing couchbase_crawl_data.' >&2
+#  echo 'Export this variable in your bash profile or ~/.bashrc' >&2
+#  exit 1
+#fi
 
 # for some reason haven't got this to work
 # --net=host
-docker run $flags --rm \
-  -v $couchbase_crawl_data:/opt/couchbase/var \
-  --name couchbase \
-  --ulimit nofile=70000:70000 \
-  --ulimit core=100000000:100000000 \
-  --ulimit memlock=100000000:100000000  \
-  -p 8091-8094:8091-8094 \
-  -p 11210:11210 couchbase:community \
+#docker run $flags --rm \
+#  -v $couchbase_crawl_data:/opt/couchbase/var \
+#  --name couchbase \
+#  --ulimit nofile=70000:70000 \
+#  --ulimit core=100000000:100000000 \
+#  --ulimit memlock=100000000:100000000  \
+#  -p 8091-8094:8091-8094 \
+#  -p 11210:11210 couchbase:community \
 
 if [ -z "${training_crawl_data:-}" -o -z "${training_crawl_repo:-}" ]; then
   echo 'error: missing training_crawl_data and training_crawl_repo variables.' >&2

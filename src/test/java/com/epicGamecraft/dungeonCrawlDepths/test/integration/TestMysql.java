@@ -17,42 +17,6 @@ public class TestMysql {
   private static final Logger LOGGER = LoggerFactory.getLogger(TestMysql.class);
 
   @Test
-  void crudMysql(Vertx vertx, VertxTestContext context) throws Throwable {
-
-    vertx.rxDeployVerticle(new MysqlVerticle())
-      .flatMap(deployId -> {
-          LOGGER.debug("Deployed MysqlVerticle. Deployment Id = " + deployId);
-          LOGGER.debug("Making request to mysqlInsert");
-          return vertx.eventBus().rxRequest(mysqlInsert.name(), "{\"id\":0,\"username\":\"billybob\",\"password\":\"password\",\"email\":\"som@gmail.com\"}");
-        }
-      )
-      .flatMap(ar -> {
-        LOGGER.debug("Test.mysqlInsert received reply: " + ar.body());
-        return vertx.eventBus().rxRequest(mysqlQuery.name(), "{\"username\":\"billybob\",\"password\":\"password\"}");
-      })
-      .flatMap(ar -> {
-        LOGGER.debug("Test.mysqlQuery received reply: " + ar.body());
-        return vertx.eventBus().rxRequest(mysqlResetPass.name(), "{\"username\":\"billybob\",\"email\":\"bob@gmail.com\",\"password\":\"newPassword\"}");
-      })
-      .flatMap(ar -> {
-        LOGGER.debug("Test.mysqlResetPass received reply: " + ar.body());
-        return vertx.eventBus().rxRequest(mysqlDelete.name(), "{\"username\":\"billybob\",\"password\":\"password\"}");
-      })
-      .map(ar -> {
-        LOGGER.debug("Test.mysqlDelete received reply: " + ar.body());
-        return ar;
-      })
-      .subscribe(f -> {
-          LOGGER.debug("Success");
-          context.completeNow();
-        },
-        err -> {
-          LOGGER.debug("Error: " + err.getMessage());
-          context.failNow(err);
-        });
-  }
-
-  @Test
   void forgotPassword(Vertx vertx, VertxTestContext context) throws Throwable {
 
     vertx.rxDeployVerticle(new MysqlVerticle())
